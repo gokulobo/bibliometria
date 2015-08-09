@@ -19,19 +19,19 @@ include"plantilla/menu.php";
 
 
                 <div class="row">
-                    <div class="input-field col s3">
+                    <div class="input-field col s4">
                         <i class="mdi-social-person prefix"></i>
                         <input id="nombre" type="text" name="nombre" class="validate" readonly>
                         <label for="nombre">Nombre</label>
                     </div>
 
 
-                    <div class="input-field col s3">
+                    <div class="input-field col s4">
                         <input id="apellido" type="text" name="apellido" class="validate" readonly>
                         <label for="apellido">Apellidos</label>
                     </div>
 
-                    <div class="input-field col s3">
+                    <div class="input-field col s4">
                         <i class="mdi-action-perm-identity prefix"></i>
                         <input id="ced" type="text" name="ced" class="validate" readonly>
                         <label for="cedula">Cedula</label>
@@ -60,6 +60,12 @@ include"plantilla/menu.php";
                         <label for="lugar">Lugar de Estudio</label>
                     </div>
                 </div>
+
+                <center>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                        <i class="material-icons">ENVIAR</i>
+                    </button>
+                </center>
             </form>
         </div>
     </div>

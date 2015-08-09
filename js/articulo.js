@@ -1,5 +1,9 @@
 $(function () {
-
+    $('select').material_select();
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
 });
 
 function buscar(){
@@ -8,12 +12,14 @@ function buscar(){
         alert("Debe ingresar una cedula");
         return false;
     }
-    $.ajax({url : "buscarDocente.php",type : "POST",data:"cedula="+cedula,dataType : "json",
+    $.ajax({url : "buscar/buscarDocente.php",type : "POST",data:"cedula="+cedula,dataType : "json",
         success : function(json) {
+            $("#nombre").focus();
             $("#nombre").val(json.nombre);
+            $("#ced").focus();
             $("#ced").val(cedula);
+            $("#apellido").focus();
             $("#apellido").val(json.apellido);
-            $("#correo").val(json.correo);
             $("#id_docente").val(json.id_docente);
         }
     });
@@ -23,7 +29,7 @@ function buscar(){
 function guardar(){
     var formulario = $("form").serialize();
     $.ajax({
-        url : "guardarArticulo.php",
+        url : "guardar/guardarArticulo.php",
         type : "POST",
         data:formulario,
         success : function(resp) {
