@@ -22,7 +22,7 @@ if($_POST['id_docente']==0){
 }else{
     $actualiza = "UPDATE docente SET nombre='".$_POST['nombre']."',apellido='".$_POST['apellido']."',nacionalidad='".$_POST['nacionalidad']."',
     cedula=".$_POST['cedula'].",fecha_nac='".$_POST['fecha_nac']."',lugar_nac='".$_POST['lugar_nac']."',profesion='".$_POST['profesion']."',
-    cargo='".$_POST['cargo']."',correo='".$_POST['correo']."',clave_usuario='".$_POST['clave_usuario']."',telefono_hab='".$_POST['telefono_hab']."',
+    cargo='".$_POST['cargo']."',correo='".$_POST['correo']."',telefono_hab='".$_POST['telefono_hab']."',
     telefono_cel='".$_POST['telefono_cel']."',direccion_hab='".$_POST['direccion']."',categoria='".$_POST['categoria']."',modalidad='".$_POST['modalidad']."',
     dedicacion='".$_POST['dedicacion']."',ascenso='".$_POST['ascenso']."',fecha_ingreso='".$_POST['fecha_ingreso']."',investigacion='".$_POST['investigacion']."',observaciones='".$_POST['observaciones']."'";
     if(isset($_POST['guia'])) $actualiza .=",guia=1";

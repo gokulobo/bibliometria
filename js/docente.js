@@ -51,50 +51,44 @@ function buscar(){
         success : function(json) {
             //alert(json);
             if(json['respuesta']=="si"){
-
-                $("#nacionalidad option[value='"+json.nacionalidad+"']").attr("selected",true);
-                $("#nombre").focus();
-                $("#nombre").val(json.nombre);
-                $("#categoria").focus();
-                $("#categoria").val(json.categoria);
-                $("#apellido").focus();
-                $("#apellido").val(json.apellido);
-                $("#modalidad").focus();
-                $("#modalidad").val(json.modalidad);
-                $("#dedicacion").focus();
-                $("#dedicacion").val(json.dedicacion);
-                $("#direccion").focus();
-                $("#direccion").val(json.direccion_hab);
-                $("#ascenso").focus();
-                $("#ascenso").val(json.ascenso);
-                $("#fecha_nac").focus();
-                $("#fecha_nac").val(json.fecha_nac);
-                $("#lugar_nac").focus();
-                $("#lugar_nac").val(json.lugar_nac);
-                $("#fecha_ingreso").focus();
-                $("#fecha_ingreso").val(json.fecha_ingreso);
+                $('ul.tabs').tabs('select_tab', 'laboral');
                 $("#profesion").focus();
                 $("#profesion").val(json.profesion);
+                $("#categoria").val(json.categoria);
+                $("#modalidad").val(json.modalidad);
+                $("#dedicacion").val(json.dedicacion);
+                $("#ascenso").focus();
+                $("#ascenso").val(json.ascenso);
+                $("#fecha_ingreso").val(json.fecha_ingreso);
                 $("#investigacion").focus();
                 $("#investigacion").val(json.investigacion);
                 $("#cargo").focus();
                 $("#cargo").val(json.cargo);
-                $("#correo").focus();
-                $("#correo").val(json.correo);
+                $("#observaciones").focus();
+                $("#observaciones").val(json.observaciones);
+                //$("#guia").focus();
+                //$("#guia").val(json.guia);
+                //$("#coordinador").focus();
+                //$("#coordinador").val(json.coordinador);
+
+                $('ul.tabs').tabs('select_tab', 'basico');
+                $("#nombre").focus();
+                $("#nombre").val(json.nombre);
+                $("#apellido").focus();
+                $("#apellido").val(json.apellido);
+                $("#direccion").focus();
+                $("#direccion").val(json.direccion_hab);
+                $("#lugar_nac").focus();
+                $("#lugar_nac").val(json.lugar_nac);
                 $("#telefono_hab").focus();
                 $("#telefono_hab").val(json.telefono_hab);
                 $("#telefono_cel").focus();
                 $("#telefono_cel").val(json.telefono_cel);
-                $("#guia").focus();
-                $("#guia").val(json.guia);
-                $("#coordinador").focus();
-                $("#coordinador").val(json.coordinador);
-                $("#observaciones").focus();
-                $("#observaciones").val(json.observaciones)
-                $("#clave_usuario").focus();
-                $("#clave_usuario").val(json.clave_usuario);
-                $("#id_docente").focus();
                 $("#id_docente").val(json.id_docente);
+                $("#correo").focus();
+                $("#correo").val(json.correo);
+                $("#fecha_nac").val(json.fecha_nac);
+                $("#nacionalidad").val(json.nacionalidad);
             }
 
         }

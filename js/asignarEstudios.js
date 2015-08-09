@@ -1,5 +1,5 @@
 $(function () {
-
+    $('select').material_select();
 });
 
 function buscar(){
@@ -8,12 +8,18 @@ function buscar(){
         alert("Debe ingresar una cedula");
         return false;
     }
-    $.ajax({url : "buscarDocente.php",type : "POST",data:"cedula="+cedula,dataType : "json",
-        success : function(json) {
+    $.ajax({
+        url : "buscar/buscarDocente.php",
+        type : "POST",
+        data:"cedula="+cedula,
+        dataType : "json",
+        success : function(json) {//alert(json);
+            $("#nombre").focus();
             $("#nombre").val(json.nombre);
+            $("#ced").focus();
             $("#ced").val(cedula);
+            $("#apellido").focus();
             $("#apellido").val(json.apellido);
-            $("#correo").val(json.correo);
             $("#id_docente").val(json.id_docente);
         }
     });
