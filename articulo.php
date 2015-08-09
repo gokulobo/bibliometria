@@ -3,10 +3,9 @@ include "plantilla/menu.php";
 ?>
 <script type="text/javascript" src="js/articulo.js"></script>
 <div class="container" col s12>
-    <div class="row">
-        <script type="text/javascript" src="js/asignarEstudios.js"></script>
+    <div class="row" >
         <form name="form" method="POST" action="#" onSubmit="return guardar();">
-            <div class="row">
+            <div class="row  cyan lighten-4 card-panel">
                 <div class="input-field col s6">
                     <label for="cedula">Buscar Docente Por C.I</label>
                     <input name="cedula" type="text" id="cedula">
@@ -79,11 +78,9 @@ include "plantilla/menu.php";
                     <label for="observaciones">Observaciones</label>
                 </div>
             </div>
-
         </form>
-
+    </div>
 </div>
-
 
 <?php
 include "plantilla/pie.php";
