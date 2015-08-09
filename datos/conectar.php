@@ -4,6 +4,7 @@
  * User: lobo
  * Date: 01/08/15
  * Time: 12:10 PM
+ * lobo eliana
  */
 session_start();//para manejo de sessiones
 $conectar = mysql_connect("localhost","root","271319");//conectar a mysql
