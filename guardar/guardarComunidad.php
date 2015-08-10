@@ -1,5 +1,5 @@
 <?php
-require("datos/conectar.php");
+require("../datos/conectar.php");
 $inserta = "INSERT into comunidad(nombre_comunidad,rif,correo,estado,municipio,parroquia,direccion,convenio,tipo_convenio,telefono_hab,telefono_cel,observaciones)
  values('".$_POST['nombre']."','".$_POST['rif']."','".$_POST['correo']."','".$_POST['estado']."','".$_POST['municipio']."',
  '".$_POST['parroquia']."','".$_POST['direccion']."','".$_POST['convenio']."','".$_POST['tipo_convenio']."','".$_POST['telefono_hab']."',
