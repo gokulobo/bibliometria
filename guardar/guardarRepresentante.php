@@ -1,5 +1,5 @@
 <?php
-require("datos/conectar.php");
+require("../datos/conectar.php");
 
 $inserta = "INSERT into representante(nombre,apellido,nacionalidad,cedula,cargo_rol,correo,direccion,telefono_hab,
 telefono_cel,id_comunidad) values('".$_POST['nombre']."','".$_POST['apellido']."','".$_POST['nacionalidad']."',
