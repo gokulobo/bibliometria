@@ -4,17 +4,15 @@ include "plantilla/menu.php";
 
     <script type="text/javascript" src="js/articulo.js"></script>
     <div class="container">
-
-        <div class="row">
-            <div class="col s12 card-panel">
-                <h5 class="header center">Registro de Articulos</h5>
-            </div>
-        </div>
-
         <div class="row" >
 
+            <div class="row">
+                <div class="col s12 card-panel">
+                    <h5 class="header center">Registro de Articulos</h5>
+                </div>
+            </div>
 
-            <form name="form" method="post" action="#" onsubmit="return guardar();" id="form">
+            <form name="form" method="POST" action="#" onsubmit="return guardar();" id="form">
                     <div class="row">
                         <div class="input-field col s6">
                             <label for="cedula">Buscar Docente Por C.I</label>

@@ -4,7 +4,7 @@ $(function () {
 
 function guardar(){
     var formulario = $("form").serialize();
-    $.ajax({url : "guardarCohorte.php",type : "POST",data:formulario,
+    $.ajax({url : "guardar/guardarCohorte.php",type : "POST",data:formulario,
         success : function(resp) {
             alert(resp);
         }

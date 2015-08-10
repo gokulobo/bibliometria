@@ -1,11 +1,17 @@
 <?php
 include "plantilla/menu.php";
 ?>
+    <script type="text/javascript" src="js/asignarGuia.js"></script>
     <div class="container">
         <div class="row">
 
-            <script type="text/javascript" src="js/asignarEstudios.js"></script>
-            <form name="form" method="POST" action="#" onSubmit="return guardar();">
+            <div class="row">
+                <div class="col s12 card-panel">
+                    <h5 class="header center">Asignación de Cohorte</h5>
+                </div>
+            </div>
+
+            <form name="form" method="post" action="#" onSubmit="return guardar();" id="form">
                 <div class="row">
                     <div class="input-field col s6">
                         <label for="cedula">Buscar Docente Por C.I</label>
@@ -20,19 +26,19 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s3">
                         <i class="mdi-social-person prefix"></i>
-                        <input id="nombre" type="text" name="nombre" class="validate" disabled="disabled">
+                        <input id="nombre" type="text" name="nombre" class="validate" readonly">
                         <label for="nombre">Nombre</label>
                     </div>
 
 
                     <div class="input-field col s3">
-                        <input id="apellido" type="text" name="apellido" class="validate" disabled="disabled">
+                        <input id="apellido" type="text" name="apellido" class="validate" readonly">
                         <label for="apellido">Apellidos</label>
                     </div>
 
                     <div class="input-field col s3">
                         <i class="mdi-action-perm-identity prefix"></i>
-                        <input id="cedula" type="text" name="cedula" class="validate" disabled="disabled">
+                        <input id="ced" type="text" name="ced" class="validate" readonly">
                         <label for="cedula">Cedula</label>
                     </div>
                 </div>
@@ -63,6 +69,11 @@ include "plantilla/menu.php";
                                 </select>
                             </div>
                 </div>
+                <center>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                        <i class="material-icons">ENVIAR</i>
+                    </button>
+                </center>
             </form>
         </div>
     </div>

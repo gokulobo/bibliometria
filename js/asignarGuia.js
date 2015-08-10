@@ -1,4 +1,7 @@
 $(function () {
+    $('select').material_select();
+});
+$(function () {
     $.ajax({url : "listaCohorte.php",type : "POST",
         success : function(resp) {
             $("#cohorte").html(resp);
@@ -12,12 +15,14 @@ function buscar(){
         alert("Debe ingresar una cedula");
         return false;
     }
-    $.ajax({url : "buscarDocente.php",type : "POST",data:"cedula="+cedula,dataType : "json",
+    $.ajax({url : "buscar/buscarDocente.php",type : "POST",data:"cedula="+cedula,dataType : "json",
         success : function(json) {
+            $("#nombre").focus();
             $("#nombre").val(json.nombre);
+            $("#ced").focus();
             $("#ced").val(cedula);
+            $("#apellido").focus();
             $("#apellido").val(json.apellido);
-            $("#correo").val(json.correo);
             $("#id_docente").val(json.id_docente);
         }
     });
@@ -27,7 +32,7 @@ function buscar(){
 function guardar(){
     var formulario = $("form").serialize();
     alert(formulario);
-    $.ajax({url : "guardarAsigGuia.php",type : "POST",data:formulario,
+    $.ajax({url : "guardar/guardarAsigGuia.php",type : "POST",data:formulario,
         success : function(resp) {
             alert(resp);
             $("#form1")[0].reset();
