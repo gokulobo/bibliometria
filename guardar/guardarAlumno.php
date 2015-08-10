@@ -1,5 +1,5 @@
 <?php
-require("datos/conectar.php");
+require("../datos/conectar.php");
 if($_POST['id_alumno']==0){
     $inserta = "INSERT into alumnos(nombre,apellido,nacionalidad,cedula,carnet,grado_instruccion,correo,direccion_hab,
             telefono_hab,telefono_cel,id_cohorte,id_carrera,trayecto,trimestre) values('".$_POST['nombre']."',

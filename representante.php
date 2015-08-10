@@ -4,22 +4,14 @@ include "plantilla/menu.php";
 <script type="text/javascript" src="js/representante.js"></script>
     <div class="container">
         <div class="row">
-            <div class="col s12"></div>
-            <form name="form" method="post" action="#"  onsubmit="return guardar();" id="form">
 
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <i class="mdi-social-person prefix red-text"></i>
-                                <input id="nombre" type="text" name="nombre" class="validate hide-on-small-only" required="required">
-                                <label for="nombre">Nombre</label>
-                            </div>
-
-
-                            <div class="input-field col s6">
-                                <input id="apellido" type="text" name="apellido" class="validate" required="required">
-                                <label for="apellido">Apellidos</label>
-                            </div>
+                    <div class="row">
+                        <div class="col s12 card-panel">
+                            <h5 class="header center">Registro de los Representantes de la Comunidad</h5>
                         </div>
+                    </div>
+
+            <form name="form" method="post" action="#"  onsubmit="return guardar();" id="form">
 
                         <div class="row">
 
@@ -36,6 +28,22 @@ include "plantilla/menu.php";
                                 <label for="cedula">Cedula</label>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="mdi-social-person prefix red-text"></i>
+                                <input id="nombre" type="text" name="nombre" class="validate hide-on-small-only" required="required">
+                                <label for="nombre">Nombre</label>
+                            </div>
+
+
+                            <div class="input-field col s6">
+                                <input id="apellido" type="text" name="apellido" class="validate" required="required">
+                                <label for="apellido">Apellidos</label>
+                            </div>
+                        </div>
+
+
 
                         <div class="row">
                                 <div class="input-field col s6">

@@ -1,10 +1,17 @@
 <?php
 include "plantilla/menu.php"
 ?>
-    <script src="js/alumno.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/alumno.js"></script>
 
 <div class="container">
     <div class="row">
+
+        <div class="row">
+            <div class="col s12 card-panel">
+                <h5 class="header center">Registro de Alumnos</h5>
+            </div>
+        </div>
+
         <form class="col s12">
 
                     <div class="row">
@@ -16,7 +23,7 @@ include "plantilla/menu.php"
 
                     <div class="row">
                         <div class="input-field col s6">
-                            <select name="nacionalidad" id="nacionalidad">
+                            <select name="nacionalidad" id="nacionalidad" class="browser-default">
                                 <option value="" disabled selected>Nacionalidad</option>
                                 <option value="Venezolano(a)">Venezolano(a)</option>
                                 <option value="Extranjero(a)">Extranjero(a)</option>
@@ -66,7 +73,7 @@ include "plantilla/menu.php"
                         </div>
 
                         <div class="input-field col s6">
-                            <select name="grado_instruccion" id="grado_instruccion">
+                            <select name="grado_instruccion" id="grado_instruccion" class="browser-default">
                                 <option value="Bachiller">Bachiller</option>
                                 <option value="TSU">TSU</option>
                                 <option value="Universitario(a)">Universitario(a)</option>
@@ -109,18 +116,18 @@ include "plantilla/menu.php"
                         <div class="input-field col s6">
 
                             <label for="carrera">Carrera</label>
-                            <select name="carrera" id="carrera" title=""></select>
+                            <select name="carrera" id="carrera" class="browser-default"></select>
                         </div>
 
                         <div class="input-field col s6">
                             <label for="numero_cohorte">Numero de Cohorte</label>
-                            <select name="cohorte" id="cohorte" title=""></select>
+                            <select name="cohorte" id="cohorte" class="browser-default"></select>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s3">
-                            <select name="trayecto" id="trayecto">
+                        <div class="input-field col s6">
+                            <select name="trayecto" id="trayecto" class="browser-default">
                                 <option value="" disabled selected>Seleccione Trayecto</option>
                                 <option value="I">I</option>
                                 <option value="II">II</option>
@@ -130,8 +137,8 @@ include "plantilla/menu.php"
                             </select>
                         </div>
 
-                        <div class="input-field col s3">
-                            <select name="trimestre" id="trimestre">
+                        <div class="input-field col s6">
+                            <select name="trimestre" id="trimestre" class="browser-default">
                                 <option value="" disabled selected>Seleccione Trimestre</option>
                                 <option value="I">I</option>
                                 <option value="II">II</option>
