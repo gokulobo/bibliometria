@@ -4,8 +4,14 @@ include "plantilla/menu.php";
 <script type="text/javascript" src="js/investigacion.js"></script>
 <div class="container">
     <div class="row">
-        <script type="text/javascript" src="js/asignarEstudios.js"></script>
-        <form name="form" method="POST" action="#" onSubmit="return guardar();">
+
+        <div class="row">
+            <div class="col s12 card-panel">
+                <h5 class="header center">Registro de Investigación</h5>
+            </div>
+        </div>
+
+        <form name="form" method="POST" action="#" onSubmit="return guardar();" id="form">
             <div class="row">
                 <div class="input-field col s6">
                     <label for="cedula">Buscar Docente Por C.I</label>
@@ -20,20 +26,20 @@ include "plantilla/menu.php";
             <div class="row">
                 <div class="input-field col s3">
                     <i class="mdi-social-person prefix"></i>
-                    <input id="nombre1" type="text" name="nombre" class="validate" disabled="disabled">
-                    <label for="nombre1">Nombre</label>
+                    <input id="nombre" type="text" name="nombre" class="validate" readonly">
+                    <label for="nombre">Nombre</label>
                 </div>
 
 
                 <div class="input-field col s3">
-                    <input id="apellido" type="text" name="apellido" class="validate" disabled="disabled">
+                    <input id="apellido" type="text" name="apellido" class="validate" readonly">
                     <label for="apellido">Apellidos</label>
                 </div>
 
                 <div class="input-field col s3">
                     <i class="mdi-action-perm-identity prefix"></i>
-                    <input id="cedula" type="text" name="cedula" class="validate" disabled="disabled">
-                    <label for="cedula">Cedula</label>
+                    <input id="ced" type="text" name="ced" class="validate" readonly">
+                    <label for="ced">Cedula</label>
                 </div>
             </div>
 
@@ -46,7 +52,7 @@ include "plantilla/menu.php";
             </div>
 
             <div class="input-field col s6">
-                <input id="nivel_peii" type="text" name="peii" class="validate">
+                <input id="nivel_peii" type="text" name="nivel_peii" class="validate">
                 <label for="nivel_peii">Nivel de PEII</label>
             </div>
 
@@ -65,8 +71,8 @@ include "plantilla/menu.php";
             </div>
 
             <div class="input-field col s6">
-                <input id="nombre_grupo" type="text" name="nombre_grupo" class="validate">
-                <label for="nombre_grupo">Nombre Grupo</label>
+                <input id="nombre_investigacion" type="text" name="nombre_investigacion" class="validate">
+                <label for="nombre_investigacion">Nombre Grupo</label>
             </div>
 
             <div class="input-field col s6">
@@ -76,13 +82,17 @@ include "plantilla/menu.php";
 
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="observaciones" name="observaciones" class="observaciones"></textarea>
-                    <label for="observaciones">Observaciones</label>
+                    <input id="observaciones" name="observaciones" type="text" class="validate">
+                    <label form="observaciones">Observaciones</label>
                 </div>
             </div>
 
+            <center>
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                    <i class="material-icons">ENVIAR</i>
+                </button>
+            </center>
         </form>
-
     </div>
 
 

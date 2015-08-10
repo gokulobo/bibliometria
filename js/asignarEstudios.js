@@ -29,7 +29,7 @@ function buscar(){
 function guardar(){
     var formulario = $("form").serialize();
     $.ajax({
-        url : "guardarEstudio.php",
+        url : "guardar/guardarEstudio.php",
         type : "POST",
         data:formulario,
         success : function(resp) {

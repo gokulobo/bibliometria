@@ -5,6 +5,11 @@ include"plantilla/menu.php";
     <div class="container">
         <div class="row">
 
+            <div class="row">
+                <div class="col s12 card-panel">
+                    <h5 class="header center">Registro de Estudios</h5>
+                </div>
+            </div>
 
             <form name="form" method="post" action="#" onsubmit="return guardar();" id="form">
                 <div class="row">
@@ -63,7 +68,7 @@ include"plantilla/menu.php";
 
                 <center>
                     <button class="btn waves-effect waves-light" type="submit" name="action">
-                        <i class="material-icons">ENVIAR</i>
+                        <i class="material-icons">Guardar</i>
                     </button>
                 </center>
             </form>
