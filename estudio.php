@@ -17,7 +17,7 @@ include"plantilla/menu.php";
                         <label for="cedula">Buscar Docente Por C.I</label>
                         <input name="cedula" type="text" id="cedula">
 
-                        <input type="button" name="button" id="button" value="Buscar" onclick="buscar();" />
+                        <input class="btn waves-effect waves-light" type="button" name="button" id="button" value="Buscar" onclick="buscar();" />
                         <input type="hidden" id="id_docente" name="id_docente" />
                     </div>
                 </div>
