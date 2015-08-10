@@ -30,28 +30,33 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 <body>
 <ul id="menudocente" class="dropdown-content">
     <li><a href="registrardocente.php">Datos del Docente</a></li>
-    <li><a href="asignar_guia.php">Asignar Docente</a></li>
     <li><a href="estudio.php">Estudios Realizados</a></li>
     <li><a href="investigacion.php">PEII</a></li>
     <li><a href="articulo.php">Articulos</a></li>
-    <li><a href="#">Registrar Cohorte</a></li>
+    <li><a href="cohorte.php">Registrar Cohorte</a></li>
+    <li><a href="asignar_guia.php">Asignar Docente</a></li>
 </ul>
 <ul id="menuproyecto" class="dropdown-content">
-    <li><a href="#"></a>Proyecto</li>
     <li><a href="alumno.php">Alumno</a></li>
-    <li><a href="#"></a>Grupo</li>
+    <li><a href="comunidad.php">Comunidad</a></li>
+    <li><a href="representante.php">Representante</a></li>
+    <li><a href="proyecto.php">Proyecto</a></li>
+    <li><a href="#">Grupo</a></li>
+</ul>
 </ul>
 <ul id="menudocente1" class="dropdown-content">
     <li><a href="registrardocente.php">Datos del Docente</a></li>
-    <li><a href="asignar_guia.php">Asignar Docente</a></li>
     <li><a href="estudio.php">Estudios Realizados</a></li>
     <li><a href="investigacion.php">PEII</a></li>
     <li><a href="articulo.php">Articulos</a></li>
-    <li><a href="#">Registrar Cohorte</a></li>
+    <li><a href="cohorte.php">Registrar Cohorte</a></li>
+    <li><a href="asignar_guia.php">Asignar Docente</a></li>
 </ul>
 <ul id="menuproyecto1" class="dropdown-content">
-    <li><a href="#"></a>Proyecto</li>
     <li><a href="alumno.php">Alumno</a></li>
+    <li><a href="comunidad.php">Comunidad</a></li>
+    <li><a href="representante.php">Representante</a></li>
+    <li><a href="proyecto.php">Proyecto</a></li>
     <li><a href="#"></a>Grupo</li>
 </ul>
 <nav>
