@@ -1,5 +1,5 @@
 <?php
-require("datos/conectar.php");
+require("../datos/conectar.php");
 if($_POST['id_proyecto']==0){
     $inserta = "INSERT into proyecto(titulo_proyecto,area_investigacion,tipo_proyecto,apoyo,tipo_apoyo,resumen_proyecto,
 id_carrera,id_comunidad,id_docente) values('".$_POST['titulo_proyecto']."',
