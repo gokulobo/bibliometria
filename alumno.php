@@ -12,7 +12,7 @@ include "plantilla/menu.php"
             </div>
         </div>
 
-        <form class="col s12">
+        <form name="form" method="POST" action="#" onsubmit="return guardar();" id="form">
 
                     <div class="row">
                         <div class="input-field col s2">
@@ -117,7 +117,7 @@ include "plantilla/menu.php"
                     <div class="row">
                         <div class="input-field col s6">
 
-                            <label for="carrera">Carrera</label>
+                            <label for="carrera"></label>
                             <select name="carrera" id="carrera" class="browser-default" required="required"></select>
                         </div>
 

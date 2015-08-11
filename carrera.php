@@ -1,6 +1,7 @@
 <?php
 include"plantilla/menu.php"
 ?>
+    <script type="text/javascript" src="js/carrera.js"></script>
     <div class="container">
         <div class="row">
 

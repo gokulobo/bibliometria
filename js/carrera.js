@@ -1,4 +1,8 @@
 $(function () {
+    $('select').material_select();
+});
+
+$(function () {
     $.ajax({url : "listar/listarSede.php",type : "POST",
         success : function(resp) {
             $("#id_sede").html(resp);

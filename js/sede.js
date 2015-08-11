@@ -1,3 +1,7 @@
+$(function () {
+    $('select').material_select();
+});
+
 function guardar(){
     var formulario = $("form").serialize();
     $.ajax({url : "guardar/guardarSede.php",type : "POST",data:formulario,
