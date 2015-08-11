@@ -30,11 +30,7 @@ $(function () {
             $("#carrera").html(resp);
         }
     });
-    $.ajax({url : "listaCohorte.php",type : "POST",
-        success : function(resp) {
-            $("#cohorte").html(resp);
-        }
-    });
+
 });
 
 function guardar(){
