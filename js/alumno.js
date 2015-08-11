@@ -36,8 +36,19 @@ function guardar(){
     $.ajax({url : "guardar/guardarAlumno.php",type : "POST",data:formulario,
         success : function(resp) {
             alert(resp);
+            $('form').each (function(){
+                this.reset();
+            });
 
+            /*if(confirm("Se proceso con exito.¿Desea ingresar otro docente ?")){
+             $('#frmDocente').each (function(){
+             this.reset();
+             });
+             }else{
+             window.location="inicio.php";
+             }*/
         }
+
     });
     return false;
 
@@ -49,7 +60,7 @@ function buscar(){
         alert("Debe ingresar una cedula");
         return false;
     }
-    $.ajax({url : "buscarAlumnoEditar.php",type : "POST",data:"cedula="+cedula,dataType : "json",
+    $.ajax({url : "buscar/buscarAlumnoEditar.php",type : "POST",data:"cedula="+cedula,dataType : "json",
         success : function(json) {
             //alert(json);
             if(json['respuesta']=="si"){
@@ -73,4 +84,10 @@ function buscar(){
 
         }
     });
+
+}
+
+function ValidaSoloNumeros() {
+    if ((event.keyCode < 48) || (event.keyCode > 57))
+        event.returnValue = false;
 }

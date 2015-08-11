@@ -23,7 +23,7 @@ include "plantilla/menu.php"
 
                     <div class="row">
                         <div class="input-field col s6">
-                            <select name="nacionalidad" id="nacionalidad" class="browser-default">
+                            <select name="nacionalidad" id="nacionalidad" class="browser-default" required="required">
                                 <option value="" disabled selected>Nacionalidad</option>
                                 <option value="Venezolano(a)">Venezolano(a)</option>
                                 <option value="Extranjero(a)">Extranjero(a)</option>
@@ -31,7 +31,9 @@ include "plantilla/menu.php"
                         </div>
 
                         <div class="input-field col s6">
-                            <input id="cedula" type="number" name="cedula" class="validate" required="required">
+                            <input type="hidden" id="id_alumno" name="id_alumno" value="0">
+                            <input id="cedula" name="cedula" type="text" class="validate" required="required"
+                                   onkeypress="ValidaSoloNumeros()" onblur="buscar();">
                             <label for="cedula">Cedula</label>
                         </div>
                     </div>
@@ -55,7 +57,7 @@ include "plantilla/menu.php"
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="mdi-action-today prefix"></i>
-                            <input id="fecha_nac" type="date" name="fecha_nac" class="datepicker" value="Nacionalida">
+                            <input id="fecha_nac" type="date" name="fecha_nac" class="datepicker" required="required">
                             <label for="fecha_nac">Fecha de Nacimiento</label>
                         </div>
 

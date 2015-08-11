@@ -16,7 +16,8 @@ include "plantilla/menu.php";
                     <div class="row">
                         <div class="input-field col s6">
                             <label for="cedula">Buscar Docente Por C.I</label>
-                            <input name="cedula" type="text" id="cedula">
+                            <input id="cedula" name="cedula" type="text" class="validate" required="required"
+                            onkeypress="ValidaSoloNumeros()" onblur="buscar();">
 
                             <input class="btn waves-effect waves-light" type="button" name="button" id="button" value="Buscar" onclick="buscar();" />
                             <input type="hidden" id="id_docente" name="id_docente" />
