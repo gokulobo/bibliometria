@@ -1,5 +1,12 @@
 $(function () {
     $('select').material_select();
+    $.ajax({
+        url : "listar/listaCohorte.php",
+        type : "POST",
+        success : function(resp) {
+            $("#cohorte").html(resp);
+        }
+    });
 
     $('.datepicker').pickadate({
         labelMonthNext: 'Next month',

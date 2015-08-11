@@ -122,8 +122,8 @@ include "plantilla/menu.php"
                         </div>
 
                         <div class="input-field col s6">
-                            <label for="numero_cohorte">Numero de Cohorte</label>
                             <select name="cohorte" id="cohorte" class="browser-default" required="required"></select>
+                            <option value="" disabled selected></option>
                         </div>
                     </div>
 
