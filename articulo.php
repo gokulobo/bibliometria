@@ -46,7 +46,7 @@ include "plantilla/menu.php";
 
                     <div class="row">
                             <div class="input-field col s6">
-                                <input id="titulo" type="text" name="titulo" class="validate">
+                                <input id="titulo" type="text" name="titulo" class="validate" required="required">
                                 <label for="titulo">Titulo</label>
                             </div>
 
@@ -54,30 +54,30 @@ include "plantilla/menu.php";
                             <div class="input-field col s6">
                                 <i class="mdi-action-today prefix"></i>
                                 <label for="">Fecha de Publicacion</label>
-                                <input id="fecha_publicacion" name="fecha_publicacion" type="date"  class="datepicker">
+                                <input id="fecha_publicacion" name="fecha_publicacion" type="date"  class="datepicker" required="required">
                             </div>
                     </div>
 
                     <div>
                             <div class="input-field col s6">
-                                <input id="volumen" type="text" name="volumen" class="validate">
+                                <input id="volumen" type="text" name="volumen" class="validate" required="required">
                                 <label for="Volumen">Volumen</label>
                             </div>
 
                             <div class="input-field col s6">
-                                <input id="numeracion" type="text" name="numeracion" class="validate">
+                                <input id="numeracion" type="text" name="numeracion" class="validate" required="required">
                                 <label for="numeracion">Numeracion</label>
                             </div>
                     </div>
 
                     <div>
                             <div class="input-field col s6">
-                                <input id="issn" type="tel" name="issn" class="validate">
+                                <input id="issn" type="tel" name="issn" class="validate" required="required">
                                 <label for="issn">ISSN</label>
                             </div>
 
                             <div class="input-field col s6">
-                                <input id="pagina_colacion" type="text" name="pagina_colacion" class="validate">
+                                <input id="pagina_colacion" type="text" name="pagina_colacion" class="validate" required="required">
                                 <label for="pagina_colacion">Pagina de Colacion</label>
                             </div>
                     </div>

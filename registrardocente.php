@@ -51,14 +51,14 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="mdi-social-person prefix"></i>
-                        <input id="nombre" name="nombre" type="text" class="validate">
+                        <input id="nombre" name="nombre" type="text" class="validate" required="required">
                         <label for="nombre">Nombre</label>
                     </div>
 
 
                     <div class="input-field col s6">
                         <i class="mdi-social-person prefix"></i>
-                        <input id="apellido" name="apellido" type="text" class="validate">
+                        <input id="apellido" name="apellido" type="text" class="validate" required="required">
                         <label for="apellido">Apellidos</label>
                     </div>
                 </div>
@@ -66,12 +66,12 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="mdi-action-today prefix"></i>
-                        <input id="fecha_nac" type="date" name="fecha_nac" class="datepicker" value="">
+                        <input id="fecha_nac" type="date" name="fecha_nac" class="datepicker" value="" required="required">
                         <label for="">Fecha de Nacimiento</label>
                     </div>
 
                     <div class="input-field col s6">
-                        <input id="lugar_nac" name="lugar_nac" type="text" class="validate">
+                        <input id="lugar_nac" name="lugar_nac" type="text" class="validate" required="required">
                         <label for="lugar_nac">Lugar de Nacimiento</label>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="mdi-communication-email prefix"></i>
-                        <input id="correo" name="correo" type="email" class="validate">
+                        <input id="correo" name="correo" type="email" class="validate" required="required">
                         <label for="correo" data-error="Correo Invalido">Email</label>
                     </div>
                 </div>
@@ -87,13 +87,13 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="mdi-action-settings-phone prefix"></i>
-                        <input id="telefono_hab" name="telefono_hab" type="text" class="validate">
+                        <input id="telefono_hab" name="telefono_hab" type="text" class="validate" required="required">
                         <label for="telefono_hab">Telefono Fijo</label>
                     </div>
 
                     <div class="input-field col s6">
                         <i class="mdi-hardware-phone-android prefix"></i>
-                        <input id="telefono_cel" name="telefono_cel" type="text" class="validate">
+                        <input id="telefono_cel" name="telefono_cel" type="text" class="validate" required="required">
                         <label for="telefono_cel">Telefono Movil</label>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="mdi-action-home prefix"></i>
-                        <input id="direccion" name="direccion" type="text" class="validate">
+                        <input id="direccion" name="direccion" type="text" class="validate" required="required">
                         <label for="direccion">Dirección</label>
                     </div>
                 </div>
@@ -113,19 +113,19 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="mdi-action-work prefix"></i>
-                        <input id="profesion" name="profesion" type="text" class="validate">
+                        <input id="profesion" name="profesion" type="text" class="validate" required="required">
                         <label for="profesion">Profesión</label>
                     </div>
 
                     <div class="input-field col s6">
-                        <input id="cargo" name="cargo" type="text" class="validate">
+                        <input id="cargo" name="cargo" type="text" class="validate" required="required">
                         <label for="cargo">Cargo</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s6">
-                        <select name="categoria" id="categoria" class="browser-default green">
+                        <select name="categoria" id="categoria" class="browser-default" required="required">
                             <option value="" disabled selected>Categoria</option>
                             <option value="Asistente(a)">Asistente</option>
                             <option value="Asociado(a)">Asociado(a)</option>
@@ -136,7 +136,7 @@ include "plantilla/menu.php";
                     </div>
 
                     <div class="input-field col s6">
-                        <select name="modalidad" id="modalidad" class="browser-default green">
+                        <select name="modalidad" id="modalidad" class="browser-default" required="required">
                             <option value="" disabled selected>Modalidad</option>
                             <option value="Presencial">Presencial</option>
                             <option value="Semi-presencial">Semi-presencial</option>
@@ -146,7 +146,7 @@ include "plantilla/menu.php";
 
                 <div class="row">
                     <div class="input-field col s6">
-                        <select name="dedicacion" id="dedicacion" class="browser-default green">
+                        <select name="dedicacion" id="dedicacion" class="browser-default" required="required">
                             <option value="" disabled selected>Dedicacion</option>
                             <option value="Exclusivo(a)">Exclusivo(a)</option>
                             <option value="Medio Tiempo">Medio Tiempo</option>
@@ -167,19 +167,19 @@ include "plantilla/menu.php";
                     <div class="input-field col s6">
                         <i class="mdi-action-today prefix"></i>
                         <label for="fecha_ingreso">Fecha de Ingreso</label>
-                        <input id="fecha_ingreso" name="fecha_ingreso" type="date" class="datepicker">
+                        <input id="fecha_ingreso" name="fecha_ingreso" type="date" class="datepicker" required="required">
                     </div>
 
 
                     <div class="input-field col s6">
-                        <input id="investigacion" name="investigacion" type="text" class="validate">
+                        <input id="investigacion" name="investigacion" type="text" class="validate" required="required">
                         <label for="investigacion">Linea de Investigacion</label>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s3">
-                        <input id="clave_usuario" name="clave_usuario" type="password" class="validate">
+                        <input id="clave_usuario" name="clave_usuario" type="password" class="validate" required="required">
                         <label for="clave_usuario">Clave</label>
                     </div>
                     <div class="switch col s4">

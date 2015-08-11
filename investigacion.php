@@ -44,7 +44,7 @@ include "plantilla/menu.php";
             </div>
 
             <div class="input-field col s6">
-                <select name="peii" id="peii">
+                <select name="peii" id="peii" required="required">
                     <option value="" disabled selected>PEII</option>
                     <option value="Si">Si</option>
                     <option value="NO">No</option>
@@ -52,18 +52,18 @@ include "plantilla/menu.php";
             </div>
 
             <div class="input-field col s6">
-                <input id="nivel_peii" type="text" name="nivel_peii" class="validate">
+                <input id="nivel_peii" type="text" name="nivel_peii" class="validate" required="required">
                 <label for="nivel_peii">Nivel de PEII</label>
             </div>
 
 
             <div class="input-field col s6">
-                <input id="ano_aplicacion_peii" type="text" name="ano_aplicacion_peii" class="validate">
+                <input id="ano_aplicacion_peii" type="text" name="ano_aplicacion_peii" class="validate" required="required">
                 <label for="ano_aplicacion_peii">Año de Aplicacion del PEII</label>
             </div>
 
             <div class="input-field col s6">
-                <select name="forma_grupo_investigacion" id="forma_grupo_investigacion">
+                <select name="forma_grupo_investigacion" id="forma_grupo_investigacion" required="required">
                     <option value="" disabled selected>Forma Grupo de Investigacion</option>
                     <option value="Si">Si</option>
                     <option value="NO">No</option>
@@ -71,12 +71,12 @@ include "plantilla/menu.php";
             </div>
 
             <div class="input-field col s6">
-                <input id="nombre_investigacion" type="text" name="nombre_investigacion" class="validate">
+                <input id="nombre_investigacion" type="text" name="nombre_investigacion" class="validate" required="required">
                 <label for="nombre_investigacion">Nombre Grupo</label>
             </div>
 
             <div class="input-field col s6">
-                <input id="area_investigacion" type="text" name="area_investigacion" class="validate">
+                <input id="area_investigacion" type="text" name="area_investigacion" class="validate" required="required">
                 <label for="area_investigacion">Area de Investigacion</label>
             </div>
 

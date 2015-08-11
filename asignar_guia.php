@@ -7,7 +7,7 @@ include "plantilla/menu.php";
 
             <div class="row">
                 <div class="col s12 card-panel">
-                    <h5 class="header center">Asignación de Cohorte</h5>
+                    <h5 class="header center">Asignación de Docente</h5>
                 </div>
             </div>
 
@@ -26,31 +26,31 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s3">
                         <i class="mdi-social-person prefix"></i>
-                        <input id="nombre" type="text" name="nombre" class="validate" readonly">
+                        <input id="nombre" type="text" name="nombre" class="validate" readonly>
                         <label for="nombre">Nombre</label>
                     </div>
 
 
                     <div class="input-field col s3">
-                        <input id="apellido" type="text" name="apellido" class="validate" readonly">
+                        <input id="apellido" type="text" name="apellido" class="validate" readonly>
                         <label for="apellido">Apellidos</label>
                     </div>
 
                     <div class="input-field col s3">
                         <i class="mdi-action-perm-identity prefix"></i>
-                        <input id="ced" type="text" name="ced" class="validate" readonly">
+                        <input id="ced" type="text" name="ced" class="validate" readonly>
                         <label for="cedula">Cedula</label>
                     </div>
                 </div>
 
                 <div class="row">
                             <div class="input-field col s3">
-                                <select name="cohorte" id="cohorte" class="browser-default green"></select>
+                                <select name="cohorte" id="cohorte" class="browser-default" required="required"></select>
                                 <option value="" disabled selected>Seleccione Cohorte</option>
                             </div>
 
                             <div class="input-field col s3">
-                                <select name="trayecto" id="trayecto" class="browser-default green">
+                                <select name="trayecto" id="trayecto" class="browser-default" required="required">
                                     <option value="" disabled selected>Seleccione Trayecto</option>
                                     <option value="I">I</option>
                                     <option value="II">II</option>
@@ -61,7 +61,7 @@ include "plantilla/menu.php";
                             </div>
 
                             <div class="input-field col s3">
-                                <select name="trimestre" id="trimestre" class="browser-default green">
+                                <select name="trimestre" id="trimestre" class="browser-default" required="required">
                                     <option value="" disabled selected>Seleccione Modalidad</option>
                                     <option value="I">I</option>
                                     <option value="II">II</option>

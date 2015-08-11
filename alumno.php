@@ -73,7 +73,7 @@ include "plantilla/menu.php"
                         </div>
 
                         <div class="input-field col s6">
-                            <select name="grado_instruccion" id="grado_instruccion" class="browser-default">
+                            <select name="grado_instruccion" id="grado_instruccion" class="browser-default" required="required">
                                 <option value="Bachiller">Bachiller</option>
                                 <option value="TSU">TSU</option>
                                 <option value="Universitario(a)">Universitario(a)</option>
@@ -92,7 +92,7 @@ include "plantilla/menu.php"
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="mdi-action-settings-phone prefix"></i>
-                            <input id="telefono_hab" type="text" name="telefono_hab" class="validate">
+                            <input id="telefono_hab" type="text" name="telefono_hab" class="validate" >
                             <label for="telefono_hab">Telefono Fijo</label>
                         </div>
 
@@ -116,18 +116,18 @@ include "plantilla/menu.php"
                         <div class="input-field col s6">
 
                             <label for="carrera">Carrera</label>
-                            <select name="carrera" id="carrera" class="browser-default"></select>
+                            <select name="carrera" id="carrera" class="browser-default" required="required"></select>
                         </div>
 
                         <div class="input-field col s6">
                             <label for="numero_cohorte">Numero de Cohorte</label>
-                            <select name="cohorte" id="cohorte" class="browser-default"></select>
+                            <select name="cohorte" id="cohorte" class="browser-default" required="required"></select>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s6">
-                            <select name="trayecto" id="trayecto" class="browser-default">
+                            <select name="trayecto" id="trayecto" class="browser-default" required="required">
                                 <option value="" disabled selected>Seleccione Trayecto</option>
                                 <option value="I">I</option>
                                 <option value="II">II</option>
@@ -138,7 +138,7 @@ include "plantilla/menu.php"
                         </div>
 
                         <div class="input-field col s6">
-                            <select name="trimestre" id="trimestre" class="browser-default">
+                            <select name="trimestre" id="trimestre" class="browser-default" required="required">
                                 <option value="" disabled selected>Seleccione Trimestre</option>
                                 <option value="I">I</option>
                                 <option value="II">II</option>

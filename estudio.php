@@ -45,7 +45,7 @@ include"plantilla/menu.php";
 
                 <div class="row">
                         <div class="input-field col s3">
-                        <select name="tipo" id="tipo" class="browser-default">
+                        <select name="tipo" id="tipo" class="browser-default" required="required">
                             <option value="Seleccione">Seleccione</option>
                             <option value="Pregrado">Pregrado</option>
                             <option value="Postgrado">Postgrado</option>
