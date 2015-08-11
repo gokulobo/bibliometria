@@ -1,5 +1,4 @@
 <?php
-<?php
 require("../datos/conectar.php");
 $inserta = "INSERT into estado(nombre_estado) values('".$_POST['nombre_estado']."')";
 $inserta = "INSERT into municipio(nombre_comunidad) values('".$_POST['nombre_comunidad']."')";
