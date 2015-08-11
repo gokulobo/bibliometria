@@ -1,6 +1,6 @@
 <?php
 
-require("datos/conectar.php");
+require("../datos/conectar.php");
 $based = ("SELECT id_comunidad,nombre_comunidad FROM comunidad");
 $rs = mysql_query($based);
 $opciones = "<option value='seleccione comunidad'>Seleccione Comunidad</option>";

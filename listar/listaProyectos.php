@@ -1,6 +1,6 @@
 <?php
 
-require("datos/conectar.php");
+require("../datos/conectar.php");
 $based = ("SELECT id_proyecto,titulo_proyecto FROM proyecto");
 $rs = mysql_query($based);
 $opciones = "<option value='0'>Seleccione Proyecto</option>";

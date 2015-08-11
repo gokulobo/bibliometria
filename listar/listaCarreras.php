@@ -1,6 +1,6 @@
 <?php
 
-require("datos/conectar.php");
+require("../datos/conectar.php");
 $based = ("SELECT * FROM carrera join sede on sede.id_sede = carrera.id_sede");
 $rs = mysql_query($based);
 $opciones = "<option value='seleccione carrera'>Seleccione Carrera</option>";

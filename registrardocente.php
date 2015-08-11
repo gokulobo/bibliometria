@@ -20,7 +20,7 @@ include "plantilla/menu.php";
         </div>
 
         <form action="#" method="post" onsubmit="return guardar();" id="frmDocente">
-            <div id="basico" class="col s12 card-panel cyan lighten-4">
+            <div id="basico" class="col s12 card-panel blue lighten-4">
 
                 <div class="row">
                     <div class="input-field col s2">

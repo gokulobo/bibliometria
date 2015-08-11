@@ -1,6 +1,6 @@
 <?php
 
-require("datos/conectar.php");
+require("../datos/conectar.php");
 $based = ("SELECT * FROM sede");
 $rs = mysql_query($based);
 $opciones = "<option value='seleccione sede'>Seleccione Sede</option>";

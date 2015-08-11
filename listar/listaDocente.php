@@ -1,6 +1,6 @@
 <?php
 
-require("datos/conectar.php");
+require("../datos/conectar.php");
 $based = ("SELECT id_docente,nombre FROM docente");
 $rs = mysql_query($based);
 $opciones = "<option value='seleccione docente'>Seleccione Docente</option>";
