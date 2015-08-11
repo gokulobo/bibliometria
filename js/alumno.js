@@ -63,7 +63,11 @@ function buscar(){
         alert("Debe ingresar una cedula");
         return false;
     }
-    $.ajax({url : "buscar/buscarAlumnoEditar.php",type : "POST",data:"cedula="+cedula,dataType : "json",
+    $.ajax({
+        url : "buscar/buscarAlumnoEditar.php",
+        type : "POST",
+        data:"cedula="+cedula,
+        dataType : "json",
         success : function(json) {
             //alert(json);
             if(json['respuesta']=="si"){
@@ -83,6 +87,16 @@ function buscar(){
                 $("#trayecto").val(json.trayecto);
                 $("#trimestre").val(json.trimestre);
                 $("#id_alumno").val(json.id_alumno);
+                $("#fecha_nac").val(json.fecha_nac);
+                $("#lugar_nac").val(json.lugar_nac);
+            }else {
+                $('form').each(function () {
+                    this.reset();
+                });
+                $("#id_alumno").val(0);
+                $("#cedula").val(cedula);
+                $("#nombre").focus();
+
             }
 
         }

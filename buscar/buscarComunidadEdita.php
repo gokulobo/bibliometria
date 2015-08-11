@@ -1,7 +1,8 @@
 <?php
+
 require("../datos/conectar.php");
-$cedula = $_POST['cedula'];
-$based = ("SELECT * FROM alumnos where cedula='".$cedula."'");
+$rif = $_POST['rif'];
+$based = ("SELECT * FROM comunidad where rif='".$rif."'");
 $rs = mysql_query($based);
 $datos=array();
 
@@ -11,8 +12,8 @@ if (mysql_num_rows($rs) > 0) {
         foreach ($fila as $clave => $valor) {
             $datos[$clave] = $valor;
         }
+        $datos["respuesta"]="si";
     }
-    $datos["respuesta"]="si";
 }else{
     $datos = array("respuesta"=>"no");
 }

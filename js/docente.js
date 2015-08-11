@@ -15,52 +15,53 @@ $(function () {
         today: 'Today',
         clear: 'Clear',
         close: 'Close',
-        selectYears:20,
-        selectMonths:true,
-        format:'yyyy-mm-dd'
+        selectYears: 20,
+        selectMonths: true,
+        format: 'yyyy-mm-dd'
     });
 
 
 });
 
-function guardar(){
+function guardar() {
     var formulario = $("#frmDocente").serialize();
     $.ajax({
-        url : "guardar/guardarDocente.php",
-        type : "POST",
-        data:formulario,
-        success : function(resp) {
+        url: "guardar/guardarDocente.php",
+        type: "POST",
+        data: formulario,
+        success: function (resp) {
             alert(resp);
-            $('#frmDocente').each (function(){
+            $('#frmDocente').each(function () {
                 this.reset();
             });
             /*if(confirm("Se proceso con exito.¿Desea ingresar otro docente ?")){
-                $('#frmDocente').each (function(){
-                    this.reset();
-                });
-            }else{
-                window.location="inicio.php";
-            }*/
+             $('#frmDocente').each (function(){
+             this.reset();
+             });
+             }else{
+             window.location="inicio.php";
+             }*/
         }
     });
     alert(formulario);
     return false;
 }
 
-function buscar(){
+function buscar() {
 
     var cedula = $("#cedula").val();
-    if(cedula == "") {
+    if (cedula == "") {
         alert("Debe ingresar una cedula");
         return false;
     }
-    $.ajax({url : "buscar/buscarDocenteEdita.php",
-        type : "POST",
-        data:"cedula="+cedula,
-        dataType : "json",
-        success : function(json) {
+    $.ajax({
+        url: "buscar/buscarDocenteEdita.php",
+        type: "POST",
+        data: "cedula=" + cedula,
+        dataType: "json",
+        success: function (json) {
             //alert(json);
-            if(json['respuesta']=="si"){
+            if (json['respuesta'] == "si") {
                 $('ul.tabs').tabs('select_tab', 'laboral');
                 $("#profesion").focus();
                 $("#profesion").val(json.profesion);
@@ -76,8 +77,8 @@ function buscar(){
                 $("#cargo").val(json.cargo);
                 $("#observaciones").focus();
                 $("#observaciones").val(json.observaciones);
-                if(json.guia == 1)$("#guia").attr("checked",true);
-                if(json.coordinador == 1)$("#coordinador").attr("checked",true);
+                if (json.guia == 1)$("#guia").attr("checked", true);
+                if (json.coordinador == 1)$("#coordinador").attr("checked", true);
 
 
                 $('ul.tabs').tabs('select_tab', 'basico');
@@ -99,8 +100,8 @@ function buscar(){
                 $("#fecha_nac").val(json.fecha_nac);
                 $("#nacionalidad").val(json.nacionalidad);
                 $("#nombre").focus();
-            }else{
-                $('#frmDocente').each (function(){
+            } else {
+                $('#frmDocente').each(function () {
                     this.reset();
                 });
                 $("#id_docente").val(0);
@@ -108,11 +109,9 @@ function buscar(){
                 $("#nombre").focus();
 
             }
-
         }
     });
-
-   }
+}
 
 function ValidaSoloNumeros() {
     if ((event.keyCode < 48) || (event.keyCode > 57))

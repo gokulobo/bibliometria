@@ -25,8 +25,8 @@ include "plantilla/menu.php"
                         <div class="input-field col s6">
                             <select name="nacionalidad" id="nacionalidad" class="browser-default" required="required">
                                 <option value="" disabled selected>Nacionalidad</option>
-                                <option value="Venezolano(a)">Venezolano(a)</option>
-                                <option value="Extranjero(a)">Extranjero(a)</option>
+                                <option value="V">Venezolano(a)</option>
+                                <option value="E">Extranjero(a)</option>
                             </select>
                         </div>
 
@@ -108,8 +108,8 @@ include "plantilla/menu.php"
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="mdi-action-home prefix"></i>
-                            <input id="direccion" type="text" class="validate" required="required">
-                            <label for="direccion">Dirección</label>
+                            <input id="direccion_hab" type="text" class="validate" required="required" name="direccion_hab">
+                            <label for="direccion_hab">Dirección</label>
                         </div>
                     </div>
 
