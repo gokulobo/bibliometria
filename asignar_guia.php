@@ -45,12 +45,12 @@ include "plantilla/menu.php";
 
                 <div class="row">
                             <div class="input-field col s3">
-                                <select name="cohorte" id="cohorte"></select>
+                                <select name="cohorte" id="cohorte" class="browser-default green"></select>
                                 <option value="" disabled selected>Seleccione Cohorte</option>
                             </div>
 
                             <div class="input-field col s3">
-                                <select name="trayecto" id="trayecto">
+                                <select name="trayecto" id="trayecto" class="browser-default green">
                                     <option value="" disabled selected>Seleccione Trayecto</option>
                                     <option value="I">I</option>
                                     <option value="II">II</option>
@@ -61,7 +61,7 @@ include "plantilla/menu.php";
                             </div>
 
                             <div class="input-field col s3">
-                                <select name="trimestre" id="trimestre">
+                                <select name="trimestre" id="trimestre" class="browser-default green">
                                     <option value="" disabled selected>Seleccione Modalidad</option>
                                     <option value="I">I</option>
                                     <option value="II">II</option>

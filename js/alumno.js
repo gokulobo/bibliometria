@@ -15,9 +15,10 @@ $(function () {
         clear: 'Clear',
         close: 'Close',
         selectYears:20,
-        selectMonths:true
+        selectMonths:true,
+        format:'yyyy-mm-dd'
     });
-    $.ajax({url : "listaCarreras.php",type : "POST",
+    $.ajax({url : "listar/listaCarreras.php",type : "POST",
         success : function(resp) {
             $("#carrera").html(resp);
         }

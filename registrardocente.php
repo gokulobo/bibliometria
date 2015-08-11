@@ -183,21 +183,22 @@ include "plantilla/menu.php";
                         <label for="clave_usuario">Clave</label>
                     </div>
                     <div class="switch col s4">
-                        <label form="coordinador">Coordinador(a)
-                            Off
+                        <label form="coordinador">Coordinador(a)</label>
+                        <label>
+                            No
                             <input id="coordinador" name="coordinador" type="checkbox">
                             <span class="lever"></span>
-                            On
+                            Si
                         </label>
                     </div>
 
                     <div class="row col s4">
                         <div class="switch">
                             <label form="guia">Guía
-                                Off
+                                No
                                 <input id="guia" name="guia" type="checkbox">
                                 <span class="lever"></span>
-                                On
+                                Si
                             </label>
                         </div>
                     </div>

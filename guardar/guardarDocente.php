@@ -25,8 +25,16 @@ if($_POST['id_docente']==0){
     cargo='".$_POST['cargo']."',correo='".$_POST['correo']."',telefono_hab='".$_POST['telefono_hab']."',
     telefono_cel='".$_POST['telefono_cel']."',direccion_hab='".$_POST['direccion']."',categoria='".$_POST['categoria']."',modalidad='".$_POST['modalidad']."',
     dedicacion='".$_POST['dedicacion']."',ascenso='".$_POST['ascenso']."',fecha_ingreso='".$_POST['fecha_ingreso']."',investigacion='".$_POST['investigacion']."',observaciones='".$_POST['observaciones']."'";
-    if(isset($_POST['guia'])) $actualiza .=",guia=1";
-    if(isset($_POST['coordinador'])) $inserta .=",coordinador=1";
+    if(isset($_POST['guia'])) {
+        $actualiza .=",guia=1";
+    }else{
+        $actualiza .=",guia=0";
+    }
+    if(isset($_POST['coordinador'])) {
+        $actualiza .=",coordinador=1";
+    }else{
+        $actualiza .=",coordinador=0";
+    }
     $actualiza.=" WHERE id_docente=".$_POST['id_docente']."
     ";
     $rs = mysql_query($actualiza);

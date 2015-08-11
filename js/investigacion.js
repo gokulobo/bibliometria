@@ -28,7 +28,16 @@ function guardar(){
     $.ajax({url : "guardar/guardarInvestigacion.php",type : "POST",data:formulario,
         success : function(resp) {
             alert(resp);
-            $("#form1")[0].reset();
+            $('form').each (function(){
+                this.reset();
+            });
+            /*if(confirm("Se proceso con exito.¿Desea ingresar otro docente ?")){
+             $('#frmDocente').each (function(){
+             this.reset();
+             });
+             }else{
+             window.location="inicio.php";
+             }*/
         }
     });
     return false;

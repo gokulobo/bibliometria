@@ -1,8 +1,8 @@
 $(function () {
     $('select').material_select();
-});
-$(function () {
-    $.ajax({url : "listaCohorte.php",type : "POST",
+    $.ajax({
+        url : "listar/listaCohorte.php",
+        type : "POST",
         success : function(resp) {
             $("#cohorte").html(resp);
         }

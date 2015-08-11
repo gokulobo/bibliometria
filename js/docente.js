@@ -16,7 +16,8 @@ $(function () {
         clear: 'Clear',
         close: 'Close',
         selectYears:20,
-        selectMonths:true
+        selectMonths:true,
+        format:'yyyy-mm-dd'
     });
 
 
@@ -30,7 +31,16 @@ function guardar(){
         data:formulario,
         success : function(resp) {
             alert(resp);
-            document.getElementById("form1").reset();
+            $('#frmDocente').each (function(){
+                this.reset();
+            });
+            /*if(confirm("Se proceso con exito.¿Desea ingresar otro docente ?")){
+                $('#frmDocente').each (function(){
+                    this.reset();
+                });
+            }else{
+                window.location="inicio.php";
+            }*/
         }
     });
     alert(formulario);
@@ -66,10 +76,9 @@ function buscar(){
                 $("#cargo").val(json.cargo);
                 $("#observaciones").focus();
                 $("#observaciones").val(json.observaciones);
-                //$("#guia").focus();
-                //$("#guia").val(json.guia);
-                //$("#coordinador").focus();
-                //$("#coordinador").val(json.coordinador);
+                if(json.guia == 1)$("#guia").attr("checked",true);
+                if(json.coordinador == 1)$("#coordinador").attr("checked",true);
+
 
                 $('ul.tabs').tabs('select_tab', 'basico');
                 $("#nombre").focus();
@@ -89,6 +98,15 @@ function buscar(){
                 $("#correo").val(json.correo);
                 $("#fecha_nac").val(json.fecha_nac);
                 $("#nacionalidad").val(json.nacionalidad);
+                $("#nombre").focus();
+            }else{
+                $('#frmDocente').each (function(){
+                    this.reset();
+                });
+                $("#id_docente").val(0);
+                $("#cedula").val(cedula);
+                $("#nombre").focus();
+
             }
 
         }
