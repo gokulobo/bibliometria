@@ -1,16 +1,43 @@
 $(function () {
     $('select').material_select();
+    estados();
 });
 
-function guardar(){
-    var formulario = $("form").serialize();
+function estados(){
     $.ajax({
-        url : "guardar/guardarVenezuela.php",
+        url : "listar/listarEstado.php",
+        type : "POST",
+        success : function(resp) {
+            $("#estado").html(resp);
+            $("#estadoP").html(resp);
+        }
+
+    });
+}
+
+function buscaMunicipio(){
+    var estado = $("#estadoP").val();
+    $.ajax({
+        url : "listar/listarMunicipio.php",
+        data: "estado="+estado,
+        type : "POST",
+        success : function(resp) {
+            $("#municipio").html(resp);
+        }
+
+    });
+}
+
+
+function guardarMunicipio(){
+    var formulario = $("#form1").serialize();
+    $.ajax({
+        url : "guardar/guardarMunicipio.php",
         type : "POST",
         data:formulario,
         success : function(resp) {
             alert(resp);
-            $('form').each (function(){
+            $('#form1').each (function(){
                 this.reset();
             });
 
@@ -25,39 +52,15 @@ function guardar(){
 
     });
 }
-
-function guardar(){
-    var formulario = $("form1").serialize();
+function guardarParroquia(){
+    var formulario = $("#form2").serialize();
     $.ajax({
-        url : "guardar/guardarVenezuela.php",
+        url : "guardar/guardarParroquia.php",
         type : "POST",
         data:formulario,
         success : function(resp) {
             alert(resp);
-            $('form').each (function(){
-                this.reset();
-            });
-
-            /*if(confirm("Se proceso con exito.¿Desea ingresar otro docente ?")){
-             $('#frmDocente').each (function(){
-             this.reset();
-             });
-             }else{
-             window.location="inicio.php";
-             }*/
-        }
-
-    });
-}
-function guardar(){
-    var formulario = $("form2").serialize();
-    $.ajax({
-        url : "guardar/guardarVenezuela.php",
-        type : "POST",
-        data:formulario,
-        success : function(resp) {
-            alert(resp);
-            $('form').each (function(){
+            $('#form2').each (function(){
                 this.reset();
             });
 
