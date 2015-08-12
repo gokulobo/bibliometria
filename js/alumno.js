@@ -75,15 +75,16 @@ function buscar(){
                 $("#nombre").val(json.nombre);
                 $("#apellido").focus();
                 $("#apellido").val(json.apellido);
+                $("#apellido").focus();
                 $("#fecha").focus();
                 $("#fecha").val(json.fecha);
-                $("#nacionalidad")..focus();
+
                 $("#nacionalidad").val(json.nacionalidad);
                 $("#cedula").focus();
                 $("#cedula").val(json.cedula);
                 $("#carnet").focus();
                 $("#carnet").val(json.carnet);
-                $("#grado_instruccion").focus();
+
                 $("#grado_instruccion").val(json.grado_instruccion);
                 $("#correo").focus();
                 $("#correo").val(json.correo);
@@ -93,15 +94,10 @@ function buscar(){
                 $("#telefono_hab").val(json.telefono_hab);
                 $("#telefono_cel").focus();
                 $("#telefono_cel").val(json.telefono_cel);
-                $("#carrera").focus();
                 $("#carrera").val(json.id_carrera);
-                $("#cohorte").focus();
                 $("#cohorte").val(json.id_cohorte);
-                $("#trayecto").focus();
                 $("#trayecto").val(json.trayecto);
-                $("#trimestre").focus();
                 $("#trimestre").val(json.trimestre);
-                $("#id_alumno").focus();
                 $("#id_alumno").val(json.id_alumno);
                 $("#fecha_nac").focus();
                 $("#fecha_nac").val(json.fecha_nac);
