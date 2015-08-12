@@ -95,8 +95,12 @@ function buscar() {
                 $("#telefono_cel").val(json.telefono_cel);
                 $("#direccion").focus();
                 $("#direccion").val(json.direccion);
-                $("#convenio").val(json.direccion);
                 $("#convenio").focus();
+                $("#convenio").val(json.convenio);
+                $("#tipo_convenio").focus();
+                $("#tipo_convenio").val(json.tipo_convenio);
+                $("#obsevaciones").focus();
+                $("#obsevaciones").val(json.obsevaciones);
                 $("#id_comunidad").val(json.convenio);
             } else {
                 $('form').each(function () {
