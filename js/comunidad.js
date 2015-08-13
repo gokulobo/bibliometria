@@ -99,15 +99,15 @@ function buscar() {
                 $("#convenio").val(json.convenio);
                 $("#tipo_convenio").focus();
                 $("#tipo_convenio").val(json.tipo_convenio);
-                $("#obsevaciones").focus();
-                $("#obsevaciones").val(json.obsevaciones);
-                $("#id_comunidad").val(json.convenio);
+                $("#observaciones").focus();
+                $("#observaciones").val(json.observaciones);
+                $("#id_comunidad").val(json.id_comunidad);
             } else {
                 $('form').each(function () {
                     this.reset();
                 });
                 $("#id_comunidad").val(0);
-
+                $("#rif").val(rif);
 
             }
         }

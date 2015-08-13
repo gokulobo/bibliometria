@@ -1,29 +1,30 @@
 $(function () {
-
     $('select').material_select();
-
-});
-
-$(function () {
-    $.ajax({url : "listaCarreras.php",type : "POST",
+    $.ajax({url : "listar/listaCarreras.php",type : "POST",
         success : function(resp) {
             $("#id_carrera").html(resp);
         }
     });
-    $.ajax({url : "listarComunidad.php",type : "POST",
-        success : function(resp) {
-            $("#id_comunidad").html(resp);
-        }
-    });
-    $.ajax({url : "listaDocente.php",type : "POST",
+    $.ajax({url : "listar/listaDocente.php",type : "POST",
         success : function(resp) {
             $("#id_docente").html(resp);
         }
     });
-    $.ajax({url : "listaProyectos.php",type : "POST",
+    $.ajax({
+        url : "listar/listarComunidad.php",
+        type : "POST",
+        success : function(resp) {
+            $("#id_comunidad").html(resp);
+        }
+
+    });
+    $.ajax({
+        url : "listar/listaProyectos.php",
+        type : "POST",
         success : function(resp) {
             $("#id_proyecto").html(resp);
         }
+
     });
 });
 

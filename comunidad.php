@@ -21,8 +21,8 @@ include "plantilla/menu.php";
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="rif" type="text" name="rif" class="validate" onblur="buscar();">
                         <input type="hidden" id="id_comunidad" name="id_comunidad" value="0">
+                        <input id="rif" name="rif" type="text" class="validate" required="required" onblur="buscar();">
                         <label for="rif">RIF</label>
                     </div>
                     <div class="input-field col s6">

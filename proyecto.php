@@ -1,9 +1,8 @@
 <?php
 include "plantilla/menu.php";
 ?>
-<script type="text/javascript" src="js/proyecto.js"></script>
-    <script type="text/javascript" src="js/alumno.js"></script>
-
+    <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="js/proyecto.js"></script>
     <div class="container">
         <div class="row">
 
@@ -13,24 +12,25 @@ include "plantilla/menu.php";
                 </div>
             </div>
 
-            <form class="col s12">
+            <form class="col s12" method="post" action="#" onsubmit=" return guardar();">
 
                 <div class="row">
-                    <div class="input-field col s2">
-                        <input id="fecha" type="text" value="<?php echo date("d/m/Y") ?>" disabled="disabled">
-
+                    <div class="input-field col s6 ">
+                        <select id="id_proyecto" name="id_proyecto" onchange="buscar();" class="browser-default"></select>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="titulo_proyecto" type="text" name="titulo_proyecto" class="validate" required="required">
+                        <input id="titulo_proyecto" type="text" name="titulo_proyecto" class="validate"
+                               required="required">
                         <label for="titulo_proyecto">Titulo del Proyecto</label>
                     </div>
 
 
                     <div class="input-field col s6">
-                        <input id="area_investigacion" type="text" name="area_investigacion" class="validate" required="required">
+                        <input id="area_investigacion" type="text" name="area_investigacion" class="validate"
+                               required="required">
                         <label for="area_investigacion">Area Investigacion</label>
                     </div>
                 </div>
@@ -55,20 +55,30 @@ include "plantilla/menu.php";
                 </div>
 
 
-
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                         <input id="tipo_apoyo" type="text" name="tipo_apoyo" class="validate" required="required">
                         <label for="tipo_apoyo">Clase de Apoyo</label>
                     </div>
                 </div>
 
                 <div class="row">
+                    <div class="input-field col s12">
+                        <input id="resumen_proyecto" name="resumen_proyecto" type="text" class="validate">
+                        <label form="resumen_proyecto">Resumen del Proyecto</label>
+                    </div>
+                </div>
 
-                        <div class="input-field col s12">
-                            <input id="resumen_proyecto" name="resumen_proyecto" type="text" class="validate">
-                            <label form="resumen_proyecto">Resumen del Proyecto</label>
-                        </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <select name="id_carrera" id="id_carrera" class="browser-default"></select>
+                    </div>
+                    <div class="input-field col s4">
+                        <select name="id_docente" id="id_docente" class="browser-default"></select>
+                    </div>
+                    <div class="input-field col s4">
+                        <select name="id_comunidad" id="id_comunidad" class="browser-default"></select>
+                    </div>
                 </div>
 
                 <div class="row">
