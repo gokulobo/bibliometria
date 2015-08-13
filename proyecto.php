@@ -1,7 +1,8 @@
 <?php
 include "plantilla/menu.php";
 ?>
-    <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet"  type="text/css">
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
     <script type="text/javascript" src="js/proyecto.js"></script>
     <div class="container">
         <div class="row">
@@ -16,7 +17,8 @@ include "plantilla/menu.php";
 
                 <div class="row">
                     <div class="input-field col s6 ">
-                        <select id="id_proyecto" name="id_proyecto" onchange="buscar();" class="browser-default"></select>
+                        <input type="hidden" id="id_proyecto" name="id_proyecto" value="0">
+                        <input type="text" id="buscarProyecto" name="buscarProyecto" onblur="buscar();">
                     </div>
                 </div>
 
