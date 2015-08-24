@@ -42,7 +42,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         <li><a href="comunidad.php">Comunidad</a></li>
         <li><a href="representante.php">Representante</a></li>
         <li><a href="proyecto.php">Proyecto</a></li>
-        <li><a href="#">Grupo</a></li>
+        <li><a href="grupo.php">Asignar Grupo</a></li>
     </ul>
 
     <ul id="panel" class="dropdown-content">
@@ -65,7 +65,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         <li><a href="comunidad.php">Comunidad</a></li>
         <li><a href="representante.php">Representante</a></li>
         <li><a href="proyecto.php">Proyecto</a></li>
-        <li><a href="#"></a>Grupo</li>
+        <li><a href="grupo.php">Asignar Grupo</a></li>
     </ul>
 
     <ul id="panel1" class="dropdown-content">
