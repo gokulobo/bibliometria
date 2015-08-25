@@ -2,46 +2,27 @@ $(function () {
     $('select').material_select();
     $.ajax({url : "listar/listaCarreras.php",type : "POST",
         success : function(resp) {
-            $("#id_carrera").html(resp);
+            $("#carrera").html(resp);
         }
     });
-    $.ajax({url : "listar/listaDocente.php",type : "POST",
-        success : function(resp) {
-            $("#id_docente").html(resp);
-        }
-    });
-    $.ajax({
-        url : "listar/listarComunidad.php",
-        type : "POST",
-        success : function(resp) {
-            $("#id_comunidad").html(resp);
-        }
-
-    });
-    $.ajax({
-        url : "listar/listaProyectos.php",
-        type : "POST",
-        success : function(resp) {
-            $("#id_proyecto").html(resp);
-        }
-
-    });
-
-    $("#buscarProyecto").autocomplete({
-        source:"listar/autoCompleteProyecto.php",
+    $("#buscarAlumno").autocomplete({
+        source:"listar/autoCompleteAlumno.php",
         minLength: 2,
         select: function( event, ui ) {
-            $("#id_proyecto").val(ui.item.id);
-            $("#titulo_proyecto").focus();
+            $("#id_alumno").val(ui.item.id);
+            $("#nombre").focus();
         }
     });
 });
 
 function guardar(){
     var formulario = $("form").serialize();
-    alert(formulario);
+    if($("#proyecto").val() == 0){
+        alert("Debe ingresar un proyecto");
+        return false;
+    }
     $.ajax({
-        url : "guardar/guardarProyecto.php",
+        url : "guardar/guardarGrupo.php",
         type : "POST",
         data:formulario,
         success : function(resp) {
@@ -68,40 +49,36 @@ function buscar(){
     var id_alumno = $("#id_alumno").val();
     var cedula = $("#buscarAlumno").val();
     $.ajax({
-        url : "buscar/buscarAlumnoAuto.php",
+        url : "buscar/buscarAlumnoEditar.php",
         type : "POST",
-        data:"id_proyecto="+id_proyecto+"&titulo="+titulo,
+        data:"cedula="+cedula,
         dataType : "json",
         success : function(json) {
             //alert(json);
             if(json['respuesta']=="si"){
-
-                $("#titulo_proyecto").val(json.titulo_proyecto);
-                $("#area_investigacion").focus();
-                $("#area_investigacion").val(json.area_investigacion);
-                $("#tipo_proyecto").focus();
-                $("#tipo_proyecto").val(json.tipo_proyecto);
-                $("#apoyo").focus();
-                $("#apoyo").val(json.apoyo);
-                $("#tipo_apoyo").focus();
-                $("#tipo_apoyo").val(json.tipo_apoyo);
-                $("#resumen_proyecto").focus();
-                $("#resumen_proyecto").val(json.resumen_proyecto);
-                $("#id_docente").val(json.id_docente);
-                $("#id_carrera").val(json.id_carrera);
-                $("#id_comunidad").val(json.id_comunidad);
-                $("#observaciones").focus();
-                $("#observaciones").val(json.observaciones);
-                $("#titulo_proyecto").focus();
+                $("#apellido").val(json.apellido);
+                $("#apellido").focus();
+                $("#carrera").val(json.id_carrera);
+                $("#nombre").val(json.nombre);
+                $("#nombre").focus();
+                llenaProyecto();
             }else {
                 $('form').each(function () {
                     this.reset();
                 });
-                $("#id_proyecto").val(0);
-                alert("Proyecto no existe");
-
+                $("#id_alumno").val(0);
+                alert("Alumno No Registrado");
+                $("#proyecto").html('');
             }
 
+        }
+    });
+}
+
+function llenaProyecto(){
+    $.ajax({url : "listar/listaProyectoCarrera.php",type : "POST",data:"carrera="+$("#carrera").val(),
+        success : function(resp) {
+            $("#proyecto").html(resp);
         }
     });
 }

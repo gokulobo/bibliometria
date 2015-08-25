@@ -39,7 +39,7 @@ $(function () {
 
 function guardar(){
     var formulario = $("form").serialize();
-    alert(formulario);
+    //alert(formulario);
     $.ajax({
         url : "guardar/guardarProyecto.php",
         type : "POST",

@@ -17,81 +17,38 @@ include "plantilla/menu.php";
 
                 <div class="row">
                     <div class="input-field col s6 ">
-                        <input type="hidden" id="id_proyecto" name="id_alu" value="0">
+                        <input type="hidden" id="id_alumno" name="id_alumno" value="0">
                         <input type="text" id="buscarAlumno" name="buscarAlumno" onblur="buscar();">
                     </div>
+                    <div class="input-field col s6">
+                        <select name="proyecto" id="proyecto" class="browser-default">
+                        </select>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s4">
                         <input id="nombre" type="text" name="nombre" class="validate"
-                               required="required">
-                        <label for="nombre">Nombre</label>
+                               required="required" disabled="disabled" placeholder="Nombre">
+
                     </div>
 
 
-                    <div class="input-field col s6">
-                        <input id="area_investigacion" type="text" name="area_investigacion" class="validate"
-                               required="required">
-                        <label for="area_investigacion">Area Investigacion</label>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s6">
-                        <select name="tipo_proyecto" id="tipo_proyecto" class="browser-default">
-                            <option value="" disabled selected>Seleccione Tipo de Proyecto</option>
-                            <option value="Socio Integrador">Socio Integrador</option>
-                            <option value="Socio Productivo">Socio Productivo</option>
-                            <option value="Socio Tecnologico">Socio Tecnologico</option>
-                        </select>
-                    </div>
-
-                    <div class="input-field col s6">
-                        <select name="apoyo" id="apoyo" class="browser-default">
-                            <option value="" disabled selected>Seleccione Apoyo de la Institución</option>
-                            <option value="Si">Si</option>
-                            <option value="No">No</option>
-                        </select>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="tipo_apoyo" type="text" name="tipo_apoyo" class="validate" required="required">
-                        <label for="tipo_apoyo">Clase de Apoyo</label>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="resumen_proyecto" name="resumen_proyecto" type="text" class="validate">
-                        <label form="resumen_proyecto">Resumen del Proyecto</label>
-                    </div>
-                </div>
-
-                <div class="row">
                     <div class="input-field col s4">
-                        <select name="id_carrera" id="id_carrera" class="browser-default"></select>
+                        <input id="apellido" type="text" name="apellido" class="validate"
+                               required="required" disabled="disabled" placeholder="Nombre">
                     </div>
+
                     <div class="input-field col s4">
-                        <select name="id_docente" id="id_docente" class="browser-default"></select>
-                    </div>
-                    <div class="input-field col s4">
-                        <select name="id_comunidad" id="id_comunidad" class="browser-default"></select>
+                        <select name="carrera" id="carrera" class="browser-default" disabled="disabled"></select>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="observaciones" name="observaciones" type="text" class="validate">
-                            <label form="observaciones">Observaciones</label>
-                        </div>
+                <div class="row hide">
+                    <div class="input-field col s12 card-panel">
+                        algo
                     </div>
                 </div>
-
                 <center>
                     <button class="btn waves-effect waves-light" type="submit" name="action">
                         <i class="material-icons">ENVIAR</i>
