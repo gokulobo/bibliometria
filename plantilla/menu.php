@@ -42,7 +42,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         <li><a href="comunidad.php">Comunidad</a></li>
         <li><a href="representante.php">Representante</a></li>
         <li><a href="proyecto.php">Proyecto</a></li>
-        <li><a href="grupo.php">Asignar Grupo</a></li>
+        <li><a href="#">Grupo</a></li>
     </ul>
 
     <ul id="panel" class="dropdown-content">
@@ -65,7 +65,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         <li><a href="comunidad.php">Comunidad</a></li>
         <li><a href="representante.php">Representante</a></li>
         <li><a href="proyecto.php">Proyecto</a></li>
-        <li><a href="grupo.php">Asignar Grupo</a></li>
+        <li><a href="#"></a>Grupo</li>
     </ul>
 
     <ul id="panel1" class="dropdown-content">
@@ -73,7 +73,6 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         <li><a href="carrera.php">Carrera</a></li>
         <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
     </ul>
-
 <nav>
     <div class="nav-wrapper indigo accent-3">
         <a href="#!" class="brand-logo"><img src="login/imagenes/logo1.jpg" style="width: 60%"></a>
@@ -85,7 +84,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
             <li><a href="#!" data-activates="menudocente" class="dropdown-button">Docente</a></li>
             <li><a href="#!" data-activates="menuproyecto" class="dropdown-button">Proyecto</a></li>
             <li><a href="#!" data-activates="menucr" class="dropdown-button">Consulta y Reportes</a></li>
-            <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>
+            <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i>Salir</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="#!"><i class="mdi-action-home"></i></a></li>
@@ -93,7 +92,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
             <li><a href="#!" data-activates="menudocente1" class="dropdown-button">Docente</a></li>
             <li><a href="#!" data-activates="menuproyecto1" class="dropdown-button">Proyecto</a></li>
             <li><a href="#" data-activates="menucr" class="dropdown-button">Consulta y Reportes</a></li>
-            <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>
+            <li><a href="salir.php"><i class="mdi-action-exit-to-app">Salir</i></a></li>
         </ul>
     </div>
 </nav>

@@ -292,10 +292,8 @@ CREATE TABLE IF NOT EXISTS `grupo_proyecto` (
   KEY `id_proyecto` (`id_proyecto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.grupo_proyecto: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.grupo_proyecto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_proyecto` DISABLE KEYS */;
-INSERT INTO `grupo_proyecto` (`id_alumno`, `fecha`, `id_proyecto`) VALUES
-	(2, '2015-08-24 23:30:00', 3);
 /*!40000 ALTER TABLE `grupo_proyecto` ENABLE KEYS */;
 
 
@@ -481,11 +479,11 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   KEY `id_docente` (`id_docente`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.proyecto: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.proyecto: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
 INSERT INTO `proyecto` (`id_proyecto`, `fecha`, `titulo_proyecto`, `area_investigacion`, `tipo_proyecto`, `apoyo`, `tipo_apoyo`, `resumen_proyecto`, `observaciones`, `id_carrera`, `id_comunidad`, `id_docente`, `cupo`) VALUES
-	(2, '2015-08-12 20:29:53', 'proyecto 1', 'informatica', 'Socio Productivo', 'No', 'ninguno', 'Muy calidadd', 'algo', 0, 1, 1, 0),
-	(3, '2015-08-12 20:36:55', 'practica algo', 'otra', 'Socio Tecnologico', 'Si', 'monetario', 'esta bueno', 'kilo', 1, 4, 26, 1);
+	(2, '2015-08-12 20:29:53', 'proyecto 1', 'informatica', 'Socio Productivo', 'No', 'ninguno', 'Muy calidad', '', 0, 1, 1, 0),
+	(3, '2015-08-12 20:36:55', 'practica algo', 'otra', 'Socio Tecnologico', 'Si', 'monetario', 'esta bueno', 'kilo', 1, 4, 26, 0);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 
@@ -505,7 +503,7 @@ CREATE TABLE IF NOT EXISTS `representante` (
   PRIMARY KEY (`id_representante`),
   UNIQUE KEY `cedula` (`cedula`),
   KEY `id_comunidad` (`id_comunidad`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- Volcando datos para la tabla sistema.representante: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `representante` DISABLE KEYS */;
