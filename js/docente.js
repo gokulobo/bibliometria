@@ -1,7 +1,11 @@
 $(function () {
 
     $('select').material_select();
-
+    $.ajax({url : "listar/listaCarreras.php",type : "POST",
+        success : function(resp) {
+            $("#id_carrera").html(resp);
+        }
+    });
     $('.datepicker').pickadate({
         labelMonthNext: 'Next month',
         labelMonthPrev: 'Previous month',
@@ -77,6 +81,8 @@ function buscar() {
                 $("#cargo").val(json.cargo);
                 $("#observaciones").focus();
                 $("#observaciones").val(json.observaciones);
+                $("#id_carrera").focus();
+                $("#id_carrera").val(json.id_carrera);
                 if (json.guia == 1)$("#guia").attr("checked", true);
                 if (json.coordinador == 1)$("#coordinador").attr("checked", true);
 

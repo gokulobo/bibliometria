@@ -1,5 +1,5 @@
 $(function () {
-    $("#phpgrid").load("reportes/docente.php");
+    $("#phpgrid").load("gridDocente.php");
 });
 
 function buscar(){

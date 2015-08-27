@@ -208,6 +208,10 @@ include "plantilla/menu.php";
                         <input id="observaciones" name="observaciones" type="text" class="validate">
                         <label form="observaciones">Observaciones</label>
                     </div>
+                    <div class="input-field col s6">
+
+                        <select name="id_carrera" id="id_carrera" class="browser-default" required="required"></select>
+                    </div>
                 </div>
             </div>
             <center>
