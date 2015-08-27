@@ -1,6 +1,6 @@
 <?php
 
-require("datos/conectar.php");
+require("../datos/conectar.php");
 $cedula = $_POST['cedula'];
 $based = ("SELECT * FROM alumnos where cedula='".$cedula."'");
 $rs = mysql_query($based);
