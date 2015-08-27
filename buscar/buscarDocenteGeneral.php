@@ -1,13 +1,13 @@
 <?php
 
-require("datos/conectar.php");
+require("../datos/conectar.php");
 $cedula = $_POST['cedula'];
 $based = ("SELECT * FROM docente where cedula='".$cedula."'");
 $rs = mysql_query($based);
-$datos="<h2>Datos Basicos</h2><br><table class='estilotabla'><thead><th>Nombre Y Apellido</th><th>Fecha Nac</th><th>Lugar Nac</th>
+$datos="<h2>Datos Basicos</h2><br><table class='blue lighten-3'><thead><tr><th>Nombre Y Apellido</th><th>Fecha Nac</th><th>Lugar Nac</th>
 <th>Profesion</th><th>Cargo</th><th>Correo</th><th>Telefono Hab</th><th>Telefon Cel</th><th>Direccion Hab</th>
 <th>Categoria</th><th>Modalidad</th><th>Dedicacion</th><th>Ascenso</th><th>Fecha Ing</th><th>Lin Investigacion</th>
-<th>Observaciones</th>
+<th>Observaciones</th></tr>
 </thead>";
 
 //---desiciones: si el numero de coincidencias es igual a 1 entonces... ejecutar la funcion sesion_cliente dentro del script sesion_cliente.php, que guarda los datos de usuario y contraseña en variables de sesion. Y luego redirecciona a la pagina de inicio.php .....de lo contrario si no existen coincidencias, entonces devolver a cero las variables de sesion (por seguridad) y luego devuelve al usuario a la pagina INDEX donde debe ingresar el usuario y contraseña correctos.

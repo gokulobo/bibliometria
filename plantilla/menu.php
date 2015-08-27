@@ -74,6 +74,10 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
 </ul>
 
+<ul id="listaReportes" class="dropdown-content">
+    <li><a href="reporteDocente.php">Sede</a></li>
+</ul>
+
 <nav>
     <div class="nav-wrapper indigo accent-3">
         <a href="#!" class="brand-logo"><img src="login/imagenes/logo1.jpg" style="width: 60%"></a>
@@ -84,7 +88,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
             <li><a href="#!" data-activates="panel" class="dropdown-button">Panel</a></li>
             <li><a href="#!" data-activates="menudocente" class="dropdown-button">Docente</a></li>
             <li><a href="#!" data-activates="menuproyecto" class="dropdown-button">Proyecto</a></li>
-            <li><a href="#!" data-activates="menucr" class="dropdown-button">Consulta y Reportes</a></li>
+            <li><a href="#!" data-activates="listaReportes" class="dropdown-button">Consulta y Reportes</a></li>
             <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
@@ -92,7 +96,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
             <li><a href="#!" data-activates="panel1" class="dropdown-button">Panel</a></li>
             <li><a href="#!" data-activates="menudocente1" class="dropdown-button">Docente</a></li>
             <li><a href="#!" data-activates="menuproyecto1" class="dropdown-button">Proyecto</a></li>
-            <li><a href="#" data-activates="menucr" class="dropdown-button">Consulta y Reportes</a></li>
+            <li><a href="#" data-activates="listaReportes" class="dropdown-button">Consulta y Reportes</a></li>
             <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>
         </ul>
     </div>

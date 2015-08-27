@@ -1,14 +1,56 @@
-<?php
 
-require("../datos/conectar.php");
-$based = ("SELECT id_docente,nombre,apellido,cedula FROM docente");
-$rs = mysql_query($based);
-$resultado = array();
-//---desiciones: si el numero de coincidencias es igual a 1 entonces... ejecutar la funcion sesion_cliente dentro del script sesion_cliente.php, que guarda los datos de usuario y contraseña en variables de sesion. Y luego redirecciona a la pagina de inicio.php .....de lo contrario si no existen coincidencias, entonces devolver a cero las variables de sesion (por seguridad) y luego devuelve al usuario a la pagina INDEX donde debe ingresar el usuario y contraseña correctos.
-if (mysql_num_rows($rs) > 0) {
-    while ($fila = mysql_fetch_assoc($rs)) {
-        $resultado[] =array("id_docente"=>$fila["id_docente"],"nombre"=>$fila["nombre"],"apellido"=>$fila["apellido"],"cedula"=>$fila["cedula"]);
-    }
-}
-echo json_encode($resultado);
+<?php
+include_once("../phpgrid/config.php");
+
+// set up DB
+mysql_connect(PHPGRID_DBHOST, PHPGRID_DBUSER, PHPGRID_DBPASS);
+mysql_select_db(PHPGRID_DBNAME);
+
+// include and create object
+include(PHPGRID_LIBPATH."inc/jqgrid_dist.php");
+$g = new jqgrid();
+
+/*$col = array();
+$col["title"] = "Id"; // caption of column, can use HTML tags too
+$col["name"] = "id_alumno"; // grid column name, same as db field or alias from sql
+$col["width"] = "20"; // width on grid
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Nombre"; // caption of column, can use HTML tags too
+$col["name"] = "nombre"; // grid column name, same as db field or alias from sql
+$col["width"] = "40"; // width on grid
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Apellido"; // caption of column, can use HTML tags too
+$col["name"] = "apellido"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$cols[] = $col;*/
+
+// pass the cooked columns to grid
+
+
+// set few params
+$grid["caption"] = "Docentes";
+//$grid["autowidth"] = true;
+$g->set_options($grid);
+//$g->select_command = "select id_alumno as id,nombre,apellido from alumnos";
+// set database table for CRUD operations
+$g->table = "docente";
+//$g->set_columns($cols,true);
+// render grid
+$out = $g->render("list1");
+
 ?>
+
+<link rel="stylesheet" type="text/css" media="screen" href="../phpgrid/lib/js/themes/redmond/jquery-ui.custom.css"></link>
+<link rel="stylesheet" type="text/css" media="screen" href="../phpgrid/lib/js/jqgrid/css/ui.jqgrid.css"></link>
+
+<!--<script src="../phpgrid/lib/js/jquery.min.js" type="text/javascript"></script>!-->
+<script src="../phpgrid/lib/js/jqgrid/js/i18n/grid.locale-es.js" type="text/javascript"></script>
+<script src="../phpgrid/lib/js/jqgrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="../phpgrid/lib/js/themes/jquery-ui.custom.min.js" type="text/javascript"></script>
+<fieldset>
+    <?php echo $out?>
+</fieldset>

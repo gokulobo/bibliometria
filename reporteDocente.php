@@ -34,40 +34,9 @@ include "plantilla/menu.php";
                 <h5 class="header center">Listado De Docentes</h5>
             </div>
         </div>
-
         <div class="row">
-            <div class="col s12">
-                <center><div id="jqxgrid" ></div></center>
-                <div id="popupWindow">
-                    <div>Edit</div>
-                    <div style="overflow: hidden;">
-                        <table>
-                            <tr>
-                                <td align="right">codigo:</td>
-                                <td align="left"><input id="id_docente" disabled="disabled"/></td>
-                            </tr>
-                            <tr>
-                                <td align="right">Cedula:</td>
-                                <td align="left"><input id="cedulag" disabled="disabled"/></td>
-                            </tr>
-                            <tr>
-                                <td align="right">Nombre:</td>
-                                <td align="left"><input id="nombre"/></td>
-                            </tr>
-                            <tr>
-                                <td align="right">Apellido:</td>
-                                <td align="left"><input id="apellido"/></td>
-                            </tr>
-                            <tr>
-                                <td align="right"></td>
-                                <td style="padding-top: 10px;" align="right"><input style="margin-right: 5px;" type="button" id="Save"
-                                                                                    value="Guardar" onclick="guardar();"/><input
-                                        id="Cancel" type="button"
-                                        value="Cancelar"/></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+            <div class="col s12" id="phpgrid">
+
             </div>
         </div>
         <div class="row">
