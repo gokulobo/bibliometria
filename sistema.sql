@@ -212,14 +212,15 @@ CREATE TABLE IF NOT EXISTS `docente` (
   `observaciones` text COLLATE utf8_spanish_ci NOT NULL,
   `guia` int(1) NOT NULL DEFAULT '0',
   `coordinador` int(1) NOT NULL DEFAULT '0',
+  `id_carrera` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_docente`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- Volcando datos para la tabla sistema.docente: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `docente` DISABLE KEYS */;
-INSERT INTO `docente` (`id_docente`, `nombre`, `apellido`, `nacionalidad`, `cedula`, `fecha_nac`, `lugar_nac`, `profesion`, `cargo`, `correo`, `clave_usuario`, `telefono_hab`, `telefono_cel`, `direccion_hab`, `categoria`, `modalidad`, `dedicacion`, `ascenso`, `fecha_ingreso`, `investigacion`, `observaciones`, `guia`, `coordinador`) VALUES
-	(1, 'Eliana', 'Lobo', 'V', 16445921, '1984-09-13', 'Mérida', 'Licenciada en educación', 'Maestra', 'lobo13256@hotmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0274-2219173', '0412-5478972', 'Ejido', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-04-21', 'Programación', 'ya', 1, 1),
-	(26, 'Erwin', 'Lobo', 'V', 14106119, '1978-09-27', 'Mérida', 'Tecnico', 'Reparación', 'white.1.wolf@hotmail.com', '202cb962ac59075b964b07152d234b70', '0274-2219173', '04126500763', 'Ejido', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-09-27', 'tecnologia', 'por Dios', 1, 1);
+INSERT INTO `docente` (`id_docente`, `nombre`, `apellido`, `nacionalidad`, `cedula`, `fecha_nac`, `lugar_nac`, `profesion`, `cargo`, `correo`, `clave_usuario`, `telefono_hab`, `telefono_cel`, `direccion_hab`, `categoria`, `modalidad`, `dedicacion`, `ascenso`, `fecha_ingreso`, `investigacion`, `observaciones`, `guia`, `coordinador`, `id_carrera`) VALUES
+	(1, 'Eliana', 'Lobo', 'V', 16445921, '1984-09-13', 'Mérida', 'Licenciada en educación', 'Maestra', 'lobo13256@hotmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0274-2219173', '0412-5478972', 'Ejido', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-04-21', 'Programación', 'ya', 1, 1, 0),
+	(26, 'Erwin', 'Lobo', 'V', 14106119, '1978-09-27', 'Mérida', 'Tecnico', 'Reparación', 'white.1.wolf@hotmail.com', '202cb962ac59075b964b07152d234b70', '0274-2219173', '04126500763', 'Ejido', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-09-27', 'tecnologia', 'por Dios', 1, 1, 0);
 /*!40000 ALTER TABLE `docente` ENABLE KEYS */;
 
 
@@ -479,7 +480,7 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   KEY `id_docente` (`id_docente`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.proyecto: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.proyecto: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
 INSERT INTO `proyecto` (`id_proyecto`, `fecha`, `titulo_proyecto`, `area_investigacion`, `tipo_proyecto`, `apoyo`, `tipo_apoyo`, `resumen_proyecto`, `observaciones`, `id_carrera`, `id_comunidad`, `id_docente`, `cupo`) VALUES
 	(2, '2015-08-12 20:29:53', 'proyecto 1', 'informatica', 'Socio Productivo', 'No', 'ninguno', 'Muy calidad', '', 0, 1, 1, 0),
