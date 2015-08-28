@@ -57,14 +57,45 @@ $col["width"] = "60"; // width on grid
 $col["editable"] = true;
 $cols[] = $col;
 
+$col = array();
+$col["title"] = "Correo"; // caption of column, can use HTML tags too
+$col["name"] = "correo"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Cargo"; // caption of column, can use HTML tags too
+$col["name"] = "cargo"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Dependencia Carrera"; // caption of column, can use HTML tags too
+$col["name"] = "nombre_carrera"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$cols[] = $col;
+
 // pass the cooked columns to grid
 
 
 // set few params
 $grid["caption"] = "Docentes";
 $grid["autowidth"] = true;
+//$grid["pgbuttons"] = false;
 $g->set_options($grid);
-$g->select_command = "select id_docente ,nombre,apellido,cedula,fecha_nac,lugar_nac,profesion,cargo,correo,carrea from docente";
+$g->set_actions(array(
+        "add"=>false,
+        "edit"=>true,
+        "delete"=>true,
+        "view"=>true,
+        "autofilter" => true,
+        "search" => "simple",
+    )
+);
+$g->select_command = "select id_docente ,nombre,apellido,cedula,fecha_nac,lugar_nac,
+profesion,cargo,correo,nombre_carrera from docente join carrera on carrera.id_carrera = docente.id_carrera";
 //set database table for CRUD operations
 $g->table = "docente";
 $g->set_columns($cols,true);

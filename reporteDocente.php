@@ -12,7 +12,7 @@ include "plantilla/menu.php";
             </div>
         </div>
         <div class="row">
-            <div class="col s12" id="phpgrid">
+            <div class="col s12 card-panel" id="phpgrid">
 
             </div>
         </div>
@@ -25,7 +25,6 @@ include "plantilla/menu.php";
                 </div>
             </div>
         </div>
-        <div class="row">
             <div class="col s12" id="resultado">
 
             </div>
