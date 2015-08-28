@@ -73,7 +73,7 @@ include "plantilla/menu.php";
 
                 <div class="row">
                     <div class="input-field col s4">
-                        <select name="id_carrera" id="id_carrera" class="browser-default"></select>
+                        <select name="id_carrera" id="id_carrera" class="browser-default" onchange="listarDocenteCarrera();"></select>
                     </div>
                     <div class="input-field col s4">
                         <select name="id_docente" id="id_docente" class="browser-default"></select>

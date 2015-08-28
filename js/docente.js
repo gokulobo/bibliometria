@@ -37,6 +37,7 @@ function guardar() {
             alert(resp);
             $('#frmDocente').each(function () {
                 this.reset();
+                $('ul.tabs').tabs('select_tab', 'basico');
             });
             /*if(confirm("Se proceso con exito.¿Desea ingresar otro docente ?")){
              $('#frmDocente').each (function(){
@@ -66,6 +67,7 @@ function buscar() {
         success: function (json) {
             //alert(json);
             if (json['respuesta'] == "si") {
+                $("#clave").hide();
                 $('ul.tabs').tabs('select_tab', 'laboral');
                 $("#profesion").focus();
                 $("#profesion").val(json.profesion);
@@ -110,6 +112,7 @@ function buscar() {
                 $('#frmDocente').each(function () {
                     this.reset();
                 });
+                $("#clave").show();
                 $("#id_docente").val(0);
                 $("#cedula").val(cedula);
                 $("#nombre").focus();

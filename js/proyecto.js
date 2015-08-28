@@ -105,3 +105,12 @@ function buscar(){
         }
     });
 }
+
+function listarDocenteCarrera(){
+    var id_carrera = $("#id_carrera").val();
+    $.ajax({url : "listar/listaDocenteCarrera.php",type : "POST",data:"id_carrera="+id_carrera,
+        success : function(resp) {
+            $("#id_docente").html(resp);
+        }
+    });
+}

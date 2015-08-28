@@ -31,13 +31,7 @@ include "plantilla/menu.php";
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s6">
-                        <select name="nacionalidad" id="nacionalidad" class="browser-default green">
-                            <option value="" disabled="disabled" selected="selected">Nacionalidad</option>
-                            <option value="V">Venezolano(a)</option>
-                            <option value="E">Extranjero(a)</option>
-                        </select>
-                    </div>
+
 
                     <div class="input-field col s6">
                         <i class="mdi-action-picture-in-picture prefix"></i>
@@ -45,6 +39,12 @@ include "plantilla/menu.php";
                         <input id="cedula" name="cedula" type="text" class="validate" required="required"
                                onkeypress="ValidaSoloNumeros()" onblur="buscar();">
                         <label for="cedula">Cedula</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select name="nacionalidad" id="nacionalidad" class="browser-default green">
+                            <option value="V">Venezolano(a)</option>
+                            <option value="E">Extranjero(a)</option>
+                        </select>
                     </div>
                 </div>
 
@@ -178,8 +178,8 @@ include "plantilla/menu.php";
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s3">
-                        <input id="clave_usuario" name="clave_usuario" type="password" class="validate" required="required">
+                    <div class="input-field col s3" id="clave">
+                        <input id="clave_usuario" name="clave_usuario" type="password" class="validate">
                         <label for="clave_usuario">Clave</label>
                     </div>
                     <div class="switch col s4">

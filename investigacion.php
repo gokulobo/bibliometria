@@ -72,12 +72,12 @@ include "plantilla/menu.php";
             </div>
 
             <div class="input-field col s6">
-                <input id="nombre_investigacion" type="text" name="nombre_investigacion" class="validate" required="required">
+                <input id="nombre_investigacion" type="text" name="nombre_investigacion" class="validate">
                 <label for="nombre_investigacion">Nombre Grupo</label>
             </div>
 
             <div class="input-field col s6">
-                <input id="area_investigacion" type="text" name="area_investigacion" class="validate" required="required">
+                <input id="area_investigacion" type="text" name="area_investigacion" class="validate">
                 <label for="area_investigacion">Area de Investigacion</label>
             </div>
 
