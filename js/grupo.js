@@ -49,20 +49,27 @@ function buscar(){
     var id_alumno = $("#id_alumno").val();
     var cedula = $("#buscarAlumno").val();
     $.ajax({
-        url : "buscar/buscarAlumnoEditar.php",
+        url : "buscar/buscarAlumnoGrupo.php",
         type : "POST",
         data:"cedula="+cedula,
         dataType : "json",
         success : function(json) {
             //alert(json);
             if(json['respuesta']=="si"){
-                $("#apellido").val(json.apellido);
-                $("#apellido").focus();
-                $("#carrera").val(json.id_carrera);
-                $("#nombre").val(json.nombre);
-                $("#nombre").focus();
-                llenaProyecto();
+                if(json.proyecto=='si'){
+                    $("#apellido").val(json.apellido);
+                    $("#apellido").focus();
+                    $("#carrera").val(json.id_carrera);
+                    $("#nombre").val(json.nombre);
+                    $("#nombre").focus();
+                    llenaProyecto();
+                }else{
+                    alert("El alumno ya esta asignado a un proyecto");
+                    $("#buscarAlumno").val('');
+                }
+
             }else {
+                $("#proyecto").val('');
                 $('form').each(function () {
                     this.reset();
                 });

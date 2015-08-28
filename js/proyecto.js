@@ -1,4 +1,6 @@
+
 $(function () {
+
     $('select').material_select();
     $.ajax({url : "listar/listaCarreras.php",type : "POST",
         success : function(resp) {
@@ -26,7 +28,13 @@ $(function () {
         }
 
     });
-
+    $.ajax({
+        url : "listar/listaCohorte.php",
+        type : "POST",
+        success : function(resp) {
+            $("#cohorte").html(resp);
+        }
+    });
     $("#buscarProyecto").autocomplete({
         source:"listar/autoCompleteProyecto.php",
         minLength: 2,
@@ -39,15 +47,23 @@ $(function () {
 
 function guardar(){
     var formulario = $("form").serialize();
-    alert(formulario);
+    var arregloAlumnos = new Array();
+    var i = 0;
+    $("#alumnos option").each(function(){
+        arregloAlumnos[i] = $(this).val();
+        i++
+    });
+    //alert(arregloAlumnos);
     $.ajax({
         url : "guardar/guardarProyecto.php",
         type : "POST",
-        data:formulario,
+        data:formulario+"&arreglo="+arregloAlumnos,
         success : function(resp) {
             alert(resp);
             $('form').each (function(){
                 this.reset();
+                $("#alumnos").html('');
+                $("#alum").html('');
             });
 
             /*if(confirm("Se proceso con exito.¿Desea ingresar otro docente ?")){
@@ -90,6 +106,7 @@ function buscar(){
                 $("#id_docente").val(json.id_docente);
                 $("#id_carrera").val(json.id_carrera);
                 $("#id_comunidad").val(json.id_comunidad);
+                $("#cohorte").val(json.id_cohorte);
                 $("#observaciones").focus();
                 $("#observaciones").val(json.observaciones);
                 $("#titulo_proyecto").focus();
@@ -113,4 +130,36 @@ function listarDocenteCarrera(){
             $("#id_docente").html(resp);
         }
     });
+}
+
+function listarAlumnosCohorte(){
+    var id_carrera = $("#id_carrera").val();
+    var cohorte = $("#cohorte").val();
+    $.ajax({url : "listar/listarAlumnosCohorte.php",type : "POST",data:"id_carrera="+id_carrera+"&id_cohorte="+cohorte,
+        success : function(resp) {
+            $("#alum").html(resp);
+        }
+    });
+}
+
+function agregar(){
+    var valor = $("#alum").val();
+    var texto = $("#alum option:selected").text();
+    var tiene = $('#alumnos option').length;
+    if(tiene >= limiteProyecto){
+        alert("Ya no puede agregar mas alumnos a este proyecto");
+        return false;
+    }
+    $("#alumnos").append(new Option(texto, valor, true, true));
+    $("#alum option:selected").remove();
+}
+
+function quitar(){
+    var valor = $("#alumnos").val();
+    var texto = $("#alumnos option:selected").text();
+    if(texto != ""){
+        $("#alum").append(new Option(texto, valor, true, true));
+        $("#alumnos option:selected").remove();
+    }
+
 }

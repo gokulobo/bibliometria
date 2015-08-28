@@ -36,7 +36,7 @@ include "plantilla/menu.php";
 
                     <div class="input-field col s4">
                         <input id="apellido" type="text" name="apellido" class="validate"
-                               required="required" disabled="disabled" placeholder="Nombre">
+                               required="required" disabled="disabled" placeholder="Apellido">
                     </div>
 
                     <div class="input-field col s4">

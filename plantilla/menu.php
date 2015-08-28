@@ -17,10 +17,11 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 
     <script>
         $(function () {
+            $('ul.tabs').tabs();
             $(".button-collapse").sideNav();
             $(".dropdown-button").dropdown({hover: true, constrain_width: false});
             $('.slider').slider({full_width: true});
-            $('ul.tabs').tabs();
+
 
 
         });
@@ -51,6 +52,11 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
 </ul>
 
+<ul id="listaReportes" class="dropdown-content">
+    <li><a href="reporteDocente.php">Listado Docentes</a></li>
+    <li><a href="listaGrupos.php">Listado Grupos</a></li>
+</ul>
+
 <ul id="menudocente1" class="dropdown-content">
     <li><a href="registrardocente.php">Datos del Docente</a></li>
     <li><a href="estudio.php">Estudios Realizados</a></li>
@@ -74,8 +80,9 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
 </ul>
 
-<ul id="listaReportes" class="dropdown-content">
-    <li><a href="reporteDocente.php">Sede</a></li>
+<ul id="listaReportes1" class="dropdown-content">
+    <li><a href="reporteDocente.php">Listado Docentes</a></li>
+    <li><a href="listaGrupos.php">Listado Grupos</a></li>
 </ul>
 
 <nav>
@@ -96,7 +103,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
             <li><a href="#!" data-activates="panel1" class="dropdown-button">Panel</a></li>
             <li><a href="#!" data-activates="menudocente1" class="dropdown-button">Docente</a></li>
             <li><a href="#!" data-activates="menuproyecto1" class="dropdown-button">Proyecto</a></li>
-            <li><a href="#" data-activates="listaReportes" class="dropdown-button">Consulta y Reportes</a></li>
+            <li><a href="#!" data-activates="listaReportes1" class="dropdown-button">Consulta y Reportes</a></li>
             <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>
         </ul>
     </div>

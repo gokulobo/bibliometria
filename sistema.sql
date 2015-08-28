@@ -33,20 +33,33 @@ CREATE TABLE IF NOT EXISTS `alumnos` (
   UNIQUE KEY `id_alumno` (`id_alumno`),
   KEY `id_cohorte` (`id_cohorte`),
   KEY `id_carrera` (`id_carrera`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.alumnos: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.alumnos: ~15 rows (aproximadamente)
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
 INSERT INTO `alumnos` (`id_alumno`, `fecha`, `nombre`, `apellido`, `nacionalidad`, `cedula`, `carnet`, `grado_instruccion`, `correo`, `direccion_hab`, `telefono_hab`, `telefono_cel`, `id_cohorte`, `id_carrera`, `trayecto`, `trimestre`, `fecha_nac`, `lugar_nac`) VALUES
-	(1, '2015-08-11 17:09:51', 'ppppepep', 'asdfasdf', 'V', 1111, '3213213', 'TSU', 'kik@sdfdsf.com', 'tampoco', '21212', '31321', 1, 14, 'I', 'I', '2015-08-20', 'merd'),
-	(2, '2015-08-11 20:22:29', 'Erwin', 'Lobo', 'V', 14106119, '500665', 'TSU', 'goku1_908@hotmail.com', 'Ejido', '02742219173', '0412-6500763', 1, 1, 'III', 'III', '2015-08-23', 'Mérida');
+	(1, '2015-08-27 23:09:14', 'Erwin Alberto', 'Lobo Rodriguez ', 'V', 14106119, '010301290', 'TSU', 'gokulobo@gmail.com', 'Av Bolivar ', '', '04126500763', 1, 1, 'III', 'III', '1978-09-27', 'mérida'),
+	(2, '2015-08-27 23:14:36', 'eliana del mar ', 'lobo roriguez', 'V', 16445921, '010301292', 'TSU', 'lobo13256@gmail.com', 'Av bolívar ejido ', '', '0412-7899672', 1, 1, 'III', 'III', '1984-09-13', 'Mérida'),
+	(3, '2015-08-28 16:02:54', 'Jose ', 'Humberto Quintero', 'V', 5654253, '010301289', 'TSU', 'jhumberto@gmail.com', 'la mesa de lo indios ejido ', '0274-2211818', '0416-1234567', 2, 1, 'III', 'II', '2015-08-11', 'Mérida'),
+	(4, '2015-08-28 16:02:56', 'Norka ', 'Viloria', 'V', 6875456, '010301285', 'Universitario(a)', 'norkanilo15@hotmail.com', 'los curos via panamericana ', '0274-2664596', '0414-8796542', 2, 1, 'III', 'II', '2015-10-19', 'Mérida'),
+	(5, '2015-08-28 16:02:58', 'juan carlos ', 'pachco', 'V', 3256789, '010301280', 'TSU', 'jcpbarinas@gmail.com', 'los molino ejido ', '', '0424-9874563', 2, 1, 'III', 'II', '2015-01-14', 'Barinas'),
+	(6, '2015-08-28 09:45:27', 'Dulce Maria ', 'silva Perez ', 'V', 16654017, '010301295', 'TSU', 'dulcemar521@hotmail.com', 'la don luis de ejido casa 18', '0274-2213535', '0414-0363217', 3, 1, 'I', 'I', '1983-05-25', 'Mérida'),
+	(7, '2015-08-28 09:49:23', 'yuraima ', 'rodriguez de albonoz ', 'V', 14106458, '010301273', 'TSU', 'yuricayuri@hotmail.com', 'calle el cristo casa 10', '0274-2215353', '0416-2587456', 3, 1, 'I', 'I', '1979-01-20', 'Mérida'),
+	(8, '2015-08-28 09:51:18', 'Maura ', 'Rodriguez de lobo', 'V', 5950871, '010301275', 'Universitario(a)', 'lobom@hotmail.com', 'Av Bolivar ejido ', '0274-2219173', '0416-6881193', 3, 1, 'I', 'I', '1975-12-12', 'Mérida'),
+	(9, '2015-08-28 09:56:19', 'erika ', 'lobo', 'V', 16444777, '0103012', 'TSU', 'lavikyeri@hotmail.com', 'el cristo ejido ', '0274-2215353', '0416-2134562', 3, 1, 'I', 'I', '1984-12-13', 'mérida '),
+	(10, '2015-08-28 09:57:57', 'isabel', 'rodriguez de albornoz ', 'V', 7895412, '010301300', 'TSU', 'isabelita2@hotmail.com', 'el cristo 10', '02742219173', '04123452145', 3, 1, 'I', 'I', '1970-08-02', 'mérida'),
+	(11, '2015-08-28 10:02:03', 'magali ', 'paredes ranguel ', 'V', 16785412, '010301301', 'TSU', 'mmag@gmail.com', 'la vega de las gonzales ', '0274-2219173', '04245213214', 3, 1, 'III', 'III', '1970-08-31', 'mérida '),
+	(12, '2015-08-28 10:05:15', 'maria lion', 'leon leon ', 'V', 10541235, '010301302', 'Universitario(a)', 'lionlion@gmail.com', 'los guaimaros ', '0274-2219173', '0412-7899452', 3, 1, 'III', 'III', '1970-11-16', 'mérida'),
+	(13, '2015-08-28 10:07:47', 'betty G', 'Garrido oballos ', 'V', 10458751, '010301', 'TSU', 'bettygggg@gmail.com', 'las marias centro ', '0274-2624578', '0414-5412345', 3, 1, 'III', 'III', '1979-03-13', 'Merida'),
+	(14, '2015-08-28 13:57:36', 'maria maria', 'petro petro', 'V', 24354123, '041287459', 'TSU', 'marimaripetro@hotmail.com', 'calle el moral  ', '02742215353', '04128745872', 3, 1, 'I', 'I', '2015-08-15', 'el vigia '),
+	(15, '2015-08-28 16:02:20', 'kari', 'colmenares ', 'V', 16445920, '00005485652', 'TSU', 'karikaricol@hotmail.com', 'pozo hondo', '02742219173', '04268794512', 3, 11, 'II', 'I', '1985-01-30', 'Barquisimeto');
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 
 
 -- Volcando estructura para tabla sistema.articulo
 CREATE TABLE IF NOT EXISTS `articulo` (
   `id_articulo` int(18) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `titulo` varchar(70) COLLATE utf8_spanish_ci NOT NULL,
   `fecha_publicacion` date NOT NULL,
   `volumen` char(3) COLLATE utf8_spanish_ci NOT NULL,
   `numeracion` int(30) NOT NULL,
@@ -56,10 +69,14 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   `id_docente` int(18) NOT NULL,
   PRIMARY KEY (`id_articulo`),
   KEY `id_docente` (`id_docente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.articulo: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.articulo: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
+INSERT INTO `articulo` (`id_articulo`, `titulo`, `fecha_publicacion`, `volumen`, `numeracion`, `issn`, `pagina_colacion`, `observaciones`, `id_docente`) VALUES
+	(1, 'Problema de los Adolecentes en', '2015-06-24', '51', 255, '51468498', '23', 'Buena critica', 34),
+	(2, 'El embarazo en las mujeres que estudian en la universidad', '2006-03-22', '12', 50, '151465', '2', 'Es verdad', 34),
+	(3, 'La corrupción en el IUTE', '1995-03-08', '5', 7000, '254', '20', 'Ven lo que pasa hay', 34);
 /*!40000 ALTER TABLE `articulo` ENABLE KEYS */;
 
 
@@ -74,8 +91,18 @@ CREATE TABLE IF NOT EXISTS `asignacion_guia` (
   KEY `id_cohorte` (`id_cohorte`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.asignacion_guia: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.asignacion_guia: ~9 rows (aproximadamente)
 /*!40000 ALTER TABLE `asignacion_guia` DISABLE KEYS */;
+INSERT INTO `asignacion_guia` (`id_docente`, `id_cohorte`, `trayecto`, `trimestre`, `activo`) VALUES
+	(29, 1, 'III', 'III', ''),
+	(2, 6, 'II', 'III', ''),
+	(31, 3, 'I', 'I', ''),
+	(31, 3, 'II', 'III', ''),
+	(31, 2, 'III', 'II', ''),
+	(2, 3, 'IV', 'I', ''),
+	(2, 3, 'III', 'III', ''),
+	(34, 2, 'IV', 'I', ''),
+	(34, 3, 'I', 'I', '');
 /*!40000 ALTER TABLE `asignacion_guia` ENABLE KEYS */;
 
 
@@ -115,30 +142,22 @@ CREATE TABLE IF NOT EXISTS `carrera` (
   `nombre_carrera` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_carrera`),
   KEY `id_sede` (`id_sede`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.carrera: ~19 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.carrera: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `carrera` DISABLE KEYS */;
 INSERT INTO `carrera` (`id_carrera`, `numero_carrera`, `id_sede`, `nombre_carrera`) VALUES
 	(0, 1, 1, 'Psicologia Social'),
-	(1, 0, 1, 'Informatica'),
-	(2, 0, 1, 'Administracion'),
-	(3, 0, 2, 'Administracion'),
-	(4, 0, 1, 'Historia'),
-	(5, 255, 5, 'Fomacion'),
-	(6, 0, 1, 'Agroalimentacion'),
+	(1, 14601, 1, 'Informatica'),
 	(7, 14595, 1, 'Radiologia e Imagenologia'),
 	(8, 14596, 1, 'Agroalimentacion'),
 	(9, 14598, 1, 'Turismo'),
 	(10, 14599, 1, 'Contaduria Publica'),
-	(11, 14600, 3, 'Administracion'),
-	(12, 14601, 2, 'Informatica'),
+	(11, 14600, 1, 'Administracion'),
 	(13, 14602, 1, 'Construccion Civil'),
 	(14, 14604, 1, 'Geociencias'),
 	(15, 14605, 1, 'Manejo de Emergencia y Accion Contra Desastre'),
-	(16, 14728, 2, 'Historia'),
-	(17, 55, 5, 'Informatico'),
-	(18, 654123, 9, 'Robotica');
+	(16, 14728, 1, 'Historia');
 /*!40000 ALTER TABLE `carrera` ENABLE KEYS */;
 
 
@@ -150,12 +169,24 @@ CREATE TABLE IF NOT EXISTS `cohorte` (
   `seccion` char(1) COLLATE utf8_spanish_ci NOT NULL,
   `estado` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id_cohorte`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.cohorte: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.cohorte: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `cohorte` DISABLE KEYS */;
 INSERT INTO `cohorte` (`id_cohorte`, `numero_cohorte`, `tipo_cohorte`, `seccion`, `estado`) VALUES
-	(1, '2015', 'A', 'A', 1);
+	(1, '2015', 'A', 'A', 1),
+	(2, '2015', 'B', 'B', 1),
+	(3, '2015', 'A', 'B', 1),
+	(4, '2015', 'A', 'C', 1),
+	(5, '2015', 'A', 'D', 1),
+	(6, '2015', 'B', 'A', 1),
+	(7, '2015', 'B', 'C', 1),
+	(8, '2015', 'B', 'D', 1),
+	(9, '2014', 'A', 'C', 1),
+	(10, '2014', 'B', 'C', 1),
+	(11, '2014', 'A', 'C', 1),
+	(12, '2014', 'A', 'A', 1),
+	(13, '2014', 'A', 'B', 1);
 /*!40000 ALTER TABLE `cohorte` ENABLE KEYS */;
 
 
@@ -177,13 +208,13 @@ CREATE TABLE IF NOT EXISTS `comunidad` (
   `parroquia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_comunidad`),
   UNIQUE KEY `rif` (`rif`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- Volcando datos para la tabla sistema.comunidad: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `comunidad` DISABLE KEYS */;
 INSERT INTO `comunidad` (`id_comunidad`, `fecha`, `nombre_comunidad`, `rif`, `correo`, `direccion`, `convenio`, `tipo_convenio`, `telefono_hab`, `telefono_cel`, `observaciones`, `estado`, `municipio`, `parroquia`) VALUES
-	(1, '2015-08-11 17:19:07', 'comunidad1', '7878', 'algo@algo', 'ejido', 'si', 'grupal', '8797', '798798798', 'algo maS', '14', '3', '9'),
-	(4, '2015-08-12 19:30:29', 'COMUNIDAD2', '8989', 'COMUNIDAD@ALGO', 'EJIDO', 'no', 'PARA TODOS', '55558', '5563244', 'OBSERVACION', '14', '6', '21');
+	(1, '2015-08-27 23:29:56', 'UPTM Kleber Ramirez ', ' G-20010201-2 ', 'uptm@hotmail.com', 'Av Monseñor Duque, Ejido 5111', 'no', '', ' 0274-2210746', '', '', '14', '6', '21'),
+	(2, '2015-08-28 13:48:27', 'ula ', 'J-31677631-0', 'ulamerida@hotmail.com', 'ula.ve@hotmail.com', 'no', 'no', '0274-2402665', '04145789654', '', '14', '12', '54');
 /*!40000 ALTER TABLE `comunidad` ENABLE KEYS */;
 
 
@@ -195,7 +226,7 @@ CREATE TABLE IF NOT EXISTS `docente` (
   `nacionalidad` char(1) COLLATE utf8_spanish_ci NOT NULL,
   `cedula` int(11) NOT NULL,
   `fecha_nac` date NOT NULL,
-  `lugar_nac` varchar(12) COLLATE utf8_spanish_ci NOT NULL,
+  `lugar_nac` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `profesion` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `cargo` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `correo` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
@@ -214,13 +245,21 @@ CREATE TABLE IF NOT EXISTS `docente` (
   `coordinador` int(1) NOT NULL DEFAULT '0',
   `id_carrera` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_docente`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.docente: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.docente: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `docente` DISABLE KEYS */;
 INSERT INTO `docente` (`id_docente`, `nombre`, `apellido`, `nacionalidad`, `cedula`, `fecha_nac`, `lugar_nac`, `profesion`, `cargo`, `correo`, `clave_usuario`, `telefono_hab`, `telefono_cel`, `direccion_hab`, `categoria`, `modalidad`, `dedicacion`, `ascenso`, `fecha_ingreso`, `investigacion`, `observaciones`, `guia`, `coordinador`, `id_carrera`) VALUES
-	(1, 'Eliana', 'Lobo', 'V', 16445921, '1984-09-13', 'Mérida', 'Licenciada en educación', 'Maestra', 'lobo13256@hotmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0274-2219173', '0412-5478972', 'Ejido', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-04-21', 'Programación', 'ya', 1, 1, 0),
-	(26, 'Erwin', 'Lobo', 'V', 14106119, '1978-09-27', 'Mérida', 'Tecnico', 'Reparación', 'white.1.wolf@hotmail.com', '202cb962ac59075b964b07152d234b70', '0274-2219173', '04126500763', 'Ejido', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-09-27', 'tecnologia', 'por Dios', 1, 1, 0);
+	(1, 'Erwin', 'Lobo', 'V', 14106119, '1978-09-27', 'Mérida', 'Tecnico', 'Reparación', 'white.1.wolf@hotmail.com', '202cb962ac59075b964b07152d234b70', '0274-2219173', '04126500763', 'Ejido', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-09-27', 'tecnologia', 'por Dios', 1, 1, 0),
+	(2, 'Solange Aniré', 'Leal Leal', 'V', 12722185, '2015-08-12', 'Mérida', 'Ingeniero en Sistema', 'Coordinadora ', 'solangeleal29@gmail.com', '202cb962ac59075b964b07152d234b70', '0274-2623282', '0416-1796501', 'Av. Las Americas, Res. Independecia, Torre Mata Siete, piso 3, Apto 3-1', 'Asociado(a)', 'Presencial', 'Tiempo Completo', '2012', '2008-05-20', 'Redes y telecomunicaciones', 'Gracias por ser nuestra tutora ', 1, 1, 1),
+	(29, 'Diony Ginette', 'Alviárez Paredes', 'V', 8047120, '2015-08-12', 'Mérida', 'Ingeniero en Sistema', 'Coordinadora de Proyecto', 'gdiony@gmail.com', '1735297e39c74352e58ac9abd7a7746d', '0274-2623524', '0426-9770025', 'Avenida las Américas Conjunto Residencial Santa Barbara Torre 4 piso 4 Apto 4-c', 'Asociado(a)', 'Semi-presencial', 'Exclusivo(a)', '2011', '2000-10-17', 'Virtualización, Gestión de aulas virtual', '', 1, 1, 1),
+	(30, 'Nelma', 'Uzcategui Pineda ', 'V', 13014569, '2015-08-18', 'Mérida', 'Especialista en Telecomunicaci', 'Docente ', 'Redes.asesoria@gmail.com', '5f5c7efb3f15ea81d0dd7b5e67250fcf', '0274-2211241', '0414-7416984', 'Conjunto res. Parque el Salado Torre F Apto 1-4 Planta Baja', 'Asistente(a)', 'Presencial', 'Tiempo Completo', '2013', '2014-04-15', 'Redes y Telecomunicaciones', '', 0, 0, 1),
+	(31, 'Blanca Elena ', 'Alviarez de Maldonado', 'V', 5655983, '1975-08-19', 'Mérida ', 'Ingeniera en Sistema ', 'Docente ', 'blancalvi@gmail.com', '463930417ebcaa6c0b983feaa99e55f3', '0274-2713583', '04167771000', 'Urbanización Campo Claro Casa 95 Merida', 'Asociado(a)', 'Semi-presencial', 'Exclusivo(a)', '2011', '2000-10-17', 'Gestion de Proyecto para fortalecer el e', '', 0, 0, 1),
+	(32, 'Ana C', 'Muñoz G', 'V', 4491973, '1970-04-01', 'Mérida', 'Ingeniera en Sistema ', 'docente ', 'anamunoz@gmail.com', 'b0298f8ed048311053f60cbf3e42b313', '0274-2637323', '0414-7447472', 'Av. Las Americas Villa el Rodeo #36', 'Asociado(a)', 'Presencial', 'Exclusivo(a)', '2006', '1996-04-01', 'Gestión e Ingeniería del Conocimiento, o', '', 0, 0, 1),
+	(33, 'Nelson', 'Corredor Trejo', 'V', 4484976, '1977-10-18', 'Mérida', 'Lic. Comunicación social menci', 'Docente', 'ncorredorve@yahoo.com', 'ba35008385c2ce7c63525c8c517c102c', '0274-2442582', '0424-7272549', 'Conjunto residencial cardenal quintero segunda etapa, edif. 9 piso 5 apto 5-1', 'Asistente(a)', 'Presencial', 'Tiempo Completo', '2013', '0000-00-00', 'Tecnología de Investigación e Informació', '', 0, 0, 1),
+	(34, 'Eliana', 'Lobo', 'V', 16445921, '1985-09-13', 'Mérida', 'Educación', 'Maestra', 'lobo13256@hotmail.com', '6c6822ef19fce318df2daa197c84cec5', '0412-7899672', '0274-2219173', 'Av. Bolivar casa N° 1 Ejido Estado Mérida, Municipio Campo Elías', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-06-15', 'Educación', 'Buena Profesora', 0, 0, 1),
+	(35, 'María Magaly', 'Paredes Rangel', 'V', 20848273, '1991-08-31', 'Mérida Municumpis Municipio Campo Elías', 'Administración', 'Profesora', 'maria_paredes@gmail.com', '32c9104d98083425c4e50b217d630196', '0424-7496237', '0274-2219173', 'Aldea Mucunpis de Azequia, Ejido Estado Mérida  Municipio Campo Elías', 'Asistente(a)', 'Presencial', 'Tiempo Completo', '2015', '2015-02-11', 'Empresa', 'ninguna', 0, 0, 11),
+	(37, 'Judelvis', 'Rivas', 'V', 17456121, '1985-12-23', 'MErida', 'programador', 'programador', 'Judprog@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '02742215686', '04262742990', 'Rosales', 'Agregado(a)', 'Presencial', 'Exclusivo(a)', '2013', '2008-08-04', 'robotica', 'algo', 0, 1, 1);
 /*!40000 ALTER TABLE `docente` ENABLE KEYS */;
 
 
@@ -270,17 +309,27 @@ CREATE TABLE IF NOT EXISTS `estudios` (
   `id_docente` int(18) NOT NULL,
   PRIMARY KEY (`id_estudio`),
   KEY `id_docente` (`id_docente`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.estudios: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.estudios: ~16 rows (aproximadamente)
 /*!40000 ALTER TABLE `estudios` DISABLE KEYS */;
 INSERT INTO `estudios` (`id_estudio`, `tipo`, `nombre`, `lugar`, `id_docente`) VALUES
-	(1, 'Pregrado', 'Ingenieria Informatica', 'IUTE', 1),
-	(2, 'Postgrado', 'Bases De Datos', 'Harvar', 1),
-	(3, 'Doctorado', 'Analisis de Algoritmo', 'Priston', 1),
-	(4, 'Postgrado', 'matematica', 'UNA', 22),
-	(5, 'Pregrado', 'Ing. Sistemas', 'Merida', 20),
-	(6, 'Postgrado', 'control y automatizacion', 'francia', 20);
+	(7, 'Pregrado', 'Ingeniero de Sistema', 'ULA', 2),
+	(8, 'Postgrado', 'Doctorado en Ciencias de la Educación ', 'UFT', 2),
+	(9, 'Pregrado', 'Especialista en Telecomunicaciones', 'IUP “Santiago Mariño”', 30),
+	(10, 'Postgrado', 'Doctorado de Gestión del Conocimiento', 'UPTM', 30),
+	(11, 'Pregrado', 'Ingeniero de Sistema', 'ULA', 29),
+	(12, 'Postgrado', 'Doctorado de Gestión del Conocimiento', 'UPTM', 29),
+	(13, 'Pregrado', 'Ingeniera en Sistema', 'ULA', 31),
+	(14, 'Postgrado', 'Doctorado de Gestión del Conocimiento', 'UPTM', 31),
+	(15, 'Pregrado', 'Ingeniera en sistema', 'ULA', 32),
+	(16, 'Pregrado', 'Lic. Comunicación social mención desarrollo social', 'UNICA', 33),
+	(17, 'Postgrado', 'Gestion de Conocimientos', 'UPTM', 33),
+	(18, 'Pregrado', 'Técnico en Informática ', 'UPTM', 1),
+	(19, 'Postgrado', 'Maestría en Informática ', 'UPTM', 1),
+	(20, 'Pregrado', 'Educación', 'UNA', 34),
+	(21, 'Pregrado', 'Técnico en Informatica', 'UPTM', 34),
+	(22, 'Postgrado', 'Educación', 'UNA', 34);
 /*!40000 ALTER TABLE `estudios` ENABLE KEYS */;
 
 
@@ -295,6 +344,12 @@ CREATE TABLE IF NOT EXISTS `grupo_proyecto` (
 
 -- Volcando datos para la tabla sistema.grupo_proyecto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_proyecto` DISABLE KEYS */;
+INSERT INTO `grupo_proyecto` (`id_alumno`, `fecha`, `id_proyecto`) VALUES
+	(13, '2015-08-28 17:59:51', 1),
+	(12, '2015-08-28 17:59:51', 1),
+	(8, '2015-08-28 17:59:52', 1),
+	(6, '2015-08-28 17:59:52', 1),
+	(0, '2015-08-28 18:18:32', 1);
 /*!40000 ALTER TABLE `grupo_proyecto` ENABLE KEYS */;
 
 
@@ -311,10 +366,19 @@ CREATE TABLE IF NOT EXISTS `investigacion` (
   `id_docente` int(18) NOT NULL,
   PRIMARY KEY (`id_investigacion`),
   KEY `id_docente` (`id_docente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.investigacion: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.investigacion: ~8 rows (aproximadamente)
 /*!40000 ALTER TABLE `investigacion` DISABLE KEYS */;
+INSERT INTO `investigacion` (`id_investigacion`, `peii`, `nivel_peii`, `ano_aplicacion_peii`, `forma_grupo_investigacion`, `nombre_investigacion`, `area_investigacion`, `observaciones`, `id_docente`) VALUES
+	(1, 'Si', 'no se ', 'enero 2014', 'NO', 'no', 'no', '', 2),
+	(2, 'Si', 'no se ', 'enero 2014', 'Si', 'Grupo de Investigación gestion del conocimiento', 'Redes y Telecomunicaciones', '', 30),
+	(3, 'Si', 'no se ', 'Enero 2012', 'Si', 'CIME', 'Virtualización, Gestión de aulas virtual', '', 29),
+	(4, 'Si', 'no se ', 'Enero 2013', 'Si', 'CIME', 'Gestion de Proyecto para fortalecer el e', '', 31),
+	(5, 'Si', 'no se ', '2006', 'Si', 'Gestión e Ingeniería del Conocimiento', 'Gestión e Ingeniería del Conocimiento, o', '', 32),
+	(6, 'Si', 'no se ', '2013', 'Si', 'CIME', 'Tecnología de Investigación e Informació', '', 33),
+	(7, 'Si', '1', '2015', 'Si', 'Wolves', 'Progamación', 'los diferentes fallas del sistema', 34),
+	(8, 'NO', '0', '0', 'Si', 'Los Pipe', 'Tecnología web  ', 'Buen comienzo', 34);
 /*!40000 ALTER TABLE `investigacion` ENABLE KEYS */;
 
 
@@ -474,17 +538,19 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   `id_comunidad` int(18) NOT NULL,
   `id_docente` int(18) NOT NULL,
   `cupo` int(18) NOT NULL,
+  `id_cohorte` int(18) NOT NULL,
   PRIMARY KEY (`id_proyecto`),
   KEY `id_carrera` (`id_carrera`),
   KEY `id_comunidad` (`id_comunidad`),
-  KEY `id_docente` (`id_docente`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  KEY `id_docente` (`id_docente`),
+  KEY `id_cohorte` (`id_cohorte`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.proyecto: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.proyecto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
-INSERT INTO `proyecto` (`id_proyecto`, `fecha`, `titulo_proyecto`, `area_investigacion`, `tipo_proyecto`, `apoyo`, `tipo_apoyo`, `resumen_proyecto`, `observaciones`, `id_carrera`, `id_comunidad`, `id_docente`, `cupo`) VALUES
-	(2, '2015-08-12 20:29:53', 'proyecto 1', 'informatica', 'Socio Productivo', 'No', 'ninguno', 'Muy calidad', '', 0, 1, 1, 0),
-	(3, '2015-08-12 20:36:55', 'practica algo', 'otra', 'Socio Tecnologico', 'Si', 'monetario', 'esta bueno', 'kilo', 1, 4, 26, 0);
+INSERT INTO `proyecto` (`id_proyecto`, `fecha`, `titulo_proyecto`, `area_investigacion`, `tipo_proyecto`, `apoyo`, `tipo_apoyo`, `resumen_proyecto`, `observaciones`, `id_carrera`, `id_comunidad`, `id_docente`, `cupo`, `id_cohorte`) VALUES
+	(1, '2015-08-28 17:59:51', '“Sistema de Control Interno en el Área de Caja del Instituto Universitario Tecnológico de Ejido', 'tecnológico ', 'Socio Tecnologico', 'No', 'na', '', '', 1, 1, 2, 5, 3),
+	(2, '2015-08-28 18:18:05', 'Redes Inalambricas', 'Redes y Telecomunicaciones', 'Socio Tecnologico', 'No', 'Ilusiones que van ayudar', 'cvkhgeiufgwiegtfbsdcbkgcfiuwge', '', 1, 1, 2, 2, 1);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 
@@ -504,12 +570,14 @@ CREATE TABLE IF NOT EXISTS `representante` (
   PRIMARY KEY (`id_representante`),
   UNIQUE KEY `cedula` (`cedula`),
   KEY `id_comunidad` (`id_comunidad`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.representante: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.representante: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `representante` DISABLE KEYS */;
 INSERT INTO `representante` (`id_representante`, `nombre`, `apellido`, `nacionalidad`, `cedula`, `cargo_rol`, `correo`, `direccion`, `telefono_hab`, `telefono_cel`, `id_comunidad`) VALUES
-	(1, 'judelvis', 'rivass', 'V', 17456121, 'representante', 'jud.p@algo', 'la mesa de los indios', '8798554', '78421', 1);
+	(1, 'judelvis', 'rivass', 'V', 17456121, 'representante', 'jud.p@algo', 'la mesa de los indios', '8798554', '78421', 1),
+	(3, 'Solange Aniré', 'Leal Leal', '', 12722185, 'coordinadora ', 'solangeleal29@gmail.com', 'Av Monseñor Duque, Ejido 5111', '', '', 1),
+	(4, 'mentira', 'menira', '', 5950873, 'mentira', 'mentira@hotmail.com', 'milla meida ', '0274-2665478', '0414-24561235', 2);
 /*!40000 ALTER TABLE `representante` ENABLE KEYS */;
 
 
@@ -521,16 +589,13 @@ CREATE TABLE IF NOT EXISTS `sede` (
   PRIMARY KEY (`id_sede`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.sede: ~8 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.sede: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `sede` DISABLE KEYS */;
 INSERT INTO `sede` (`id_sede`, `nombre_sede`, `codigo`) VALUES
 	(1, 'Ejido(Sede Principal)', '001'),
 	(2, 'Tucani', '002'),
 	(3, 'Bailadores', '003'),
 	(4, 'Sede Merida', '004'),
-	(5, 'Barinas', '005'),
-	(7, 'Apure', '006'),
-	(8, 'trujillo', '007'),
 	(9, 'Barquisimeto', '008');
 /*!40000 ALTER TABLE `sede` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
