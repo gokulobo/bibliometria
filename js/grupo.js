@@ -62,6 +62,7 @@ function buscar(){
                     $("#carrera").val(json.id_carrera);
                     $("#nombre").val(json.nombre);
                     $("#nombre").focus();
+                    $("#id_alumno").val(json.id);
                     llenaProyecto();
                 }else{
                     alert("El alumno ya esta asignado a un proyecto");

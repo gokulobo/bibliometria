@@ -6,7 +6,8 @@ if (!$rs) {
     echo "No se pudo Insertar";
 }else{
     echo "Se registro Con exito";
+    $update = "update proyecto set cupo=(cupo+1) where id_proyecto=".$_POST['proyecto'];
+    $rs = mysql_query($update);
 }
-$update = "update proyecto set cupo=(cupo+1) where id_proyecto=".$_POST['proyecto'];
-$rs = mysql_query($update);
+
 ?>
