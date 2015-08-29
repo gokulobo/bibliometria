@@ -1,29 +1,20 @@
 <?php
 include "plantilla/menu.php";
 ?>
-<style>
-    @media print {
-        #f1,#f2,nav{
-            display: none;
-        }
-    }
-</style>
-    <link href="jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/reporteGrupo.js"></script>
+    <script type="text/javascript" src="js/asignarTrayecto.js"></script>
     <div class="container">
         <div class="row">
-            <div class="row" id="f1">
+            <div class="row">
                 <div class="col s12 card-panel">
-                    <h5 class="header center">Lista De Grupos Por Cohorte</h5>
+                    <h5 class="header center">Asignar Trayecto</h5>
                 </div>
             </div>
-            <div class="row" id="f2">
+            <div class="row">
 
                 <div class="col s12 card-panel">
                     <div class="row">
-                        <div class="input-field col s3 ">
-                            <select name="id_carrera" id="id_carrera" class="browser-default"></select>
+                        <div class="input-field col s3">
+                            <select name="id_carrera" id="id_carrera" class="browser-default" required="required"></select>
                         </div>
                         <div class="input-field col s3 ">
                             <select name="cohorte" id="cohorte" class="browser-default" required="required"></select>
@@ -49,9 +40,9 @@ include "plantilla/menu.php";
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s2 ">
-                            <button class="btn waves-effect waves-light" onclick="buscar();">
-                            <i class="material-icons">Buscar</i>
+                        <div class="input-field col s3 ">
+                            <button class="btn waves-effect waves-light" onclick="modificar();">
+                                <i class="material-icons">Modificar</i>
                             </button>
                         </div>
                     </div>

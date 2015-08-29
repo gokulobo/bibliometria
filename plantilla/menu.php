@@ -40,12 +40,12 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 
 <ul id="menuproyecto" class="dropdown-content">
     <li><a href="alumno.php">Alumno</a></li>
+    <li><a href="asignartrayecto.php">Asignar Trayecto</a></li>
     <li><a href="comunidad.php">Comunidad</a></li>
     <li><a href="representante.php">Representante</a></li>
     <li><a href="proyecto.php">Proyecto</a></li>
     <li><a href="grupo.php">Asignar Grupo</a></li>
 </ul>
-
 <ul id="panel" class="dropdown-content">
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
@@ -55,6 +55,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 <ul id="listaReportes" class="dropdown-content">
     <li><a href="reporteDocente.php">Listado Docentes</a></li>
     <li><a href="listaGrupos.php">Listado Grupos</a></li>
+    <li><a href="datosComunidad.php">Comunidad</a></li>
 </ul>
 
 <ul id="menudocente1" class="dropdown-content">
@@ -68,6 +69,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 
 <ul id="menuproyecto1" class="dropdown-content">
     <li><a href="alumno.php">Alumno</a></li>
+    <li><a href="asignartrayecto.php">Asignar Trayecto</a></li>
     <li><a href="comunidad.php">Comunidad</a></li>
     <li><a href="representante.php">Representante</a></li>
     <li><a href="proyecto.php">Proyecto</a></li>

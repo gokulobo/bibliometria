@@ -24,7 +24,7 @@ if($_POST['id_proyecto']==0){
             $rs = mysql_query($update2);
         }
 
-        echo "Se registro Con exito".$inserta;
+        echo "Se registro Con exito";
     }
 }else{
     $actualiza = "UPDATE proyecto SET titulo_proyecto='".$_POST['titulo_proyecto']."',
