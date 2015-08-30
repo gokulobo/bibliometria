@@ -49,6 +49,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 <ul id="panel" class="dropdown-content">
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
+    <li><a href="subirTesis.php">Subir Tesis</a></li>
     <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
 </ul>
 
@@ -80,6 +81,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 <ul id="panel1" class="dropdown-content">
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
+    <li><a href="subirTesis.php">Subir Tesis</a></li>
     <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
 </ul>
 
