@@ -56,6 +56,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="reporteDocente.php">Listado Docentes</a></li>
     <li><a href="listaGrupos.php">Listado Grupos</a></li>
     <li><a href="datosComunidad.php">Comunidad</a></li>
+    <li><a href="bibliometria.php">Bibliometria</a></li>
 </ul>
 
 <ul id="menudocente1" class="dropdown-content">
@@ -85,6 +86,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 <ul id="listaReportes1" class="dropdown-content">
     <li><a href="reporteDocente.php">Listado Docentes</a></li>
     <li><a href="listaGrupos.php">Listado Grupos</a></li>
+    <li><a href="bibliometria.php">Bibliometria</a></li>
 </ul>
 
 <nav>
