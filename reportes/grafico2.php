@@ -1,6 +1,6 @@
 <?php
-
 require("../datos/conectar.php");
+
 
 $based = "select ifnull(cant,0)as cant,nombre_carrera,carrera.id_carrera from carrera
 left join(select count(*)as cant,id_carrera

@@ -98,18 +98,24 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
                 class="mdi-action-toc"></i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="inicio.php"><i class="mdi-action-home"></i></a></li>
+            <?php if($_SESSION['coordinador'] == 1){?>
             <li><a href="#!" data-activates="panel" class="dropdown-button">Panel</a></li>
             <li><a href="#!" data-activates="menudocente" class="dropdown-button">Docente</a></li>
+            <?php }?>
             <li><a href="#!" data-activates="menuproyecto" class="dropdown-button">Proyecto</a></li>
             <li><a href="#!" data-activates="listaReportes" class="dropdown-button">Consulta y Reportes</a></li>
+
             <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="#!"><i class="mdi-action-home"></i></a></li>
+            <?php if($_SESSION['coordinador'] == 1){?>
             <li><a href="#!" data-activates="panel1" class="dropdown-button">Panel</a></li>
             <li><a href="#!" data-activates="menudocente1" class="dropdown-button">Docente</a></li>
+            <?php }?>
             <li><a href="#!" data-activates="menuproyecto1" class="dropdown-button">Proyecto</a></li>
             <li><a href="#!" data-activates="listaReportes1" class="dropdown-button">Consulta y Reportes</a></li>
+
             <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>
         </ul>
     </div>

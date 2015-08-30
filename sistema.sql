@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS `alumnos` (
   UNIQUE KEY `id_alumno` (`id_alumno`),
   KEY `id_cohorte` (`id_cohorte`),
   KEY `id_carrera` (`id_carrera`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.alumnos: ~15 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.alumnos: ~44 rows (aproximadamente)
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
 INSERT INTO `alumnos` (`id_alumno`, `fecha`, `nombre`, `apellido`, `nacionalidad`, `cedula`, `carnet`, `grado_instruccion`, `correo`, `direccion_hab`, `telefono_hab`, `telefono_cel`, `id_cohorte`, `id_carrera`, `trayecto`, `trimestre`, `fecha_nac`, `lugar_nac`) VALUES
 	(1, '2015-08-27 23:09:14', 'Erwin Alberto', 'Lobo Rodriguez ', 'V', 14106119, '010301290', 'TSU', 'gokulobo@gmail.com', 'Av Bolivar ', '', '04126500763', 1, 1, 'III', 'III', '1978-09-27', 'mérida'),
@@ -61,7 +61,27 @@ INSERT INTO `alumnos` (`id_alumno`, `fecha`, `nombre`, `apellido`, `nacionalidad
 	(21, '2015-08-29 15:52:30', 'magi', 'walter', 'V', 32156123, '123456213', 'TSU', 'santamagi@hotmail.com', 'santa barbara del zulia ', '02742345631', '014257896312', 3, 1, 'III', 'III', '2015-01-06', 'zulia'),
 	(22, '2015-08-29 15:52:30', 'lili', 'lander', 'V', 321456321, '012456214', 'TSU', 'colili@gmail.com', 'calle el cobre ', '02742219173', '04125478965', 3, 1, 'III', 'III', '2015-08-03', 'colombia'),
 	(23, '2015-08-29 15:52:30', 'deyci', 'perezca ', 'V', 210312456, '124563214521', 'TSU', 'perezcadey@gmail.com', 'jaji', '0274212191', '041245785214', 3, 1, 'III', 'III', '2015-08-04', 'colombia'),
-	(24, '2015-08-29 15:52:30', 'ma', 'rincon', 'V', 12345678, '012155455121', 'Universitario(a)', 'rincomas@gmail.com', 'manzano', '027489745633', '31427854124', 3, 1, 'III', 'III', '1975-08-04', 'merida');
+	(24, '2015-08-29 15:52:30', 'ma', 'rincon', 'V', 12345678, '012155455121', 'Universitario(a)', 'rincomas@gmail.com', 'manzano', '027489745633', '31427854124', 3, 1, 'III', 'III', '1975-08-04', 'merida'),
+	(25, '2015-08-30 15:22:49', 'jose de sesus ', 'barinas ', 'V', 3214563, '021456321121', 'TSU', 'barijosej@hotmail.com', 'el molino ejido ', '04127896541', '04142145783', 1, 1, 'I', 'II', '2015-08-09', 'barinas '),
+	(26, '2015-08-30 15:24:15', 'marisol', 'albornoz ', 'V', 3245621, '021462135544', 'TSU', 'mari2958@gmail.com', 'los rosales ', '02478451214', '021487541235', 1, 1, 'I', 'II', '1975-02-07', 'merida'),
+	(27, '2015-08-30 15:25:08', 'Alondra', 'Quintero', 'V', 20556899, '010500987', 'Bachiller', 'Alonder@gmail.com', 'San Juan', '0245-12336548', '0426-1264587', 6, 1, 'I', 'I', '1985-02-12', 'Mérida'),
+	(28, '2015-08-30 15:28:45', 'Shakira', 'Pacheco', 'V', 25461987, '010254887', 'Universitario(a)', 'shakira@gmail.com', 'shakira@gmail.com', '0272-4458755', '0424-2145669', 6, 1, 'I', 'I', '1980-06-23', 'Mérida'),
+	(29, '2015-08-30 15:32:41', 'Claudia ', 'Rondón ', 'V', 20754125, '010235547', 'TSU', 'claudia@gmail.com', 'San   José ', '', '0241-10514654', 6, 1, 'I', 'I', '1984-09-23', 'Mérida'),
+	(30, '2015-08-30 15:33:49', 'daniel', 'mendez', 'V', 16445930, '02174589', 'Bachiller', '19650804dani@hotmail.com', 'la mesa de los indios ', '04127854785', '04145785412', 1, 1, 'I', 'I', '1965-08-04', 'merida'),
+	(31, '2015-08-30 15:35:21', 'ivon', 'ramirez', 'V', 16445931, '214521422122', 'TSU', 'ivonemanuel@yahoo.com', 'jaji el pueblo ', '07422185412', '04167895412', 1, 1, 'I', 'I', '1965-08-17', 'merida'),
+	(32, '2015-08-30 15:36:50', 'manuel', 'silva ', 'V', 16445932, '1222543512', 'Universitario(a)', 'mmmanuel@yahoo.com', 'la don luis via la picadora ', '04147896541', '04147896541', 1, 1, 'I', 'I', '1982-08-13', 'merida'),
+	(33, '2015-08-30 15:40:21', 'alver', 'rodriguez ', 'V', 16445933, '213646466', 'TSU', 'alvet21@hotmail.com', 'el cristo ', '02742215353', '04167896541', 3, 1, 'I', 'II', '1984-08-21', 'merida'),
+	(34, '2015-08-30 15:43:37', 'mariana', 'altuve ', 'V', 16445934, '213156564', 'TSU', 'almatu@gmail.com', 'el chama ', '02742214512', '04167845211', 1, 1, 'II', 'I', '1983-08-10', 'merida'),
+	(35, '2015-08-30 15:43:42', 'Ronaldo', 'Guillen ', 'V', 14106112, '0110564781', 'Bachiller', 'ronaldo@hotmail.com', 'campo claro', '042411452368', '0284-2154789', 2, 1, 'II', 'II', '1988-11-15', 'Mérida'),
+	(36, '2015-08-30 15:46:04', 'Juan', 'Camacho', 'V', 14106116, '01065478912', 'Bachiller', 'juan@gmail.com', 'Fernadez Peña', '21564684864', '15445156465', 2, 1, 'II', 'II', '1987-11-25', 'Mérida'),
+	(37, '2015-08-30 15:48:28', 'vicky', 'vicky', 'V', 16445935, '16464351354646', 'TSU', 'vickyvicky@gmail.com', 'csasaa', '027485412145', '04167896541', 1, 10, 'I', 'I', '1985-01-23', 'merida'),
+	(38, '2015-08-30 15:54:17', 'mari', 'mari', 'V', 16445936, '2215464646', 'TSU', 'lmarimari@gmail.com', 'los curos ', '123456644', '04145789654', 1, 10, 'I', 'I', '2005-02-02', 'mérida'),
+	(39, '2015-08-30 16:26:23', 'rene', 'renesss', 'V', 16445937, '3234646464', 'TSU', 'rememesmix@gmail.com', 'la paz ', '0214578145121', '041678936655', 1, 10, 'I', 'I', '2015-08-17', 'merida '),
+	(40, '2015-08-30 16:27:41', 'luz ', 'luz', 'V', 16445938, '21354354|', 'TSU', 'luz@hotmai.com', 'loma de los ángeles ', '02749874563', '04789654232', 1, 10, 'I', 'I', '1996-09-12', 'merida'),
+	(41, '2015-08-30 16:29:04', 'angeles ', 'angeles ', 'V', 16445939, '123546464', 'TSU', 'angeleless@gmail.com', 'el rinco merida ', '02742478954', '04147896541', 1, 10, 'I', 'I', '1993-09-16', 'mérida '),
+	(42, '2015-08-30 17:53:50', 'javi', 'javi', 'V', 16445940, '13544464646', 'TSU', 'fasfas@yahoo.es', 'via jaji ', '02742216541', '04167896541', 1, 13, 'II', 'II', '1995-04-13', 'mérida'),
+	(43, '2015-08-30 17:53:50', 'richar', 'richar', 'V', 16445941, '51353535', 'TSU', 'richar@hotmail.com', 'manzano alto ', '02742215353', '04127899672', 1, 13, 'II', 'II', '1976-03-10', 'merida'),
+	(44, '2015-08-30 17:53:50', 'manuela', 'manuela', 'V', 19445942, '21344646', 'TSU', 'lmanuela@gmail.com', 'la rancheria ', '02742215353', '01427899672', 1, 13, 'II', 'II', '1983-03-09', 'merida');
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 
 
@@ -203,7 +223,7 @@ INSERT INTO `cohorte` (`id_cohorte`, `numero_cohorte`, `tipo_cohorte`, `seccion`
 CREATE TABLE IF NOT EXISTS `comunidad` (
   `id_comunidad` int(18) NOT NULL AUTO_INCREMENT,
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `nombre_comunidad` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre_comunidad` text COLLATE utf8_spanish_ci NOT NULL,
   `rif` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
   `correo` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `direccion` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
@@ -217,13 +237,30 @@ CREATE TABLE IF NOT EXISTS `comunidad` (
   `parroquia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_comunidad`),
   UNIQUE KEY `rif` (`rif`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.comunidad: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.comunidad: ~19 rows (aproximadamente)
 /*!40000 ALTER TABLE `comunidad` DISABLE KEYS */;
 INSERT INTO `comunidad` (`id_comunidad`, `fecha`, `nombre_comunidad`, `rif`, `correo`, `direccion`, `convenio`, `tipo_convenio`, `telefono_hab`, `telefono_cel`, `observaciones`, `estado`, `municipio`, `parroquia`) VALUES
 	(1, '2015-08-27 23:29:56', 'UPTM Kleber Ramirez ', ' G-20010201-2 ', 'uptm@hotmail.com', 'Av Monseñor Duque, Ejido 5111', 'no', '', ' 0274-2210746', '', '', '14', '6', '21'),
-	(2, '2015-08-28 13:48:27', 'ula ', 'J-31677631-0', 'ulamerida@hotmail.com', 'ula.ve@hotmail.com', 'no', 'no', '0274-2402665', '04145789654', '', '14', '12', '54');
+	(2, '2015-08-28 13:48:27', 'ula ', 'J-31677631-0', 'ulamerida@hotmail.com', 'ula.ve@hotmail.com', 'no', 'no', '0274-2402665', '04145789654', '', '14', '12', '54'),
+	(4, '2015-08-30 12:13:19', 'consejo comunal cristo jaji ', ' J-29978452-4', '', ' Parroquia JAJI, municipio Campo Elías, del Estado Mérida  Norte: SILENCIO ALTO. Sur: JAGUANI. Este:', 'no', '', '', '', '', '14', '6', '25'),
+	(5, '2015-08-30 12:16:45', 'Comunal Consejo El Chamizal', ' J-29941781-5', '', ' Parroquia JAJI, municipio Campo Elías, del Estado Mérida Norte: LA PLAYA. Sur: LOMA DEL CARMEN. Est', 'no', '', '', '', '', '14', '6', '25'),
+	(6, '2015-08-30 12:32:40', 'Consejo Comunal El Chicorial', 'J-29938107-1', '', 'Parroquia JAJI, municipio Campo Elías, del Estado Mérida Norte: LA CARBONERA. Sur: CONSEJO COMUNAL E', 'no', '', '', '', '', '14', '6', '25'),
+	(7, '2015-08-30 13:06:23', 'consejo comunal el cobre ', 'J-299772151', '', 'calle el cobre ', 'no', '', '', '', '', '14', '6', '22'),
+	(8, '2015-08-30 13:19:48', 'CONSEJO COMUNAL 24 DE JUNIO SAN JUAN', 'J-30587942-7', '', 'CALLE CAMEJO, CASA N° 1-6 ', 'no', '', '', '', '', '14', '20', '79'),
+	(9, '2015-08-30 14:55:58', 'junta comunal el salidito ', 'J-00124134-5', '', 'el vigia avenida 15', 'no', '', '', '0472578941', '', '14', '1', '5'),
+	(10, '2015-08-30 14:59:01', 'cardenal quintero ', ' J-40521093-1', '', 'el vigia la cadernal  ', 'no', '', '', '04127895412', '', '14', '1', '6'),
+	(11, '2015-08-30 15:00:13', 'san feliz ', 'J-400609682', '', 'la azulita via principal ', 'no', '', '', '', '', '14', '2', '8'),
+	(12, '2015-08-30 15:02:31', 'comunidad del caracciolo parra perez', 'j 16445921-3', '', 'cardenal quintero ', 'no', '', '02742666874', '04141785214', '', '14', '12', '44'),
+	(13, '2015-08-30 15:04:11', 'Consejos Comunales pertenecientes a la Gran Misión Vivienda Venezuela. ... Cumarebo Planta de Cemento Cumarebo ', 'G-20011588-2 ..', '', 'el arenal parte baja ', 'no', '', '02712245617', '04167896412', '', 'seleccione estado', '14', '63'),
+	(14, '2015-08-30 15:06:23', 'mocoties', 'G-20011588-2', '', 'mucuruba', '', '', '027422189745', '04127895641', '', '14', '17', '69'),
+	(15, '2015-08-30 15:08:34', 'pueblo nuevo ', 'J- 29963981-8', '', 'pueblo llanos ', 'no', '', '0278965412', '0412879641321', '', '14', '16', '65'),
+	(16, '2015-08-30 15:10:46', 'los cuji', 'J-31258678-8', '', 'mucumpis ', 'no', '', '', '', '', '14', '20', '78'),
+	(17, '2015-08-30 15:12:44', 'comunidad la palmas ', 'G-20005393-3', '', 'mesa las palmas ', 'no', '', '02752219173', '04157894563', '', '14', '3', '11'),
+	(18, '2015-08-30 15:17:18', 'Fernandez  Peña ', 'R-999333555-h', 'Fernandesz@hotmail.com', 'Av. Fernandesz Peña', 'no', 'ninguno', '0274-0547896', '041226-1234567', 'ninguna', '14', '6', '22'),
+	(19, '2015-08-30 15:20:49', 'Padre Duque', 'P-3698741-H', 'padreduque@gmail.com', 'Vía el Manzano', 'no', 'ninguno', '0274-25814752', '0412-2611546', 'ninguno', '14', '6', '27'),
+	(20, '2015-08-30 15:40:34', 'Empres Biosoft', '12125448', 'biosoft@gmail.com', 'Av. 4 con calle 45 ', 'no', 'ningumno', '0274-2356874', '0424-1322567', 'la realidad ', '14', '12', '46');
 /*!40000 ALTER TABLE `comunidad` ENABLE KEYS */;
 
 
@@ -254,9 +291,9 @@ CREATE TABLE IF NOT EXISTS `docente` (
   `coordinador` int(1) NOT NULL DEFAULT '0',
   `id_carrera` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_docente`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.docente: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.docente: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `docente` DISABLE KEYS */;
 INSERT INTO `docente` (`id_docente`, `nombre`, `apellido`, `nacionalidad`, `cedula`, `fecha_nac`, `lugar_nac`, `profesion`, `cargo`, `correo`, `clave_usuario`, `telefono_hab`, `telefono_cel`, `direccion_hab`, `categoria`, `modalidad`, `dedicacion`, `ascenso`, `fecha_ingreso`, `investigacion`, `observaciones`, `guia`, `coordinador`, `id_carrera`) VALUES
 	(1, 'Erwin', 'Lobo', 'V', 14106119, '1978-09-27', 'Mérida', 'Tecnico', 'Reparación', 'white.1.wolf@hotmail.com', '202cb962ac59075b964b07152d234b70', '0274-2219173', '04126500763', 'Ejido', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-09-27', 'tecnologia', 'por Dios', 1, 1, 0),
@@ -268,7 +305,10 @@ INSERT INTO `docente` (`id_docente`, `nombre`, `apellido`, `nacionalidad`, `cedu
 	(33, 'Nelson', 'Corredor Trejo', 'V', 4484976, '1977-10-18', 'Mérida', 'Lic. Comunicación social menci', 'Docente', 'ncorredorve@yahoo.com', 'ba35008385c2ce7c63525c8c517c102c', '0274-2442582', '0424-7272549', 'Conjunto residencial cardenal quintero segunda etapa, edif. 9 piso 5 apto 5-1', 'Asistente(a)', 'Presencial', 'Tiempo Completo', '2013', '0000-00-00', 'Tecnología de Investigación e Informació', '', 0, 0, 1),
 	(34, 'Eliana', 'Lobo', 'V', 16445921, '1985-09-13', 'Mérida', 'Educación', 'Maestra', 'lobo13256@hotmail.com', '6c6822ef19fce318df2daa197c84cec5', '0412-7899672', '0274-2219173', 'Av. Bolivar casa N° 1 Ejido Estado Mérida, Municipio Campo Elías', 'Titular', 'Semi-presencial', 'Exclusivo(a)', '2015', '2015-06-15', 'Educación', 'Buena Profesora', 0, 0, 1),
 	(35, 'María Magaly', 'Paredes Rangel', 'V', 20848273, '1991-08-31', 'Mérida Municumpis Municipio Campo Elías', 'Administración', 'Profesora', 'maria_paredes@gmail.com', '32c9104d98083425c4e50b217d630196', '0424-7496237', '0274-2219173', 'Aldea Mucunpis de Azequia, Ejido Estado Mérida  Municipio Campo Elías', 'Asistente(a)', 'Presencial', 'Tiempo Completo', '2015', '2015-02-11', 'Empresa', 'ninguna', 0, 0, 11),
-	(37, 'Judelvis', 'Rivas', 'V', 17456121, '1985-12-23', 'MErida', 'programador', 'programador', 'Judprog@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '02742215686', '04262742990', 'Rosales', 'Agregado(a)', 'Presencial', 'Exclusivo(a)', '2013', '2008-08-04', 'robotica', 'algo', 0, 1, 1);
+	(37, 'Judelvis', 'Rivas', 'V', 17456121, '1985-12-23', 'MErida', 'programador', 'programador', 'Judprog@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '02742215686', '04262742990', 'Rosales', 'Agregado(a)', 'Presencial', 'Exclusivo(a)', '2013', '2008-08-04', 'robotica', 'algo', 0, 1, 1),
+	(38, 'mari', 'lobo', 'V', 5974271, '1985-08-06', 'merida', 'contadora publica  ', 'docente ', 'mairlobo06@hotmail.com', '202cb962ac59075b964b07152d234b70', '02742215353', '04127899672', 'villa manzano ', 'Asociado(a)', 'Presencial', 'Tiempo Completo', '2013', '2009-08-18', 'contadoria ', '', 1, 0, 10),
+	(39, 'sobeida', 'solera', 'V', 16445946, '2015-08-04', 'merida', 'Ingeniero civil', 'docente ', 'sobesolera@hotmail.com', '202cb962ac59075b964b07152d234b70', '02742219173', '04167896541', 'el piñal ', 'Asociado(a)', 'Presencial', 'Tiempo Completo', '2014', '2000-08-08', 'pavimentación ', '', 1, 1, 13),
+	(40, 'lilian', 'lilian', 'E', 2147483647, '2015-08-04', 'Bogota Colombia ', 'ingeniero civil', 'docente ', 'bclilian@gmail.com', '202cb962ac59075b964b07152d234b70', '02742219178', '04147896541', 'el palmo ', 'Asociado(a)', 'Semi-presencial', 'Tiempo Convencional', '2013', '2011-08-04', 'nos ', '', 0, 0, 7);
 /*!40000 ALTER TABLE `docente` ENABLE KEYS */;
 
 
@@ -351,7 +391,7 @@ CREATE TABLE IF NOT EXISTS `grupo_proyecto` (
   KEY `id_proyecto` (`id_proyecto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.grupo_proyecto: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.grupo_proyecto: ~38 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_proyecto` DISABLE KEYS */;
 INSERT INTO `grupo_proyecto` (`id_alumno`, `fecha`, `id_proyecto`) VALUES
 	(13, '2015-08-28 17:59:51', 1),
@@ -371,7 +411,27 @@ INSERT INTO `grupo_proyecto` (`id_alumno`, `fecha`, `id_proyecto`) VALUES
 	(21, '2015-08-29 15:18:31', 15),
 	(22, '2015-08-29 15:18:31', 15),
 	(23, '2015-08-29 15:18:31', 15),
-	(24, '2015-08-29 15:18:31', 15);
+	(24, '2015-08-29 15:18:31', 15),
+	(25, '2015-08-30 15:26:14', 16),
+	(26, '2015-08-30 15:26:14', 16),
+	(1, '2015-08-30 15:29:10', 17),
+	(2, '2015-08-30 15:29:10', 17),
+	(3, '2015-08-30 15:31:08', 18),
+	(4, '2015-08-30 15:31:08', 18),
+	(5, '2015-08-30 15:31:08', 18),
+	(27, '2015-08-30 15:34:57', 19),
+	(28, '2015-08-30 15:34:57', 19),
+	(29, '2015-08-30 15:34:57', 19),
+	(35, '2015-08-30 16:29:10', 20),
+	(36, '2015-08-30 16:29:10', 20),
+	(37, '2015-08-30 16:38:43', 21),
+	(38, '2015-08-30 16:38:43', 21),
+	(39, '2015-08-30 16:38:43', 21),
+	(40, '2015-08-30 16:44:14', 22),
+	(41, '2015-08-30 16:44:14', 22),
+	(42, '2015-08-30 17:10:56', 23),
+	(43, '2015-08-30 17:12:09', 24),
+	(44, '2015-08-30 17:12:10', 24);
 /*!40000 ALTER TABLE `grupo_proyecto` ENABLE KEYS */;
 
 
@@ -561,22 +621,32 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   `id_docente` int(18) NOT NULL,
   `cupo` int(18) NOT NULL,
   `id_cohorte` int(18) NOT NULL,
+  `tesis` text COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_proyecto`),
   KEY `id_carrera` (`id_carrera`),
   KEY `id_comunidad` (`id_comunidad`),
   KEY `id_docente` (`id_docente`),
   KEY `id_cohorte` (`id_cohorte`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.proyecto: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.proyecto: ~15 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
-INSERT INTO `proyecto` (`id_proyecto`, `fecha`, `titulo_proyecto`, `area_investigacion`, `tipo_proyecto`, `apoyo`, `tipo_apoyo`, `resumen_proyecto`, `observaciones`, `id_carrera`, `id_comunidad`, `id_docente`, `cupo`, `id_cohorte`) VALUES
-	(1, '2015-08-28 17:59:51', '“Sistema de Control Interno en el Área de Caja del Instituto Universitario Tecnológico de Ejido', 'tecnológico ', 'Socio Tecnologico', 'No', 'na', '', '', 1, 1, 2, 5, 3),
-	(2, '2015-08-28 18:18:05', 'Redes Inalambricas', 'Redes y Telecomunicaciones', 'Socio Tecnologico', 'No', 'Ilusiones que van ayudar', 'cvkhgeiufgwiegtfbsdcbkgcfiuwge', '', 1, 1, 2, 2, 1),
-	(3, '2015-08-29 13:15:20', 'sistema de robotica ', 'Tecnología web  ', 'Socio Tecnologico', 'Si', 'de la alcaldía ', '', '', 1, 2, 37, 5, 3),
-	(4, '2015-08-29 14:52:36', 'aula virtual ', 'tecnologia', 'Socio Tecnologico', 'Si', 'monetario', '', '', 1, 2, 37, 4, 3),
-	(14, '2015-08-29 15:17:43', 'asssssssssssssssssssssssss', 'ssssssssdddddddddddddddddddddddddd', 'Socio Tecnologico', 'Si', 'assssssssssssssssssssssssssssssssssssssssssssssss', '', '', 1, 2, 37, 3, 3),
-	(15, '2015-08-29 15:18:31', 'love tecnologi', 'Tecnología web  ', 'Socio Tecnologico', 'No', 'no hay', '', '', 1, 2, 37, 4, 3);
+INSERT INTO `proyecto` (`id_proyecto`, `fecha`, `titulo_proyecto`, `area_investigacion`, `tipo_proyecto`, `apoyo`, `tipo_apoyo`, `resumen_proyecto`, `observaciones`, `id_carrera`, `id_comunidad`, `id_docente`, `cupo`, `id_cohorte`, `tesis`) VALUES
+	(1, '2015-08-28 17:59:51', '“Sistema de Control Interno en el Área de Caja del Instituto Universitario Tecnológico de Ejido', 'tecnológico ', 'Socio Tecnologico', 'No', 'na', '', '', 1, 1, 2, 5, 3, ''),
+	(2, '2015-08-28 18:18:05', 'Redes Inalambricas', 'Redes y Telecomunicaciones', 'Socio Tecnologico', 'No', 'Ilusiones que van ayudar', 'cvkhgeiufgwiegtfbsdcbkgcfiuwge', '', 1, 1, 2, 2, 1, ''),
+	(3, '2015-08-29 13:15:20', 'sistema de robotica ', 'Tecnología web  ', 'Socio Tecnologico', 'Si', 'de la alcaldía ', '', '', 1, 2, 37, 5, 3, ''),
+	(4, '2015-08-29 14:52:36', 'aula virtual ', 'tecnologia', 'Socio Tecnologico', 'Si', 'monetario', '', '', 1, 2, 37, 4, 3, ''),
+	(14, '2015-08-29 15:17:43', 'asssssssssssssssssssssssss', 'ssssssssdddddddddddddddddddddddddd', 'Socio Tecnologico', 'Si', 'assssssssssssssssssssssssssssssssssssssssssssssss', '', '', 1, 2, 37, 3, 3, ''),
+	(15, '2015-08-29 15:18:31', 'love tecnologi', 'Tecnología web  ', 'Socio Tecnologico', 'No', 'no hay', '', '', 1, 2, 37, 4, 3, ''),
+	(16, '2015-08-30 15:26:14', 'COORDINACION DE PROTECCIONES EN LAS SUB-ESTACIONESNO ATENDIDAS REFERENTE A LOS CIRCUITOS DE LA COSTA', 'tecnologico', 'Socio Tecnologico', 'No', 'no', '', '', 1, 16, 37, 2, 1, 'METRICA_V3_Implantacion_y_Aceptacion_del_Sistema.pdf'),
+	(17, '2015-08-30 15:29:10', 'sistema de información para la optimizacion del proceso de inscripción de alumnos', 'tecnologico', 'Socio Tecnologico', 'No', 'no', '', '', 1, 15, 30, 2, 1, ''),
+	(18, '2015-08-30 15:31:08', 'sistema de información para el proceso de inscripción de alumnos', 'tecnologico', 'Socio Tecnologico', 'No', 'no', '', '', 1, 19, 33, 3, 2, ''),
+	(19, '2015-08-30 15:34:57', 'Identificación y Extracción de redes sociales ', 'Desarrollo WEB', 'Socio Tecnologico', 'No', 'ninguno', 'dsfnhsaehfuh hhfah hafh ahafhfa h hoah', '', 1, 18, 32, 3, 6, ''),
+	(20, '2015-08-30 16:29:10', 'Visualización 3D realista utilizando posicionamiento espacial', 'Tecnología 3D', 'Socio Tecnologico', 'No', 'cuando', 'cvsajdfoiaefg jfipog jgpsejpejgp jpj gpgj pje jpe j', '', 1, 18, 2, 2, 2, ''),
+	(21, '2015-08-30 16:38:43', 'Análisis comparativo de la eficiencia en términos sociales y económicos de las instituciones financi', 'contaduria ', 'Socio Integrador', 'No', 'no', '', '', 10, 14, 38, 3, 1, ''),
+	(22, '2015-08-30 16:44:14', 'Analisis de algunos determinantes economicos de la oferta de nuevas viviendas formales en Venezuela', 'contaduria', 'Socio Integrador', 'No', 'no', '', '', 10, 18, 38, 2, 1, ''),
+	(23, '2015-08-30 17:10:56', 'proyecto de obra civil', 'productivo', 'Socio Productivo', 'Si', 'gobernación de Mérida ', '', '', 13, 9, 39, 1, 1, ''),
+	(24, '2015-08-30 17:12:09', 'obras de pavimento ', 'productivo ', 'Socio Productivo', 'Si', 'gobernación de Mérida ', '', '', 13, 17, 39, 2, 1, '');
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 
@@ -596,13 +666,18 @@ CREATE TABLE IF NOT EXISTS `representante` (
   PRIMARY KEY (`id_representante`),
   UNIQUE KEY `cedula` (`cedula`),
   KEY `id_comunidad` (`id_comunidad`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- Volcando datos para la tabla sistema.representante: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla sistema.representante: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `representante` DISABLE KEYS */;
 INSERT INTO `representante` (`id_representante`, `nombre`, `apellido`, `nacionalidad`, `cedula`, `cargo_rol`, `correo`, `direccion`, `telefono_hab`, `telefono_cel`, `id_comunidad`) VALUES
 	(1, 'judelvis', 'rivass', 'V', 17456121, 'representante', 'jud.p@algo', 'la mesa de los indios', '8798554', '78421', 1),
-	(4, 'mentira', 'menira', '', 5950873, 'mentira', 'mentira@hotmail.com', 'milla meida ', '0274-2665478', '0414-24561235', 2);
+	(4, 'mentira', 'menira', '', 5950873, 'mentira', 'mentira@hotmail.com', 'milla meida ', '0274-2665478', '0414-24561235', 2),
+	(5, 'yaney', 'la CRUZ ', 'V', 16657739, 'vocera princiapl', 'yasmeylacruz16@hotmail.com', 'chamizal 1', '', '04169703213', 5),
+	(6, 'yajaira ', 'varga', 'V', 10103388, 'vocera principal', '', 'el cristo casa 10 jaji', '', '04168736461', 4),
+	(7, 'carlos ', 'angulos ', 'V', 8033200, 'vocero principal', '', 'la carbonera ', '', '04264287462', 6),
+	(8, 'jose ', 'gonzalez ', 'V', 18797309, 'vocero principal', '', 'calle el cristo casa 10', '', '0416309084', 7),
+	(9, 'Mirian', 'Maldonado ', 'V', 4485475, 'vocera principal', '', 'san juan el corozo casa 24-a', '', '04165753966', 8);
 /*!40000 ALTER TABLE `representante` ENABLE KEYS */;
 
 
