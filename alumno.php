@@ -22,19 +22,20 @@ include "plantilla/menu.php"
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s6">
-                            <select name="nacionalidad" id="nacionalidad" class="browser-default" required="required">
-                                <option value="" disabled selected>Nacionalidad</option>
-                                <option value="V">Venezolano(a)</option>
-                                <option value="E">Extranjero(a)</option>
-                            </select>
-                        </div>
+
 
                         <div class="input-field col s6">
                             <input type="hidden" id="id_alumno" name="id_alumno" value="0">
                             <input id="cedula" name="cedula" type="text" class="validate" required="required"
                                    onkeypress="ValidaSoloNumeros()" onblur="buscar();">
                             <label for="cedula">Cedula</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <select name="nacionalidad" id="nacionalidad" class="browser-default" required="required">
+                                <option value="" disabled selected>Nacionalidad</option>
+                                <option value="V">Venezolano(a)</option>
+                                <option value="E">Extranjero(a)</option>
+                            </select>
                         </div>
                     </div>
 

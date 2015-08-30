@@ -22,7 +22,7 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s6">
                         <input type="hidden" id="id_comunidad" name="id_comunidad" value="0">
-                        <input id="rif" name="rif" type="text" class="validate" required="required" onblur="buscar();">
+                        <input id="rif" name="rif" type="text" class="validate"  onblur="buscar();">
                         <label for="rif">RIF</label>
                     </div>
                     <div class="input-field col s6">

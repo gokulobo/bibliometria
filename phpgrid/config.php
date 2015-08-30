@@ -3,7 +3,7 @@
 define("PHPGRID_DBTYPE","Mysql"); // or mysqli
 define("PHPGRID_DBHOST","localhost");
 define("PHPGRID_DBUSER","root");
-define("PHPGRID_DBPASS","123");
+define("PHPGRID_DBPASS","271319");
 define("PHPGRID_DBNAME","sistema");
 
 // Automatically make db connection inside lib
