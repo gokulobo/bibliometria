@@ -36,6 +36,12 @@ $col["editable"] = true;
 $cols[] = $col;
 
 $col = array();
+$col["title"] = "Carnet"; // caption of column, can use HTML tags too
+$col["name"] = "carnet"; // grid column name, same as db field or alias from sql
+$col["width"] = "40"; // width on grid
+$cols[] = $col;
+
+$col = array();
 $col["title"] = "F. Nacimiento"; // caption of column, can use HTML tags too
 $col["name"] = "fecha_nac"; // grid column name, same as db field or alias from sql
 $col["width"] = "60"; // width on grid
@@ -79,7 +85,7 @@ $g->set_actions(array(
         "search" => "simple",
     )
 );
-$g->select_command = "select id_alumno ,nombre,apellido,cedula,fecha_nac,lugar_nac,
+$g->select_command = "select id_alumno ,nombre,apellido,cedula,carnet,fecha_nac,lugar_nac,
 correo,nombre_carrera from alumnos
 join carrera on carrera.id_carrera = alumnos.id_carrera";
 // set database table for CRUD operations
