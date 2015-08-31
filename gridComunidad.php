@@ -11,47 +11,20 @@ $g = new jqgrid();
 
 $col = array();
 $col["title"] = "Id"; // caption of column, can use HTML tags too
-$col["name"] = "id_alumno"; // grid column name, same as db field or alias from sql
+$col["name"] = "id_comunidad"; // grid column name, same as db field or alias from sql
 $col["hidden"] = true;
 $cols[] = $col;
 
 $col = array();
-$col["title"] = "Cedula"; // caption of column, can use HTML tags too
-$col["name"] = "cedula"; // grid column name, same as db field or alias from sql
+$col["title"] = "rif"; // caption of column, can use HTML tags too
+$col["name"] = "rif"; // grid column name, same as db field or alias from sql
 $col["width"] = "40"; // width on grid
 $cols[] = $col;
 
 $col = array();
-$col["title"] = "Nombre"; // caption of column, can use HTML tags too
-$col["name"] = "nombre"; // grid column name, same as db field or alias from sql
+$col["title"] = "Nombre Comunidad"; // caption of column, can use HTML tags too
+$col["name"] = "nombre_comunidad"; // grid column name, same as db field or alias from sql
 $col["width"] = "40"; // width on grid
-$col["editable"] = true;
-$cols[] = $col;
-
-$col = array();
-$col["title"] = "Apellido"; // caption of column, can use HTML tags too
-$col["name"] = "apellido"; // grid column name, same as db field or alias from sql
-$col["width"] = "60"; // width on grid
-$col["editable"] = true;
-$cols[] = $col;
-
-$col = array();
-$col["title"] = "Carnet"; // caption of column, can use HTML tags too
-$col["name"] = "carnet"; // grid column name, same as db field or alias from sql
-$col["width"] = "40"; // width on grid
-$cols[] = $col;
-
-$col = array();
-$col["title"] = "F. Nacimiento"; // caption of column, can use HTML tags too
-$col["name"] = "fecha_nac"; // grid column name, same as db field or alias from sql
-$col["width"] = "60"; // width on grid
-$col["editable"] = true;
-$cols[] = $col;
-
-$col = array();
-$col["title"] = "L.Nacimiento"; // caption of column, can use HTML tags too
-$col["name"] = "lugar_nac"; // grid column name, same as db field or alias from sql
-$col["width"] = "60"; // width on grid
 $col["editable"] = true;
 $cols[] = $col;
 
@@ -63,8 +36,35 @@ $col["editable"] = true;
 $cols[] = $col;
 
 $col = array();
-$col["title"] = "Carrera"; // caption of column, can use HTML tags too
-$col["name"] = "nombre_carrera"; // grid column name, same as db field or alias from sql
+$col["title"] = "Dirección"; // caption of column, can use HTML tags too
+$col["name"] = "direccion"; // grid column name, same as db field or alias from sql
+$col["width"] = "40"; // width on grid
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "telefono"; // caption of column, can use HTML tags too
+$col["name"] = "telefono_hab"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Estado"; // caption of column, can use HTML tags too
+$col["name"] = "estado"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Municipio"; // caption of column, can use HTML tags too
+$col["name"] = "municipio"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Parroquia"; // caption of column, can use HTML tags too
+$col["name"] = "parroquia"; // grid column name, same as db field or alias from sql
 $col["width"] = "60"; // width on grid
 $cols[] = $col;
 
@@ -72,7 +72,7 @@ $cols[] = $col;
 
 
 // set few params
-$grid["caption"] = "Alumnos";
+$grid["caption"] = "Comunidad";
 $grid["autowidth"] = true;
 //$grid["pgbuttons"] = false;
 $g->set_options($grid);
@@ -85,9 +85,8 @@ $g->set_actions(array(
         "search" => "simple",
     )
 );
-$g->select_command = "select id_alumno ,nombre,apellido,cedula,carnet,fecha_nac,lugar_nac,
-correo,nombre_carrera from alumnos
-join carrera on carrera.id_carrera = alumnos.id_carrera";
+$g->select_command = "select id_comunidad,nombre_comunidad,rif,correo,direccion,convenio,tipo_convenio,
+telefono_hab,telefono_cel,observaciones,estado,municipio,parroquia from comunidad";
 // set database table for CRUD operations
 $g->table = "alumnos";
 $g->set_columns($cols,true);
