@@ -59,8 +59,7 @@ include "plantilla/menu.php";
 
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="tipo_apoyo" type="text" name="tipo_apoyo" class="validate"
-                                       required="required">
+                                <input id="tipo_apoyo" type="text" name="tipo_apoyo" class="validate">
                                 <label for="tipo_apoyo">Clase de Apoyo</label>
                             </div>
                         </div>
