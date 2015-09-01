@@ -50,21 +50,21 @@ $cols[] = $col;
 
 $col = array();
 $col["title"] = "Estado"; // caption of column, can use HTML tags too
-$col["name"] = "estado"; // grid column name, same as db field or alias from sql
+$col["name"] = "est"; // grid column name, same as db field or alias from sql
 $col["width"] = "60"; // width on grid
-$col["editable"] = true;
+$col["editable"] = false;
 $cols[] = $col;
 
 $col = array();
 $col["title"] = "Municipio"; // caption of column, can use HTML tags too
-$col["name"] = "municipio"; // grid column name, same as db field or alias from sql
+$col["name"] = "muni"; // grid column name, same as db field or alias from sql
 $col["width"] = "60"; // width on grid
-$col["editable"] = true;
+$col["editable"] = false;
 $cols[] = $col;
 
 $col = array();
 $col["title"] = "Parroquia"; // caption of column, can use HTML tags too
-$col["name"] = "parroquia"; // grid column name, same as db field or alias from sql
+$col["name"] = "parro"; // grid column name, same as db field or alias from sql
 $col["width"] = "60"; // width on grid
 $cols[] = $col;
 
@@ -86,7 +86,13 @@ $g->set_actions(array(
     )
 );
 $g->select_command = "select id_comunidad,nombre_comunidad,rif,correo,direccion,convenio,tipo_convenio,
-telefono_hab,telefono_cel,observaciones,estado,municipio,parroquia from comunidad";
+telefono_hab,telefono_cel,observaciones,
+nombre_estado as est,nombre_municipio as muni,
+nombre_parroquia as parro
+from comunidad
+join estados on estados.id_estado = comunidad.estado
+join municipio on municipio.id_municipio = comunidad.municipio
+join parroquia on parroquia.id_parroquia = comunidad.parroquia";
 // set database table for CRUD operations
 $g->table = "alumnos";
 $g->set_columns($cols,true);

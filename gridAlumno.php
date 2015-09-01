@@ -68,6 +68,34 @@ $col["name"] = "nombre_carrera"; // grid column name, same as db field or alias 
 $col["width"] = "60"; // width on grid
 $cols[] = $col;
 
+$col = array();
+$col["title"] = "Cohorte"; // caption of column, can use HTML tags too
+$col["name"] = "cohorte"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = false;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Seccion"; // caption of column, can use HTML tags too
+$col["name"] = "seccion"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = false;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Trayecto"; // caption of column, can use HTML tags too
+$col["name"] = "trayecto"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = false;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Trimestre"; // caption of column, can use HTML tags too
+$col["name"] = "trimestre"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = false;
+$cols[] = $col;
+
 // pass the cooked columns to grid
 
 
@@ -86,8 +114,11 @@ $g->set_actions(array(
     )
 );
 $g->select_command = "select id_alumno ,nombre,apellido,cedula,carnet,fecha_nac,lugar_nac,
-correo,nombre_carrera from alumnos
-join carrera on carrera.id_carrera = alumnos.id_carrera";
+correo,nombre_carrera,trayecto,trimestre,concat(numero_cohorte,tipo_cohorte)as cohorte,
+seccion
+from alumnos
+join carrera on carrera.id_carrera = alumnos.id_carrera
+join cohorte on cohorte.id_cohorte = alumnos.id_cohorte";
 // set database table for CRUD operations
 $g->table = "alumnos";
 $g->set_columns($cols,true);

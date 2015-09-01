@@ -9,7 +9,7 @@ representante.telefono_cel as tel2,representante.nombre as nombR,representante.a
 docente.telefono_cel as tel1
 from proyecto
 join comunidad on comunidad.id_comunidad=proyecto.id_comunidad
-join representante on representante.id_comunidad = comunidad.id_comunidad
+LEFT join representante on representante.id_comunidad = comunidad.id_comunidad
 join cohorte on cohorte.id_cohorte = proyecto.id_cohorte
 join carrera on carrera.id_carrera = proyecto.id_carrera
 join estados on estados.id_estado = comunidad.estado

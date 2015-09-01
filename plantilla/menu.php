@@ -56,6 +56,8 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 <ul id="listaReportes" class="dropdown-content">
     <li><a href="reporteDocente.php">Reporte Docentes</a></li>
     <li><a href="reporteAlumnos.php">Reporte Alumnos</a></li>
+    <li><a href="reporteComunidad.php">Reporte Comunidad</a></li>
+    <li><a href="reporteProyecto.php">Reporte Proyectos</a></li>
     <li><a href="listaGrupos.php">Reporte Grupos</a></li>
     <li><a href="datosComunidad.php">Comunidad</a></li>
     <li><a href="bibliometria.php">Bibliometria</a></li>
@@ -90,6 +92,8 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 <ul id="listaReportes1" class="dropdown-content">
     <li><a href="reporteDocente.php">Reporte Docentes</a></li>
     <li><a href="reporteAlumnos.php">Reporte Alumnos</a></li>
+    <li><a href="reporteComunidad.php">Reporte Comunidad</a></li>
+    <li><a href="reporteProyecto.php">Reporte Proyectos</a></li>
     <li><a href="listaGrupos.php">Reporte Grupos</a></li>
     <li><a href="datosComunidad.php">Comunidad</a></li>
     <li><a href="bibliometria.php">Bibliometria</a></li>
