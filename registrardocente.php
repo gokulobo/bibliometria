@@ -14,13 +14,13 @@ include "plantilla/menu.php";
 
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s6 cyan lighten-4"><a href="#basico" class="black-text">Datos Básicos</a></li>
-                <li class="tab col s6 blue lighten-4"><a href="#laboral" class="black-text">Datos Laborales</a></li>
+                <li class="tab col s6 "><a href="#basico" class="black-text">Datos Básicos</a></li>
+                <li class="tab col s6 "><a href="#laboral" class="black-text">Datos Laborales</a></li>
             </ul>
         </div>
 
         <form action="#" method="post" onsubmit="return guardar();" id="frmDocente">
-            <div id="basico" class="col s12 card-panel blue lighten-4">
+            <div id="basico" class="col s12 card-panel ">
 
                 <div class="row">
                     <div class="input-field col s2">
@@ -178,10 +178,6 @@ include "plantilla/menu.php";
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s3" id="clave">
-                        <input id="clave_usuario" name="clave_usuario" type="password" class="validate">
-                        <label for="clave_usuario">Clave</label>
-                    </div>
                     <div class="switch col s4">
                         <label form="coordinador">Coordinador(a)</label>
                         <label>
@@ -202,13 +198,29 @@ include "plantilla/menu.php";
                             </label>
                         </div>
                     </div>
+                    <?php if($_SESSION['admin']==1){?>
+                    <div class="row col s4">
+                        <div class="switch">
+                            <label form="admin">Admin
+                                No
+                                <input id="admin" name="admin" type="checkbox">
+                                <span class="lever"></span>
+                                Si
+                            </label>
+                        </div>
+                    </div>
+                    <?php }?>
                 </div>
                 <div class="row">
-                    <div class="input-field col s5">
+                    <div class="input-field col s4" id="clave">
+                        <input id="clave_usuario" name="clave_usuario" type="password" class="validate">
+                        <label for="clave_usuario">Clave</label>
+                    </div>
+                    <div class="input-field col s4">
                         <input id="observaciones" name="observaciones" type="text" class="validate">
                         <label form="observaciones">Observaciones</label>
                     </div>
-                    <div class="input-field col s6">
+                    <div class="input-field col s4">
 
                         <select name="id_carrera" id="id_carrera" class="browser-default" required="required"></select>
                     </div>

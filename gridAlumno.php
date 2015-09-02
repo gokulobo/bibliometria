@@ -118,7 +118,9 @@ correo,nombre_carrera,trayecto,trimestre,concat(numero_cohorte,tipo_cohorte)as c
 seccion
 from alumnos
 join carrera on carrera.id_carrera = alumnos.id_carrera
-join cohorte on cohorte.id_cohorte = alumnos.id_cohorte";
+join cohorte on cohorte.id_cohorte = alumnos.id_cohorte
+where alumnos.id_carrera=".$_SESSION['id_carrera']."
+";
 // set database table for CRUD operations
 $g->table = "alumnos";
 $g->set_columns($cols,true);

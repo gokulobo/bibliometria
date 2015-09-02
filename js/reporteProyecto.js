@@ -1,4 +1,5 @@
 $(function () {
+    $("#phpGrid").load("gridProyecto.php");
     listar();
 });
 

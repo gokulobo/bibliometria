@@ -18,7 +18,7 @@ include "plantilla/menu.php";
                 <div class="row">
                     <div class="input-field col s6 ">
                         <input type="hidden" id="id_alumno" name="id_alumno" value="0">
-                        <input type="text" id="buscarAlumno" name="buscarAlumno" onblur="buscar();">
+                        <input type="text" id="buscarAlumno" name="buscarAlumno" onblur="buscar();" placeholder="Cedula Estudiante">
                     </div>
                     <div class="input-field col s6">
                         <select name="proyecto" id="proyecto" class="browser-default">

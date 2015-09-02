@@ -4,23 +4,23 @@ require("../datos/conectar.php");
 $cedula = $_POST['cedula'];
 $based = ("SELECT * FROM docente where cedula='".$cedula."'");
 $rs = mysql_query($based);
-$datos="<h4>Datos Basicos</h4><br><table class='striped responsive-table'><thead><tr><th>Nombre Y Apellido</th><th>Fecha Nac</th><th>Lugar Nac</th>
+/*$datos="<h4>Datos Basicos</h4><br><table class='striped responsive-table'><thead><tr><th>Nombre Y Apellido</th><th>Fecha Nac</th><th>Lugar Nac</th>
 <th>Profesion</th><th>Cargo</th><th>Correo</th><th>Telefono Hab</th><th>Telefon Cel</th><th>Direccion Hab</th>
 <th>Categoria</th><th>Modalidad</th><th>Dedicacion</th><th>Ascenso</th><th>Fecha Ing</th><th>Lin Investigacion</th>
 <th>Observaciones</th></tr>
-</thead>";
-//$datos="<table class='striped responsive-table'>";
+</thead>";*/
+$datos="<table class='striped responsive-table'>";
 if (mysql_num_rows($rs) > 0) {
     while ($fila = mysql_fetch_assoc($rs)) {
-        $datos .= "<tr><td>".$fila['nombre']." ".$fila['apellido']."</td><td>".$fila['fecha_nac']."</td>
+        /*$datos .= "<tr><td>".$fila['nombre']." ".$fila['apellido']."</td><td>".$fila['fecha_nac']."</td>
         <td>".$fila['lugar_nac']."</td><td>".$fila['profesion']."</td><td>".$fila['cargo']."</td><td>".$fila['correo']."</td>
         <td>".$fila['telefono_hab']."</td><td>".$fila['telefono_cel']."</td><td>".$fila['direccion_hab']."</td>
         <td>".$fila['categoria']."</td><td>".$fila['modalidad']."</td><td>".$fila['dedicacion']."</td><td>".$fila['ascenso']."</td>
         <td>".$fila['fecha_ingreso']."</td><td>".$fila['investigacion']."</td><td>".$fila['observaciones']."</td>
-        </tr>";
-        /*$datos .= "<tbody><tr><th>Nombre</th><td>".$fila['nombre']."</td><th>Apellido</th><td>".$fila['apellido']."</td></tr>
-        <tr><th class='blue'>F.Nacimiento</th><td>".$fila['fecha_nac']."</td><th>L.Nacimiento</th><td>".$fila['lugar_nac']."</td></tr>
-        ";*/
+        </tr>";*/
+        $datos .= "<tbody><tr><th>Nombre</th><td>".$fila['nombre']."</td><th>Apellido</th><td>".$fila['apellido']."</td></tr>
+        <tr><th class=''>F.Nacimiento</th><td>".$fila['fecha_nac']."</td><th>L.Nacimiento</th><td>".$fila['lugar_nac']."</td></tr>
+        <tr><th>Profesión</th><td>".$fila['profesion']."</td><th>cargo</th><td>".$fila['cargo']."</td></tr>";
 
 
     }

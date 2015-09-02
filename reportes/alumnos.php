@@ -7,7 +7,9 @@ correo,nombre_carrera,trayecto,trimestre,concat(numero_cohorte,tipo_cohorte)as c
 seccion
 from alumnos
 join carrera on carrera.id_carrera = alumnos.id_carrera
-join cohorte on cohorte.id_cohorte = alumnos.id_cohorte");
+join cohorte on cohorte.id_cohorte = alumnos.id_cohorte
+where alumnos.id_carrera=".$_SESSION['id_carrera']."
+");
 $rs = mysql_query($based);
 $datos="<h4>Datos Basicos</h4><br><table class='striped responsive-table'>
 <thead><tr><th>Cedula</th><th>Nombre Y Apellido</th><th>Carnet</th>
@@ -21,7 +23,7 @@ if (mysql_num_rows($rs) > 0) {
         $datos .= "<tr><td>".$fila['cedula']."</td><td>".$fila['nombre']." ".$fila['apellido']."</td>
         <td>".$fila['carnet']."</td><td>".$fila['fecha_nac']."</td>
         <td>".$fila['lugar_nac']."</td><td>".$fila['correo']."</td>
-        <td>".$fila['carrera']."</td><td>".$fila['cohorte']."</td><td>".$fila['seccion']."</td>
+        <td>".$fila['nombre_carrera']."</td><td>".$fila['cohorte']."</td><td>".$fila['seccion']."</td>
         <td>".$fila['trayecto']."</td><td>".$fila['trimestre']."</td></tr>";
         /*$datos .= "<tbody><tr><th>Nombre</th><td>".$fila['nombre']."</td><th>Apellido</th><td>".$fila['apellido']."</td></tr>
         <tr><th class='blue'>F.Nacimiento</th><td>".$fila['fecha_nac']."</td><th>L.Nacimiento</th><td>".$fila['lugar_nac']."</td></tr>

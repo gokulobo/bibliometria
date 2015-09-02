@@ -23,8 +23,6 @@ $(function () {
         selectMonths: true,
         format: 'yyyy-mm-dd'
     });
-
-
 });
 
 function guardar() {
@@ -86,6 +84,7 @@ function buscar() {
                 $("#id_carrera").focus();
                 $("#id_carrera").val(json.id_carrera);
                 if (json.guia == 1)$("#guia").attr("checked", true);
+                if (json.admin == 1)$("#admin").attr("checked", true);
                 if (json.coordinador == 1)$("#coordinador").attr("checked", true);
 
 

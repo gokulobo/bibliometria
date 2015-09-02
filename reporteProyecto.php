@@ -1,11 +1,12 @@
 <?php
 include "plantilla/menu.php";
 ?>
-    <link type="text/css" rel="stylesheet" href="css/tabla.css" media="print"/>
+    <!--<link type="text/css" rel="stylesheet" href="css/tabla.css" media="print"/>!-->
+    <link type="text/css" rel="stylesheet" href="css/Table2.css" media="all"/>
     <script type="text/javascript" src="js/reporteProyecto.js"></script>
     <style>
         @media print {
-            #f1, nav {
+            #f1, nav,#phpGrid {
                 display: none;
             }
 
@@ -21,6 +22,9 @@ include "plantilla/menu.php";
                 <h5 class="header center">Listado de Proyectos</h5>
             </div>
         </div>
+    </div>
+    <div class="col s12" id="phpGrid">
+
     </div>
 
     <div class="col s12" id="resultado">

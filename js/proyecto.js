@@ -1,6 +1,6 @@
 
 $(function () {
-
+    $("#ocultar").hide();
     $('select').material_select();
     $.ajax({url : "listar/listaCarreras.php",type : "POST",
         success : function(resp) {
@@ -107,8 +107,11 @@ function buscar(){
                 $("#id_carrera").val(json.id_carrera);
                 $("#id_comunidad").val(json.id_comunidad);
                 $("#cohorte").val(json.id_cohorte);
+                $("#estatus").val(json.estatus);
                 $("#observaciones").focus();
                 $("#observaciones").val(json.observaciones);
+                $("#carrera2").focus();
+                $("#carrera2").val(json.carrera2);
                 $("#titulo_proyecto").focus();
             }else {
                 $('form').each(function () {
@@ -162,4 +165,10 @@ function quitar(){
         $("#alumnos option:selected").remove();
     }
 
+}
+
+function verificarTipo(){
+    var tipo = $("#tipo_proyecto").val();
+    if(tipo == 'Socio Integrador')$("#ocultar").show();
+    else $("#ocultar").hide();
 }

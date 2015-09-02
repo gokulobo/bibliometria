@@ -28,7 +28,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 
     </script>
 </head>
-<body>
+<body><?php print_R($_SESSION);?>
 <ul id="menudocente" class="dropdown-content">
     <li><a href="registrardocente.php">Datos del Docente</a></li>
     <li><a href="estudio.php">Estudios Realizados</a></li>
@@ -47,8 +47,10 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="grupo.php">Asignar Grupo</a></li>
 </ul>
 <ul id="panel" class="dropdown-content">
+    <?php if($_SESSION['admin'] == 1){?>
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
+    <?php }?>
     <li><a href="subirTesis.php">Subir Tesis</a></li>
     <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
 </ul>
@@ -83,8 +85,10 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 </ul>
 
 <ul id="panel1" class="dropdown-content">
+    <?php if($_SESSION['admin'] == 1){?>
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
+    <?php }?>
     <li><a href="subirTesis.php">Subir Tesis</a></li>
     <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
 </ul>
@@ -107,7 +111,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
                 class="mdi-action-toc"></i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="inicio.php"><i class="mdi-action-home"></i></a></li>
-            <?php if($_SESSION['coordinador'] == 1){?>
+            <?php if($_SESSION['coordinador'] == 1 || $_SESSION['admin'] == 1){?>
             <li><a href="#!" data-activates="panel" class="dropdown-button">Panel</a></li>
             <li><a href="#!" data-activates="menudocente" class="dropdown-button">Docente</a></li>
             <?php }?>
@@ -118,7 +122,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="#!"><i class="mdi-action-home"></i></a></li>
-            <?php if($_SESSION['coordinador'] == 1){?>
+            <?php if($_SESSION['coordinador'] == 1 || $_SESSION['admin'] == 1){?>
             <li><a href="#!" data-activates="panel1" class="dropdown-button">Panel</a></li>
             <li><a href="#!" data-activates="menudocente1" class="dropdown-button">Docente</a></li>
             <?php }?>
@@ -129,3 +133,4 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         </ul>
     </div>
 </nav>
+<diV class="row"><small><?php echo "Usuario Conectado:".$_SESSION['nombre']."|Carrera:".$_SESSION['carrera'] ?></small></diV>

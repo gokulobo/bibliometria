@@ -5,12 +5,14 @@ require("../datos/conectar.php");
 if($_POST['id_proyecto']==0){
     $inserta = "INSERT into proyecto(titulo_proyecto,area_investigacion,
                 tipo_proyecto,apoyo,tipo_apoyo,resumen_proyecto,
-                id_carrera,id_comunidad,id_docente,observaciones,id_cohorte)
+                id_carrera,id_comunidad,id_docente,observaciones,id_cohorte,
+                carrera2,estatus)
                 values('".$_POST['titulo_proyecto']."','".$_POST['area_investigacion']."',
                 '".$_POST['tipo_proyecto']."','".$_POST['apoyo']."',
                 '".$_POST['tipo_apoyo']."','".$_POST['resumen_proyecto']."',
                 ".$_POST['id_carrera'].",".$_POST['id_comunidad'].",".$_POST['id_docente'].",
-                '".$_POST['observaciones']."',".$_POST['cohorte'].")";
+                '".$_POST['observaciones']."',".$_POST['cohorte'].",'".$_POST['carrera2']."'
+                ,".$_POST['estatus'].")";
     $rs = mysql_query($inserta);
     if (!$rs) {
         echo "No se pudo Insertar".$inserta;
@@ -34,7 +36,8 @@ if($_POST['id_proyecto']==0){
     resumen_proyecto='".$_POST['resumen_proyecto']."', id_carrera=".$_POST['id_carrera'].",
     id_comunidad=".$_POST['id_comunidad'].",
     id_docente=".$_POST['id_docente'].",observaciones='".$_POST['observaciones']."',
-    id_cohorte= ".$_POST['cohorte']." where id_proyecto=".$_POST['id_proyecto'];
+    id_cohorte= ".$_POST['cohorte'].",carrera2='".$_POST['carrera2']."'
+    ,estatus=".$_POST['estatus']." where id_proyecto=".$_POST['id_proyecto'];
     $rs = mysql_query($actualiza);
     if (!$rs) {
         echo "No se pudo Actualizar".$actualiza;

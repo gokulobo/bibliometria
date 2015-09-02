@@ -5,12 +5,14 @@ require("../datos/conectar.php");
 $based = ("select id_proyecto,titulo_proyecto as titulo,
 resumen_proyecto as resumen,
 area_investigacion as area,concat(nombre,' ',apellido)as nombre,
-concat(numero_cohorte,tipo_cohorte)as cohorte,seccion,tesis
+concat(numero_cohorte,tipo_cohorte)as cohorte,seccion,tesis,proyecto.id_carrera
 from proyecto
 join docente on docente.id_docente = proyecto.id_docente
-join cohorte on cohorte.id_cohorte = proyecto.id_cohorte");
+join cohorte on cohorte.id_cohorte = proyecto.id_cohorte
+where proyecto.id_carrera = ".$_SESSION['id_carrera']."
+");
 $rs = mysql_query($based);
-$datos="<h4>Datos Proyecto</h4><br><table class='striped responsive-table'>
+$datos="<h4>Datos Proyecto</h4><br><table class='tablaeli'>
 <thead><tr><th>Titulo</th><th>Resumen</th><th>Area</th>
 <th>Tutor</th><th>Integrantes</th><th>Cohorte</th><th>Seccion</th><th>Tesis</th></tr>
 </thead>";

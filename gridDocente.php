@@ -95,7 +95,9 @@ $g->set_actions(array(
     )
 );
 $g->select_command = "select id_docente ,nombre,apellido,cedula,fecha_nac,lugar_nac,
-profesion,cargo,correo,nombre_carrera from docente join carrera on carrera.id_carrera = docente.id_carrera";
+profesion,cargo,correo,nombre_carrera from docente join carrera on carrera.id_carrera = docente.id_carrera
+where docente.id_carrera = ".$_SESSION['id_carrera']."
+";
 //set database table for CRUD operations
 $g->table = "docente";
 $g->set_columns($cols,true);

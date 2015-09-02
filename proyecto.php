@@ -39,7 +39,7 @@ include "plantilla/menu.php";
 
                         <div class="row">
                             <div class="input-field col s6">
-                                <select name="tipo_proyecto" id="tipo_proyecto" class="browser-default">
+                                <select name="tipo_proyecto" id="tipo_proyecto" class="browser-default" onchange="verificarTipo();">
                                     <option value="" disabled selected>Seleccione Tipo de Proyecto</option>
                                     <option value="Socio Integrador">Socio Integrador</option>
                                     <option value="Socio Productivo">Socio Productivo</option>
@@ -90,10 +90,23 @@ include "plantilla/menu.php";
                                 <select name="cohorte" id="cohorte" class="browser-default" onchange="listarAlumnosCohorte();"
                                         required="required"></select>
                             </div>
+                            <div class="input-field col s6">
+                                <select name="estatus" id="estatus" class="browser-default">
+                                    <option value="" disabled selected>Seleccione Estatus</option>
+                                    <option value="0">Pendiente</option>
+                                    <option value="1">Terminado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="ocultar">
                             <div class="row">
                                 <div class="input-field col s6">
                                     <input id="observaciones" name="observaciones" type="text" class="validate">
-                                    <label form="observaciones">Observaciones</label>
+                                    <label form="observaciones">Carreras asociadas 1</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="carrera2" name="carrera2" type="text" class="validate">
+                                    <label form="carrera2">Carreras asociadas 2</label>
                                 </div>
                             </div>
                         </div>
@@ -102,8 +115,8 @@ include "plantilla/menu.php";
                                 <select name="alum" id="alum" class="browser-default"></select>
                             </div>
                             <div class="input-field col s2">
-                                <input type="button" onclick="agregar();" value="Agregar>>"></input>
-                                <input type="button" onclick="quitar();" value="<<Quitar"></input>
+                                <input type="button" onclick="agregar();" value="Agregar>>"/>
+                                <input type="button" onclick="quitar();" value="<<Quitar"/>
                             </div>
                             <div class="input-field col s6">
                                 <select name="alumnos" id="alumnos" class="browser-default" multiple style="height: 150px;"></select>

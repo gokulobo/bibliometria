@@ -53,13 +53,13 @@ include "plantilla/menu.php";
             </div>
 
             <div class="input-field col s6">
-                <input id="nivel_peii" type="text" name="nivel_peii" class="validate" required="required">
+                <input id="nivel_peii" type="text" name="nivel_peii" class="validate" >
                 <label for="nivel_peii">Nivel de PEII</label>
             </div>
 
 
             <div class="input-field col s6">
-                <input id="ano_aplicacion_peii" type="text" name="ano_aplicacion_peii" class="validate" required="required">
+                <input id="ano_aplicacion_peii" type="text" name="ano_aplicacion_peii" class="validate" >
                 <label for="ano_aplicacion_peii">Año de Aplicacion del PEII</label>
             </div>
 

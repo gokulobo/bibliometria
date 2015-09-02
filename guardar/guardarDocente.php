@@ -5,6 +5,7 @@ if($_POST['id_docente']==0){
             telefono_hab,telefono_cel,direccion_hab,categoria,modalidad,dedicacion,ascenso,fecha_ingreso,investigacion,observaciones,id_carrera";
     if(isset($_POST['guia'])) $inserta .=",guia";
     if(isset($_POST['coordinador'])) $inserta .=",coordinador";
+    if(isset($_POST['admin'])) $inserta .=",admin";
     $inserta .=") values('".$_POST['nombre']."','".$_POST['apellido']."','".$_POST['nacionalidad']."',
             ".$_POST['cedula'].",'".$_POST['fecha_nac']."','".$_POST['lugar_nac']."','".$_POST['profesion']."','".$_POST['cargo']."',
             '".$_POST['correo']."',md5('".$_POST['clave_usuario']."'),'".$_POST['telefono_hab']."','".$_POST['telefono_cel']."',
@@ -12,6 +13,7 @@ if($_POST['id_docente']==0){
             '".$_POST['ascenso']."','".$_POST['fecha_ingreso']."','".$_POST['investigacion']."','".$_POST['observaciones']."' ,".$_POST['id_carrera'];
     if(isset($_POST['guia'])) $inserta .=",1";
     if(isset($_POST['coordinador'])) $inserta .=",1";
+    if(isset($_POST['admin'])) $inserta .=",1";
     $inserta.=")";
     $rs = mysql_query($inserta);
     if (!$rs) {
@@ -35,6 +37,11 @@ if($_POST['id_docente']==0){
         $actualiza .=",coordinador=1";
     }else{
         $actualiza .=",coordinador=0";
+    }
+    if(isset($_POST['admin'])) {
+        $actualiza .=",adminr=1";
+    }else{
+        $actualiza .=",admin=0";
     }
     $actualiza.=" WHERE id_docente=".$_POST['id_docente']."
     ";

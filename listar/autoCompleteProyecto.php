@@ -1,7 +1,7 @@
 <?php
 
 require("../datos/conectar.php");
-$based = ("SELECT * FROM proyecto where titulo_proyecto like '%".$_GET['term']."%'");
+$based = ("SELECT * FROM proyecto where titulo_proyecto like '%".$_GET['term']."%' and id_carrera =".$_SESSION['id_carrera']);
 $rs = mysql_query($based);
 $datos = array();
 if (mysql_num_rows($rs) > 0) {

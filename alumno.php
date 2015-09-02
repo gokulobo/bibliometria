@@ -77,6 +77,7 @@ include "plantilla/menu.php"
 
                         <div class="input-field col s6">
                             <select name="grado_instruccion" id="grado_instruccion" class="browser-default" required="required">
+                                <option value="" disabled selected>Estudios</option>
                                 <option value="Bachiller">Bachiller</option>
                                 <option value="TSU">TSU</option>
                                 <option value="Universitario(a)">Universitario(a)</option>

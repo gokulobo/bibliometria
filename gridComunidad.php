@@ -85,14 +85,18 @@ $g->set_actions(array(
         "search" => "simple",
     )
 );
-$g->select_command = "select id_comunidad,nombre_comunidad,rif,correo,direccion,convenio,tipo_convenio,
-telefono_hab,telefono_cel,observaciones,
+$g->select_command = "select comunidad.id_comunidad,nombre_comunidad,rif,correo,direccion,convenio,tipo_convenio,
+telefono_hab,telefono_cel,comunidad.observaciones,
 nombre_estado as est,nombre_municipio as muni,
 nombre_parroquia as parro
 from comunidad
 join estados on estados.id_estado = comunidad.estado
 join municipio on municipio.id_municipio = comunidad.municipio
-join parroquia on parroquia.id_parroquia = comunidad.parroquia";
+join parroquia on parroquia.id_parroquia = comunidad.parroquia
+join proyecto on proyecto.id_comunidad = comunidad.id_comunidad
+where proyecto.id_carrera =".$_SESSION['id_carrera']."
+
+";
 // set database table for CRUD operations
 $g->table = "alumnos";
 $g->set_columns($cols,true);

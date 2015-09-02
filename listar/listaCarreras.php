@@ -1,6 +1,7 @@
 <?php
 
 require("../datos/conectar.php");
+if($_SESSION['admin'] == 1){
 $based = ("SELECT * FROM carrera join sede on sede.id_sede = carrera.id_sede");
 $rs = mysql_query($based);
 $opciones = "<option value='seleccione carrera'>Seleccione Carrera</option>";
@@ -12,4 +13,8 @@ if (mysql_num_rows($rs) > 0) {
     }
 }
 echo $opciones;
+}else{
+    echo "<option value='seleccione carrera'>Seleccione Carrera</option><option value='".$_SESSION['id_carrera']."' >".$_SESSION['carrera']."</option>";
+
+}
 ?>
