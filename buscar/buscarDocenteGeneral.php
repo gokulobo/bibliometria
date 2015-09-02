@@ -18,9 +18,15 @@ if (mysql_num_rows($rs) > 0) {
         <td>".$fila['categoria']."</td><td>".$fila['modalidad']."</td><td>".$fila['dedicacion']."</td><td>".$fila['ascenso']."</td>
         <td>".$fila['fecha_ingreso']."</td><td>".$fila['investigacion']."</td><td>".$fila['observaciones']."</td>
         </tr>";*/
-        $datos .= "<tbody><tr><th>Nombre</th><td>".$fila['nombre']."</td><th>Apellido</th><td>".$fila['apellido']."</td></tr>
+        $datos .= "<h4>Datos Basicos</h4><br><tbody><tr><th>Nombre</th><td>".$fila['nombre']."</td><th>Apellido</th><td>".$fila['apellido']."</td></tr>
         <tr><th class=''>F.Nacimiento</th><td>".$fila['fecha_nac']."</td><th>L.Nacimiento</th><td>".$fila['lugar_nac']."</td></tr>
-        <tr><th>Profesión</th><td>".$fila['profesion']."</td><th>cargo</th><td>".$fila['cargo']."</td></tr>";
+        <tr><th>Profesión</th><td>".$fila['profesion']."</td><th>cargo</th><td>".$fila['cargo']."</td></tr>
+        <tr><th>Teléfono Habitación</th><td>".$fila['telefono_hab']."</td><th>Teléfono Celular</th><td>".$fila['telefono_cel']."</td></tr>
+        <tr><th>Dirección</th><td>".$fila['direccion_hab']."</td><th>Categoria</th><td>".$fila['categoria']."</td></tr>
+        <tr><th>Modalidad</th><td>".$fila['modalidad']."</td><th>Dedicación</th><td>".$fila['dedicacion']."</td></tr>
+        <tr><th>Ultimo Año de Ascenso</th><td>".$fila['ascenso']."</td><th>Fecha Ingreso</th><td>".$fila['fecha_ingreso']."</td></tr>
+        <tr><th>Investigación</th><td>".$fila['investigacion']."</td><th>Observaciones</th><td>".$fila['observaciones']."</td></tr>
+        ";
 
 
     }
