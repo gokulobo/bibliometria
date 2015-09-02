@@ -10,6 +10,65 @@ mysql_select_db(PHPGRID_DBNAME);
 include(PHPGRID_LIBPATH."inc/jqgrid_dist.php");
 $g = new jqgrid();
 
+$col = array();
+$col["title"] = "Id"; // caption of column, can use HTML tags too
+$col["name"] = "id_proyecto"; // grid column name, same as db field or alias from sql
+$col["hidden"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Titulo"; // caption of column, can use HTML tags too
+$col["name"] = "titulo"; // grid column name, same as db field or alias from sql
+$col["width"] = "40"; // width on grid
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Resumen de Proyecto"; // caption of column, can use HTML tags too
+$col["name"] = "resumen"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Area de Investigación"; // caption of column, can use HTML tags too
+$col["name"] = "area"; // grid column name, same as db field or alias from sql
+$col["width"] = "40"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Tutor"; // caption of column, can use HTML tags too
+$col["name"] = "tutor"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Integrantes"; // caption of column, can use HTML tags too
+$col["name"] = "integrantes"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Cohorte"; // caption of column, can use HTML tags too
+$col["name"] = "cohorte"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Sección"; // caption of column, can use HTML tags too
+$col["name"] = "seccion"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
+$col = array();
+$col["title"] = "Tesis"; // caption of column, can use HTML tags too
+$col["name"] = "tesis"; // grid column name, same as db field or alias from sql
+$col["width"] = "60"; // width on grid
+$col["editable"] = true;
+$cols[] = $col;
+
 
 
 // pass the cooked columns to grid
