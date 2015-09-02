@@ -38,13 +38,13 @@ $cols[] = $col;
 
 $col = array();
 $col["title"] = "Tutor"; // caption of column, can use HTML tags too
-$col["name"] = "tutor"; // grid column name, same as db field or alias from sql
+$col["name"] = "nombre"; // grid column name, same as db field or alias from sql
 $col["width"] = "60"; // width on grid
 $cols[] = $col;
 
 $col = array();
-$col["title"] = "Integrantes"; // caption of column, can use HTML tags too
-$col["name"] = "integrantes"; // grid column name, same as db field or alias from sql
+$col["title"] = "Estatus"; // caption of column, can use HTML tags too
+$col["name"] = "estatus"; // grid column name, same as db field or alias from sql
 $col["width"] = "60"; // width on grid
 $cols[] = $col;
 
@@ -58,15 +58,15 @@ $cols[] = $col;
 $col = array();
 $col["title"] = "Sección"; // caption of column, can use HTML tags too
 $col["name"] = "seccion"; // grid column name, same as db field or alias from sql
-$col["width"] = "60"; // width on grid
-$col["editable"] = true;
+$col["width"] = "20"; // width on grid
+$col["editable"] = false;
 $cols[] = $col;
 
 $col = array();
 $col["title"] = "Tesis"; // caption of column, can use HTML tags too
 $col["name"] = "tesis"; // grid column name, same as db field or alias from sql
 $col["width"] = "60"; // width on grid
-$col["editable"] = true;
+$col["editable"] = false;
 $cols[] = $col;
 
 
@@ -91,7 +91,8 @@ $g->set_actions(array(
 $g->select_command = "select id_proyecto,titulo_proyecto as titulo,
 resumen_proyecto as resumen,
 area_investigacion as area,concat(nombre,' ',apellido)as nombre,
-concat(numero_cohorte,tipo_cohorte)as cohorte,seccion,tesis,proyecto.id_carrera
+concat(numero_cohorte,tipo_cohorte)as cohorte,seccion,tesis,proyecto.id_carrera,
+if (estatus = 1,'Terminado','Pendiente')as estatus
 from proyecto
 join docente on docente.id_docente = proyecto.id_docente
 join cohorte on cohorte.id_cohorte = proyecto.id_cohorte

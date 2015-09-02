@@ -2,19 +2,27 @@
 
 require("../datos/conectar.php");
 
-$based = ("select id_proyecto,titulo_proyecto as titulo,
+$based = ("select proyecto.id_proyecto,titulo_proyecto as titulo,
 resumen_proyecto as resumen,
-area_investigacion as area,concat(nombre,' ',apellido)as nombre,
-concat(numero_cohorte,tipo_cohorte)as cohorte,seccion,tesis,proyecto.id_carrera
+area_investigacion as area,
+concat(docente.nombre,' ',docente.apellido)as nombre,
+concat(numero_cohorte,tipo_cohorte)as cohorte,seccion,
+tesis,proyecto.id_carrera,trayecto,trimestre,
+if (estatus = 1,'Terminado','Pendiente')as estatus
 from proyecto
 join docente on docente.id_docente = proyecto.id_docente
 join cohorte on cohorte.id_cohorte = proyecto.id_cohorte
+join (
+	select id_proyecto,id_alumno
+	from grupo_proyecto
+	group by id_proyecto)as a on a.id_proyecto = proyecto.id_proyecto
+join alumnos on alumnos.id_alumno = a.id_alumno
 where proyecto.id_carrera = ".$_SESSION['id_carrera']."
 ");
 $rs = mysql_query($based);
 $datos="<h4>Datos Proyecto</h4><br><table class='tablaeli'>
-<thead><tr><th>Titulo</th><th>Resumen</th><th>Area</th>
-<th>Tutor</th><th>Integrantes</th><th>Cohorte</th><th>Seccion</th><th>Tesis</th></tr>
+<thead><tr><th style='width: 50px;'>Titulo</th><th style='width: 50px;'>Resumen</th><th style='width: 50px;'>Area</th>
+<th>Tutor</th><th>Integrantes</th><th>Cohorte</th><th>Seccion</th><th>%Realiado</th><th>Estatus</th><th>Tesis</th></tr>
 </thead>";
 //$datos="<table class='striped responsive-table'>";
 if (mysql_num_rows($rs) > 0) {
@@ -33,8 +41,20 @@ where id_proyecto=".$fila["id_proyecto"];
         }else{
             $datos .= "No posee integrantes";
         }
-        $datos .= "</td><td>".$fila['cohorte']."</td><td>".$fila['seccion']."</td>
+        switch($fila['trimestre']){
+            case 'I':$porcen = 20;break;
+            case 'II':$porcen = 40;break;
+            case 'III':$porcen = 60;break;
+            case 'IV':$porcen = 80;break;
+            case 'V':$porcen = 100;break;
+        }
+        $datos .= "</td><td>".$fila['cohorte']."</td><td>".$fila['seccion']."</td><td>
+        <div class='progress'>
+            <div class='determinate' style='width:".$porcen."%'></div>
+        </div><div>".$porcen."%</div>
+        </td><td>".$fila['estatus']."</td>
         <td>";
+
         if($fila['tesis'] != '')$datos .="<a href='tesis/".$fila['tesis']."'>Descargar</a>";
 
         $datos .= "</td></tr>";
