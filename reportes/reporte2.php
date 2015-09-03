@@ -29,24 +29,24 @@ if (mysql_num_rows($rs) > 0) {
         <div class='row'>
             <div class='col s12'>
                 <div class='row'>
-                    <div class='input-field col s12 grey lighten-3 center-align'><b>DATOS DEL ANTEPROYECTO<br> CARRERA "
+                    <div class='input-field col s12 grey lighten-3 center-align ' ><b>DATOS DEL ANTEPROYECTO<br> CARRERA "
                             .strtoupper($fila['nombre_carrera'])."|COHORTE ".$fila['numero_cohorte'].$fila['tipo_cohorte']
-                            ."|SECCION ".$fila['seccion']."</br>
+                            ."|SECCION ".$fila['seccion']. " </br>
                      </div>
                      <div class='row' >
                      <b>1.NOMBRE DE LA COMUNIDAD:</b><br><hr>".$fila['nombre_comunidad']."<hr>
                      </div>
                      <div class='row' >
-                     <b>2.LOCALIZACION:</b><br><hr>Estado ".$fila['nombre_estado']."
+                     <b>2.LOCALIZACIÓN:</b><br><hr>Estado ".$fila['nombre_estado']."
                      Municipio ".$fila['nombre_municipio']." Parroquia ".$fila['nombre_parroquia']." ,".$fila['dir1']."<hr>
                      </div>
                      <div class='row' >
                      <b>3.REPRESENTATE DE LA COMUNIDAD:</b><br><hr>".$fila['nombR']." ".$fila['apeR']."
-                      DIRECCION DE UBICACION ".$fila['dir2']." TELEFONO ".$fila['tel2']."<hr>
+                      DIRECCIÓN DE UBICACIÓN ".$fila['dir2']." TELÉFONO ".$fila['tel2']."<hr>
                      </div>
                      <div class='row' >
                      <b>4.TUTOR ASIGANADO:</b><br><hr>".$fila['nombre']." ".$fila['apellido']."
-                      Correo ".$fila['correo']." TELEFONO ".$fila['tel1']."<hr>
+                      Correo ".$fila['correo']." TELÉFONO ".$fila['tel1']."<hr>
                      </div>
 
         ";
