@@ -25,9 +25,9 @@ include "plantilla/menu.php";
                         </div>
                         <div class="col s4 center-align">
                             <div class="file-field input-field">
-                                <input class="file-path validate" type="text"/>
+                                <input class="file-path validate" type="text" placeholder="CLIC HERE"/>
                                 <div class="btn">
-                                    <span>File</span>
+                                    <span>Tesis alumnos(as)</span>
                                     <input type="file" id="archivo" name="archivo" />
                                 </div>
                             </div>
