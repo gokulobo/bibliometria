@@ -28,7 +28,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 
     </script>
 </head>
-<body><?php print_R($_SESSION);?>
+<body>
 <ul id="menudocente" class="dropdown-content">
     <li><a href="registrardocente.php">Datos del Docente</a></li>
     <li><a href="estudio.php">Estudios Realizados</a></li>
