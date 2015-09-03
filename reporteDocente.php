@@ -23,7 +23,7 @@ include "plantilla/menu.php";
             <div class="col s12" >
                 <div class="input-field col s4">
                     <input id="cedula" type="text" name="cedula" class="validate"
-                           required="required" placeholder="Cedula a Buscar" onblur="buscar();">
+                           required="required" placeholder="Cédula a Buscar" onblur="buscar();">
 
                 </div>
             </div>

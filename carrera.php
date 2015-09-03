@@ -18,7 +18,7 @@ include"plantilla/menu.php"
                             <i class="mdi-social-person prefix"></i>
                             <input id="numero_carrera" name="numero_carrera" type="text" class="validate" required="required"
                                    onkeypress="ValidaSoloNumeros();">
-                            <label for="numero_carrera">Codigo de Carrera</label>
+                            <label for="numero_carrera">Código de Carrera</label>
                         </div>
 
                         <div class="input-field col s4">

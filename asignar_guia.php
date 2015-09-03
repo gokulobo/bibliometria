@@ -40,7 +40,7 @@ include "plantilla/menu.php";
                     <div class="input-field col s3">
                         <i class="mdi-action-perm-identity prefix"></i>
                         <input id="ced" type="text" name="ced" class="validate" readonly>
-                        <label for="cedula">Cedula</label>
+                        <label for="cedula">Cédula</label>
                     </div>
                 </div>
 

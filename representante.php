@@ -26,7 +26,7 @@ include "plantilla/menu.php";
                     <div class="input-field col s6">
                         <input type="hidden" id="id_representante" name="id_representante" value="0">
                         <input id="cedula" type="text" name="cedula" class="validate" required="required" onblur="buscar();">
-                        <label for="cedula">Cedula</label>
+                        <label for="cedula">Cédula</label>
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@ include "plantilla/menu.php";
                     <div class="input-field col s12">
                         <i class="mdi-action-home prefix"></i>
                         <input id="direccion" type="text" name="direccion" class="validate" required="required">
-                        <label for="direccion">Direccion</label>
+                        <label for="direccion">Dirección</label>
                     </div>
                 </div>
 
@@ -74,13 +74,13 @@ include "plantilla/menu.php";
                     <div class="input-field col s6">
                         <i class="mdi-action-settings-phone prefix"></i>
                         <input id="telefono_hab" type="text" name="telefono_hab" class="validate">
-                        <label for="telefono_hab">Telefono de Casa</label>
+                        <label for="telefono_hab">Teléfono de Casa</label>
                     </div>
 
                     <div class="input-field col s6">
                         <i class="mdi-hardware-phone-android prefix"></i>
                         <input id="telefono_cel" type="text" name="telefono_cel" class="validate">
-                        <label for="telefono_cel">Telefono Celular</label>
+                        <label for="telefono_cel">Teléfono Celular</label>
                     </div>
                 </div>
 

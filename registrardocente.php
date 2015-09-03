@@ -14,8 +14,8 @@ include "plantilla/menu.php";
 
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s6 "><a href="#basico" class="black-text">Datos Básicos</a></li>
-                <li class="tab col s6 "><a href="#laboral" class="black-text">Datos Laborales</a></li>
+                <li class="tab col s6 "><a href="#basico" class="blue lighten-5">Datos Básicos</a></li>
+                <li class="tab col s6 "><a href="#laboral" class="blue lighten-5">Datos Laborales</a></li>
             </ul>
         </div>
 
@@ -38,10 +38,10 @@ include "plantilla/menu.php";
                         <input type="hidden" id="id_docente" name="id_docente" value="0">
                         <input id="cedula" name="cedula" type="text" class="validate" required="required"
                                onkeypress="ValidaSoloNumeros()" onblur="buscar();">
-                        <label for="cedula">Cedula</label>
+                        <label for="cedula">Cédula</label>
                     </div>
                     <div class="input-field col s6">
-                        <select name="nacionalidad" id="nacionalidad" class="browser-default green">
+                        <select name="nacionalidad" id="nacionalidad" class="browser-default">
                             <option value="V">Venezolano(a)</option>
                             <option value="E">Extranjero(a)</option>
                         </select>
@@ -88,13 +88,13 @@ include "plantilla/menu.php";
                     <div class="input-field col s6">
                         <i class="mdi-action-settings-phone prefix"></i>
                         <input id="telefono_hab" name="telefono_hab" type="text" class="validate" required="required">
-                        <label for="telefono_hab">Telefono Fijo</label>
+                        <label for="telefono_hab">Teléfono Fijo</label>
                     </div>
 
                     <div class="input-field col s6">
                         <i class="mdi-hardware-phone-android prefix"></i>
                         <input id="telefono_cel" name="telefono_cel" type="text" class="validate" required="required">
-                        <label for="telefono_cel">Telefono Movil</label>
+                        <label for="telefono_cel">Teléfono Movil</label>
                     </div>
                 </div>
 
@@ -108,7 +108,7 @@ include "plantilla/menu.php";
             </div>
 
 
-            <div id="laboral" class="col s12 card-panel blue lighten-4">
+            <div id="laboral" class="">
 
                 <div class="row">
                     <div class="input-field col s6">
@@ -130,7 +130,7 @@ include "plantilla/menu.php";
                             <option value="Asistente(a)">Asistente</option>
                             <option value="Asociado(a)">Asociado(a)</option>
                             <option value="Agregado(a)">Agregado(a)</option>
-                            <option value="Intructor(a)">Intructor(a)</option>
+                            <option value="Intructor(a)">Instructor(a)</option>
                             <option value="Titular">Titular</option>
                         </select>
                     </div>
@@ -173,7 +173,7 @@ include "plantilla/menu.php";
 
                     <div class="input-field col s6">
                         <input id="investigacion" name="investigacion" type="text" class="validate" required="required">
-                        <label for="investigacion">Linea de Investigacion</label>
+                        <label for="investigacion">Linea de Investigación</label>
                     </div>
                 </div>
 

@@ -40,7 +40,7 @@ include "plantilla/menu.php";
                 <div class="input-field col s3">
                     <i class="mdi-action-perm-identity prefix"></i>
                     <input id="ced" type="text" name="ced" class="validate" readonly>
-                    <label for="ced">Cedula</label>
+                    <label for="ced">Cédula</label>
                 </div>
             </div>
 
@@ -60,12 +60,12 @@ include "plantilla/menu.php";
 
             <div class="input-field col s6">
                 <input id="ano_aplicacion_peii" type="text" name="ano_aplicacion_peii" class="validate" >
-                <label for="ano_aplicacion_peii">Año de Aplicacion del PEII</label>
+                <label for="ano_aplicacion_peii">Año de Aplicación del PEII</label>
             </div>
 
             <div class="input-field col s6">
                 <select name="forma_grupo_investigacion" id="forma_grupo_investigacion" required="required">
-                    <option value="" disabled selected>Forma Grupo de Investigacion</option>
+                    <option value="" disabled selected>Forma Grupo de Investigación</option>
                     <option value="Si">Si</option>
                     <option value="NO">No</option>
                 </select>
@@ -78,7 +78,7 @@ include "plantilla/menu.php";
 
             <div class="input-field col s6">
                 <input id="area_investigacion" type="text" name="area_investigacion" class="validate">
-                <label for="area_investigacion">Area de Investigacion</label>
+                <label for="area_investigacion">Area de Investigación</label>
             </div>
 
             <div class="row">

@@ -26,14 +26,14 @@ include "plantilla/menu.php";
                             <div class="input-field col s6">
                                 <input id="titulo_proyecto" type="text" name="titulo_proyecto" class="validate"
                                        required="required">
-                                <label for="titulo_proyecto">Titulo del Proyecto</label>
+                                <label for="titulo_proyecto">Título del Proyecto</label>
                             </div>
 
 
                             <div class="input-field col s6">
                                 <input id="area_investigacion" type="text" name="area_investigacion" class="validate"
                                        required="required">
-                                <label for="area_investigacion">Area Investigacion</label>
+                                <label for="area_investigacion">Area Investigación</label>
                             </div>
                         </div>
 
@@ -43,7 +43,7 @@ include "plantilla/menu.php";
                                     <option value="" disabled selected>Seleccione Tipo de Proyecto</option>
                                     <option value="Socio Integrador">Socio Integrador</option>
                                     <option value="Socio Productivo">Socio Productivo</option>
-                                    <option value="Socio Tecnologico">Socio Tecnologico</option>
+                                    <option value="Socio Tecnologico">Socio Tecnológico</option>
                                 </select>
                             </div>
 

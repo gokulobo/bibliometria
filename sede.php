@@ -19,7 +19,7 @@ include "plantilla/menu.php"
                         <i class="mdi-social-person prefix"></i>
                         <input id="codigo" name="codigo" type="text" class="validate" required="required"
                                onkeypress="ValidaSoloNumeros();">
-                        <label for="codigo">Codigo de Sede</label>
+                        <label for="codigo">Código de Sede</label>
 
 
 

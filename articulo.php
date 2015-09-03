@@ -8,7 +8,7 @@ include "plantilla/menu.php";
 
             <div class="row">
                 <div class="col s12 card-panel">
-                    <h5 class="header center">Registro de Articulos</h5>
+                    <h5 class="header center">Registro de Artículos</h5>
                 </div>
             </div>
 
@@ -41,20 +41,20 @@ include "plantilla/menu.php";
                         <div class="input-field col s4">
                             <i class="mdi-action-perm-identity prefix"></i>
                             <input id="ced" type="text" name="ced" class="validate" readonly>
-                            <label for="cedula">Cedula</label>
+                            <label for="cedula">Cédula</label>
                         </div>
                     </div>
 
                     <div class="row">
                             <div class="input-field col s6">
                                 <input id="titulo" type="text" name="titulo" class="validate" required="required">
-                                <label for="titulo">Titulo</label>
+                                <label for="titulo">Título</label>
                             </div>
 
 
                             <div class="input-field col s6">
                                 <i class="mdi-action-today prefix"></i>
-                                <label for="">Fecha de Publicacion</label>
+                                <label for="">Fecha de Publicación</label>
                                 <input id="fecha_publicacion" name="fecha_publicacion" type="date"  class="datepicker" required="required">
                             </div>
                     </div>
@@ -67,7 +67,7 @@ include "plantilla/menu.php";
 
                             <div class="input-field col s6">
                                 <input id="numeracion" type="text" name="numeracion" class="validate" required="required">
-                                <label for="numeracion">Numeracion</label>
+                                <label for="numeracion">Numeración</label>
                             </div>
                     </div>
 
@@ -79,7 +79,7 @@ include "plantilla/menu.php";
 
                             <div class="input-field col s6">
                                 <input id="pagina_colacion" type="text" name="pagina_colacion" class="validate" required="required">
-                                <label for="pagina_colacion">Pagina de Colacion</label>
+                                <label for="pagina_colacion">Páginas de Colacion</label>
                             </div>
                     </div>
 

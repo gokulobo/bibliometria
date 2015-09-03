@@ -33,7 +33,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="registrardocente.php">Datos del Docente</a></li>
     <li><a href="estudio.php">Estudios Realizados</a></li>
     <li><a href="investigacion.php">PEII</a></li>
-    <li><a href="articulo.php">Articulos</a></li>
+    <li><a href="articulo.php">Artículos</a></li>
     <li><a href="cohorte.php">Registrar Cohorte</a></li>
     <li><a href="asignar_guia.php">Asignar Docente</a></li>
 </ul>
@@ -45,14 +45,15 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="representante.php">Representante</a></li>
     <li><a href="proyecto.php">Proyecto</a></li>
     <li><a href="grupo.php">Asignar Grupo</a></li>
+    <li><a href="subirTesis.php">Subir Tesis</a></li>
 </ul>
 <ul id="panel" class="dropdown-content">
     <?php if($_SESSION['admin'] == 1){?>
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
     <?php }?>
-    <li><a href="subirTesis.php">Subir Tesis</a></li>
-    <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
+    <li><a href="asignartrayecto.php">Asignar Trayecto</a></li>
+    <li><a href="Venezuela.php">Registro de Ubicación</a></li>
 </ul>
 
 <ul id="listaReportes" class="dropdown-content">
@@ -62,7 +63,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="reporteProyecto.php">Reporte Proyectos</a></li>
     <li><a href="listaGrupos.php">Reporte Grupos</a></li>
     <li><a href="datosComunidad.php">Comunidad</a></li>
-    <li><a href="bibliometria.php">Bibliometria</a></li>
+    <li><a href="bibliometria.php">Bibliometría</a></li>
 
 </ul>
 
@@ -70,18 +71,18 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="registrardocente.php">Datos del Docente</a></li>
     <li><a href="estudio.php">Estudios Realizados</a></li>
     <li><a href="investigacion.php">PEII</a></li>
-    <li><a href="articulo.php">Articulos</a></li>
+    <li><a href="articulo.php">Artículos</a></li>
     <li><a href="cohorte.php">Registrar Cohorte</a></li>
     <li><a href="asignar_guia.php">Asignar Docente</a></li>
 </ul>
 
 <ul id="menuproyecto1" class="dropdown-content">
     <li><a href="alumno.php">Alumno</a></li>
-    <li><a href="asignartrayecto.php">Asignar Trayecto</a></li>
     <li><a href="comunidad.php">Comunidad</a></li>
     <li><a href="representante.php">Representante</a></li>
     <li><a href="proyecto.php">Proyecto</a></li>
     <li><a href="grupo.php">Asignar Grupo</a></li>
+    <li><a href="subirTesis.php">Subir Tesis</a></li>
 </ul>
 
 <ul id="panel1" class="dropdown-content">
@@ -89,8 +90,8 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
     <?php }?>
-    <li><a href="subirTesis.php">Subir Tesis</a></li>
-    <li><a href="Venezuela.php">Registro de Ubicacion</a></li>
+    <li><a href="asignartrayecto.php">Asignar Trayecto</a></li>
+    <li><a href="Venezuela.php">Registro de Ubicación</a></li>
 </ul>
 
 <ul id="listaReportes1" class="dropdown-content">
@@ -112,10 +113,10 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         <ul class="right hide-on-med-and-down">
             <li><a href="inicio.php"><i class="mdi-action-home"></i></a></li>
             <?php if($_SESSION['coordinador'] == 1 || $_SESSION['admin'] == 1){?>
-            <li><a href="#!" data-activates="panel" class="dropdown-button">Panel</a></li>
-            <li><a href="#!" data-activates="menudocente" class="dropdown-button">Docente</a></li>
+            <li><a href="#!" data-activates="panel" class="dropdown-button">Registrar Panel</a></li>
+            <li><a href="#!" data-activates="menudocente" class="dropdown-button">Registrar Docente</a></li>
             <?php }?>
-            <li><a href="#!" data-activates="menuproyecto" class="dropdown-button">Proyecto</a></li>
+            <li><a href="#!" data-activates="menuproyecto" class="dropdown-button">Registrar Proyecto</a></li>
             <li><a href="#!" data-activates="listaReportes" class="dropdown-button">Consulta y Reportes</a></li>
 
             <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>
@@ -123,10 +124,10 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         <ul class="side-nav" id="mobile-demo">
             <li><a href="#!"><i class="mdi-action-home"></i></a></li>
             <?php if($_SESSION['coordinador'] == 1 || $_SESSION['admin'] == 1){?>
-            <li><a href="#!" data-activates="panel1" class="dropdown-button">Panel</a></li>
-            <li><a href="#!" data-activates="menudocente1" class="dropdown-button">Docente</a></li>
+            <li><a href="#!" data-activates="panel1" class="dropdown-button">Registrar Panel</a></li>
+            <li><a href="#!" data-activates="menudocente1" class="dropdown-button">Registrar Docente</a></li>
             <?php }?>
-            <li><a href="#!" data-activates="menuproyecto1" class="dropdown-button">Proyecto</a></li>
+            <li><a href="#!" data-activates="menuproyecto1" class="dropdown-button">Registrar Proyecto</a></li>
             <li><a href="#!" data-activates="listaReportes1" class="dropdown-button">Consulta y Reportes</a></li>
 
             <li><a href="salir.php"><i class="mdi-action-exit-to-app"></i></a></li>

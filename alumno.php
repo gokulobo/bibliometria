@@ -28,7 +28,7 @@ include "plantilla/menu.php"
                             <input type="hidden" id="id_alumno" name="id_alumno" value="0">
                             <input id="cedula" name="cedula" type="text" class="validate" required="required"
                                    onkeypress="ValidaSoloNumeros()" onblur="buscar();">
-                            <label for="cedula">Cedula</label>
+                            <label for="cedula">Cédula</label>
                         </div>
                         <div class="input-field col s6">
                             <select name="nacionalidad" id="nacionalidad" class="browser-default" required="required">
@@ -97,13 +97,13 @@ include "plantilla/menu.php"
                         <div class="input-field col s6">
                             <i class="mdi-action-settings-phone prefix"></i>
                             <input id="telefono_hab" type="text" name="telefono_hab" class="validate" >
-                            <label for="telefono_hab">Telefono Fijo</label>
+                            <label for="telefono_hab">Teléfono Fijo</label>
                         </div>
 
                         <div class="input-field col s6">
                             <i class="mdi-hardware-phone-android prefix"></i>
                             <input id="telefono_cel" type="tel" name="telefono_cel" class="validate" required="required">
-                            <label for="telefono_cel">Telefono Movil</label>
+                            <label for="telefono_cel">Teléfono Movil</label>
                         </div>
                     </div>
 
