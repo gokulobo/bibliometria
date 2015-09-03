@@ -14,11 +14,11 @@ include "plantilla/menu.php";
             </div>
             <div class="row">
                 <form class="col s12" method="post" action="#" onsubmit=" return guardar();">
-                    <div class="col s12 card-panel blue lighten-4" id="basico">
+                    <div class="col s12 card-panel" id="basico">
                         <div class="row">
                             <div class="input-field col s6 ">
                                 <input type="hidden" id="id_proyecto" name="id_proyecto" value="0">
-                                <input type="text" id="buscarProyecto" name="buscarProyecto" onblur="buscar();">
+                                <input type="text" id="buscarProyecto" placeholder="Buscar Proyecto" name="buscarProyecto" onblur="buscar() ;">
                             </div>
                         </div>
 
@@ -84,7 +84,7 @@ include "plantilla/menu.php";
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 card-panel blue lighten-4">
+                    <div class="col s12 card-panel">
                         <div class="row">
                             <div class="input-field col s6">
                                 <select name="cohorte" id="cohorte" class="browser-default" onchange="listarAlumnosCohorte();"
