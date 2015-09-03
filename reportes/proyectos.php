@@ -22,7 +22,7 @@ where proyecto.id_carrera = ".$_SESSION['id_carrera']."
 $rs = mysql_query($based);
 $datos="<h4>Datos Proyecto</h4><br><table class='table' align='center'>
 <thead><tr><th style='width: 50px;'>Titulo</th><th style='width: 50px;'>Resumen</th><th style='width: 50px;'>Area</th>
-<th>Tutor</th><th>Integrantes</th><th>Cohorte</th><th>Seccion</th><th>%Realiado</th><th>Estatus</th><th>Tesis</th></tr>
+<th>Tutor</th><th>Integrantes</th><th>Cohorte</th><th>Sección</th><th>%Realizado</th><th>Estatus</th><th>Tesis</th></tr>
 </thead>";
 //$datos="<table class='striped responsive-table'>";
 if (mysql_num_rows($rs) > 0) {
