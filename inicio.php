@@ -34,13 +34,13 @@ include "plantilla/menu.php";
             </li>
         </ul>
     </div>
-    <div class="caption center-align text-lighten-3">
+    <div class="caption center-align ">
 
-        <h5 class="light black-text">Bienvenidos</h5>
+        <h5 class="light grey-text">Bienvenidos</h5>
     </div>
-    <div class="caption center-align text-lighten-3">
+    <div class="caption center-align ">
 
-        <h5 class="light black-text">Al Sistema Bibliométrico para el Registro y Control de los Proyectos, Asignación de los Dosentes Guías y Tutores Asesores de los PNF de la Universidad Politecnica Territorial del Estado Mérida "Keber Ramirez" Ejido Estado Mérida</h5>
+        <h5 class="light grey-text">Al Sistema Bibliométrico para el Registro y Control de los Proyectos, Asignación de los Dosentes Guías y Tutores Asesores de los PNF de la Universidad Politecnica Territorial del Estado Mérida "Keber Ramirez" Ejido Estado Mérida</h5>
     </div>
 </div>
 
