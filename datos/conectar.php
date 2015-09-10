@@ -7,7 +7,7 @@
  * lobo eliana
  */
 session_start();//para manejo de sessiones
-$conectar = mysql_connect("localhost","root","271319");//conectar a mysql
+$conectar = mysql_connect("localhost","root","123");//conectar a mysql
 $base = mysql_select_db("sistema",$conectar);//conectar a base de datos
 /*if($base)echo "entro<br>";
 else echo "no entro".mysql_error()."<br>";*/

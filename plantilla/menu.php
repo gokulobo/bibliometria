@@ -6,6 +6,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Sistema Bibliometrico UPTM Kleber Ramirez</title>
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
 
@@ -51,6 +52,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <?php if($_SESSION['admin'] == 1){?>
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
+        <li><a href="#" onclick="respaldar();">Respaldo Base De Datos</a></li>
     <?php }?>
     <li><a href="asignartrayecto.php">Asignar Trayecto</a></li>
     <li><a href="Venezuela.php">Registro de Ubicación</a></li>
@@ -64,6 +66,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="listaGrupos.php">Reporte Grupos</a></li>
     <li><a href="datosComunidad.php">Comunidad</a></li>
     <li><a href="bibliometria.php">Bibliometría</a></li>
+    <li><a href="bibliometriaCarrera.php">Bibliometría Por Carrera</a></li>
 
 </ul>
 
@@ -89,6 +92,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <?php if($_SESSION['admin'] == 1){?>
     <li><a href="sede.php">Sede</a></li>
     <li><a href="carrera.php">Carrera</a></li>
+        <li><a href="#" onclick="respaldar();">Respaldo Base De Datos</a></li>
     <?php }?>
     <li><a href="asignartrayecto.php">Asignar Trayecto</a></li>
     <li><a href="Venezuela.php">Registro de Ubicación</a></li>
@@ -102,6 +106,7 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
     <li><a href="listaGrupos.php">Reporte Grupos</a></li>
     <li><a href="datosComunidad.php">Comunidad</a></li>
     <li><a href="bibliometria.php">Bibliometria</a></li>
+    <li><a href="bibliometriaCarrera.php">Bibliometría Por Carrera</a></li>
 
 </ul>
 
@@ -134,4 +139,18 @@ if (!isset($_SESSION['usuario'])) header("Location:index.html");
         </ul>
     </div>
 </nav>
+
+<script>
+    function respaldar() {
+        $.ajax({
+            url : "respaldo.php",
+            type : "POST",
+            success : function(respuesta) {
+                alert(respuesta);
+            }
+        });
+
+        return false;
+    }
+</script>
 <diV class="row"><small><?php echo "Usuario Conectado:".$_SESSION['nombre']."|Carrera:".$_SESSION['carrera'] ?></small></diV>

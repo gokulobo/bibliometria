@@ -9,22 +9,18 @@ include "plantilla/menu.php";
     <script type="text/javascript" src="fusion/js/themes/fusioncharts.theme.carbon.js"></script>
     <script type="text/javascript" src="fusion/js/fusioncharts-jquery-plugin.js"></script>
     <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
-    <script type="text/javascript" src="js/merida.js"></script>
+    <script type="text/javascript" src="js/bibliometriaCarrera.js"></script>
     <div class="container">
         <div class="row">
             <div class="row" id="f1">
                 <div class="col s12 card-panel">
-                    <h5 class="header center">Bibliometria Del Estado Mérida</h5>
+                    <h5 class="header center">Bibliometria Por Carrera:<?php echo $_SESSION['carrera'];?></h5>
+                    <input type="hidden" value="<?php echo $_SESSION['id_carrera'];?>" id="idcarrera">
                 </div>
             </div>
             <div class="row card-panel center-align" id="">
                 <div class="col s12 ">
                     <div id="estadistica1"></div>
-                </div>
-            </div>
-            <div class="row card-panel center-align" id="">
-                <div class="col s12 ">
-                    <div id="estadistica2"></div>
                 </div>
             </div>
             <div class="row card-panel center-align" id="merida">

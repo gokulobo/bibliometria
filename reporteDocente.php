@@ -1,7 +1,8 @@
 <?php
 include "plantilla/menu.php";
 ?>
-<link type="text/css" rel="stylesheet" href="css/tabla.css" media="print"/>
+<link type="text/css" rel="stylesheet" href="css/Table2.css" media="all"/>
+
 <script type="text/javascript" src="js/reportes.js"></script>
 <style>
         @media print {

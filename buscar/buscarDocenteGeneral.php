@@ -10,7 +10,7 @@ $rs = mysql_query($based);
 <th>Categoria</th><th>Modalidad</th><th>Dedicacion</th><th>Ascenso</th><th>Fecha Ing</th><th>Lin Investigacion</th>
 <th>Observaciones</th></tr>
 </thead>";*/
-$datos="<table class='left striped responsive-table'>";
+$datos="<table class='table'>";
 if (mysql_num_rows($rs) > 0) {
     while ($fila = mysql_fetch_assoc($rs)) {
         /*$datos .= "<tr><td>".$fila['nombre']." ".$fila['apellido']."</td><td>".$fila['fecha_nac']."</td>
@@ -44,7 +44,7 @@ $rs = mysql_query($based);
 
 //---desiciones: si el numero de coincidencias es igual a 1 entonces... ejecutar la funcion sesion_cliente dentro del script sesion_cliente.php, que guarda los datos de usuario y contraseña en variables de sesion. Y luego redirecciona a la pagina de inicio.php .....de lo contrario si no existen coincidencias, entonces devolver a cero las variables de sesion (por seguridad) y luego devuelve al usuario a la pagina INDEX donde debe ingresar el usuario y contraseña correctos.
 if (mysql_num_rows($rs) > 0) {
-    $datos .= "<br><br><h4>Estudios Realizados</h4><br><table class='left striped responsive-table'><thead><th>Tipo</th><th>Nombre</th><th>Lugar</th>
+    $datos .= "<br><br><h4>Estudios Realizados</h4><br><table class='table'><thead><th>Tipo</th><th>Nombre</th><th>Lugar</th>
 </thead>";
     while ($fila = mysql_fetch_assoc($rs)) {
         $datos .= "<tr><td>".$fila['tipo']."</td>
@@ -58,20 +58,21 @@ if (mysql_num_rows($rs) > 0) {
 /*
  * Datos Articulo
  */
-$based = ("select titulo,fecha_publicacion,volumen,numeracion,issn,pagina_colacion,articulo.observaciones from docente
+$based = ("select titulo,fecha_publicacion,volumen,numeracion,issn,pagina_colacion,articulo.observaciones,archivo from docente
 join articulo on articulo.id_docente = docente.id_docente where cedula='".$cedula."'");
 $rs = mysql_query($based);
 
 //---desiciones: si el numero de coincidencias es igual a 1 entonces... ejecutar la funcion sesion_cliente dentro del script sesion_cliente.php, que guarda los datos de usuario y contraseña en variables de sesion. Y luego redirecciona a la pagina de inicio.php .....de lo contrario si no existen coincidencias, entonces devolver a cero las variables de sesion (por seguridad) y luego devuelve al usuario a la pagina INDEX donde debe ingresar el usuario y contraseña correctos.
 if (mysql_num_rows($rs) > 0) {
-    $datos .= "<br><br><h4>Articulos</h4><br><table class='left striped responsive-table'><thead><th>Titulo</th><th>Fecha Pub.</th><th>Volumen</th>
-<th>Numeracion</th><th>ISSN</th><th>Pag. Colacion</th><th>Observacion</th>
+    $datos .= "<br><br><h4>Articulos</h4><br><table class='table'><thead><th>Titulo</th><th>Fecha Pub.</th><th>Volumen</th>
+<th>Numeracion</th><th>ISSN</th><th>Pag. Colacion</th><th>Observacion</th><th>Documento</th>
 </thead>";
     while ($fila = mysql_fetch_assoc($rs)) {
         $datos .= "<tr><td>".$fila['titulo']."</td>
         <td>".$fila['fecha_publicacion']."</td><td>".$fila['volumen']."</td><td>".$fila['numeracion']."</td><td>".$fila['issn']."</td>
-        <td>".$fila['pagina_colacion']."</td><td>".$fila['observaciones']."</td>
-</tr>";
+        <td>".$fila['pagina_colacion']."</td><td>".$fila['observaciones']."</td><td>";
+        if($fila['archivo'] != '')$datos .="<a href='articulos/".$fila['archivo']."' target='blank'>Descargar</a>";
+        $datos .="</tr>";
     }
     $datos .= "</table>";
 }
@@ -84,7 +85,7 @@ from docente join investigacion on investigacion.id_docente = docente.id_docente
 $rs = mysql_query($based);
 
 if (mysql_num_rows($rs) > 0) {
-    $datos .= "<br><br><h4>Investigacion</h4><br><table class='left striped responsive-table'><thead><th>PEII</th><th>Nivel</th>
+    $datos .= "<br><br><h4>Investigacion</h4><br><table class='table'><thead><th>PEII</th><th>Nivel</th>
 <th>Ano aplicacion</th><th>Forma Grupo</th><th>Nombre Investigacion</th><th>Area Investigacion</th>
 <th>Investigacion</th><th>Observaciones</th>
 </thead>";

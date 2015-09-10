@@ -40,11 +40,18 @@ function buscar(){
 }
 
 function guardar(){
-    var formulario = $("form").serialize();
+    var formData = new FormData($("form")[0]);
+    //var formulario = $("form").serialize();
     $.ajax({
         url : "guardar/guardarArticulo.php",
         type : "POST",
-        data:formulario,
+        data:formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        beforeSend: function(){
+            $("#mensaje").html("Subiendo, por favor espere");;
+        },
         success : function(resp) {
             alert(resp);
             $('form').each (function(){

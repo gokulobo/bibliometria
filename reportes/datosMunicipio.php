@@ -12,6 +12,7 @@ join docente on docente.id_docente = proyecto.id_docente
 join carrera on carrera.id_carrera = proyecto.id_carrera
 join municipio on municipio.id_municipio = comunidad.municipio
 where municipio=".$id;
+if(isset($_POST['id_carrera'])) $based .= ' and proyecto.id_carrera='.$_POST['id_carrera'];
 $rs = mysql_query($based);
 $resultado = "";
 $titulo = "";

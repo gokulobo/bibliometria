@@ -25,11 +25,12 @@ include "plantilla/menu.php";
                         </div>
                         <div class="col s4 center-align">
                             <div class="file-field input-field">
-                                <input class="file-path validate" type="text" placeholder="CLIC HERE"/>
+                                <input class="file-path validate" type="text" placeholder="CLIC AQUI Para Cargar Archivo"/>
                                 <div class="btn">
                                     <span>Tesis alumnos(as)</span>
                                     <input type="file" id="archivo" name="archivo" />
-                                </div>
+                                    </div>
+
                             </div>
                         </div>
                         <div class="col s4 center-align">

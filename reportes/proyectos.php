@@ -55,7 +55,7 @@ where id_proyecto=".$fila["id_proyecto"];
         </td><td>".$fila['estatus']."</td>
         <td>";
 
-        if($fila['tesis'] != '')$datos .="<a href='tesis/".$fila['tesis']."'>Descargar</a>";
+        if($fila['tesis'] != '')$datos .="<a href='tesis/".$fila['tesis']."' target='blank'>Descargar</a>";
 
         $datos .= "</td></tr>";
         /*$datos .= "<tbody><tr><th>Nombre</th><td>".$fila['nombre']."</td><th>Apellido</th><td>".$fila['apellido']."</td></tr>

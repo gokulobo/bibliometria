@@ -84,9 +84,19 @@ include "plantilla/menu.php";
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s8">
                             <input id="observaciones" name="observaciones" type="text" class="validate">
                             <label form="observaciones">Observaciones</label>
+                        </div>
+                        <div class="col s4 center-align">
+                            <div class="file-field input-field">
+                                <input class="file-path validate" type="text" placeholder="CLIC AQUI Para Cargar Archivo"/>
+                                <div class="btn">
+                                    <span>Tesis alumnos(as)</span>
+                                    <input type="file" id="archivo" name="archivo" />
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 <center>
